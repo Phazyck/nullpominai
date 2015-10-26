@@ -1,0 +1,318 @@
+# NetLobby language file - Default English
+
+# Title
+Title_NetLobby=NullpoMino NetLobby
+
+# MessageBoxes
+MessageBody_ServerDelete=Do you really want to delete the following server from the list?
+MessageTitle_ServerDelete=Delete Server
+MessageBody_SetObserver=Do you want to enable the watch feature for the following server?\nThe watch feature displays the current number of players on the bottom of the screen.\nOnly one server can be watched at a time.
+MessageTitle_SetObserver=Enable Watch
+MessageBody_UnsetObserver=Disable watch feature?\n(Currently watching %s:%d)
+MessageTitle_UnsetObserver=Disable Watch
+
+# Server select screen elements
+ServerSelect_LabelName=Nickname (#Tripcode)
+ServerSelect_LabelTeam=Team (blank for none)
+ServerSelect_ServerAdd=Add...
+ServerSelect_ServerDelete=Delete...
+ServerSelect_SetObserver=Set to watch...
+ServerSelect_UnsetObserver=Unset watch...
+ServerSelect_Connect=Connect
+ServerSelect_Exit=Exit
+
+# Lobby menu elements
+Lobby_Menu=Menu
+Lobby_Menu_CreateGame=Create game...
+Lobby_Menu_QuickStart=Quick Start
+Lobby_Menu_RoomCreate=Multiplayer
+Lobby_Menu_RoomCreate1P=Single player
+
+# Lobby screen elements
+Lobby_Tab_Lobby=Lobby
+Lobby_Tab_NoRoom=(No Room)
+Lobby_Tab_Room=Room:
+Lobby_QuickStart=Quick Start
+Lobby_QuickStart_Tip=Get right into a game.
+Lobby_RoomCreate=New Room...
+Lobby_RoomCreate_Tip=Create a multi-player room.
+Lobby_RoomCreate1P=New 1P Room...
+Lobby_RoomCreate1P_Tip=Create a single-player room.
+Lobby_Options=Options...
+Lobby_Options_Tip=Misc commands are in here.
+Lobby_RuleChange=Change rule...
+Lobby_RuleChange_Tip=Select a rule to use.
+Lobby_TeamChange=Change team...
+Lobby_TeamChange_Tip=Change which team you are in.
+Lobby_Ranking=Leaderboard...
+Lobby_Ranking_Tip=You can see the multiplayer rating leaderboard here.
+Lobby_Disconnect=Disconnect
+Lobby_Disconnect_Tip=Disconnect from the server and return to the server selection screen.
+Lobby_ChatSend=Send
+Lobby_TeamChange_OK=OK
+Lobby_TeamChange_Cancel=Cancel
+
+# RoomTable column names
+RoomTable_ID=ID
+RoomTable_Name=Name
+RoomTable_Rated=Rated
+RoomTable_RuleName=Rule
+RoomTable_ModeName=Mode
+RoomTable_Status=Status
+RoomTable_Players=Players
+RoomTable_Spectators=Spectators
+
+# RoomTable status names
+RoomTable_Rated_True=Yes
+RoomTable_Rated_False=No
+RoomTable_RuleName_Any=*Any*
+RoomTable_Status_Playing=Playing
+RoomTable_Status_Waiting=Waiting
+
+# Room screen elements
+Room_Leave=Leave
+Room_Leave_Tip=Leave the current room.
+Room_Join=Join
+Room_Join_Tip=Join in the game.
+Room_SitOut=Watch
+Room_SitOut_Tip=Become spectator of the game.
+Room_TeamChange=Team...
+Room_TeamChange_Tip=Change which team you are in.
+Room_ViewSetting=View Setting...
+Room_ViewSetting_Tip=View settings of the current room.
+Room_Ranking=Ranking...
+Room_Ranking_Tip=You can see the leaderboard of multiplayer rating here.
+Room_ChatSend=Send
+Room_TeamChange_OK=OK
+Room_TeamChange_Cancel=Cancel
+
+# StatTable column names
+StatTable_Rank=\#
+StatTable_Name=Name
+StatTable_Attack=Attack
+StatTable_APL=APL
+StatTable_APM=APM
+StatTable_Lines=Lines
+StatTable_LPM=LPM
+StatTable_Piece=Pieces
+StatTable_PPS=PPS
+StatTable_Time=Time
+StatTable_KO=KO
+StatTable_Wins=Wins
+StatTable_Games=Games
+
+# StatTable1P column names
+StatTable1P_Description=Description
+StatTable1P_Value=Value
+
+# RoomUserList status name
+RoomUserList_Playing= <Playing>
+RoomUserList_Ready= <Ready>
+
+# Server Add screen elements
+ServerAdd_Host=Hostname(or IP address):Port
+ServerAdd_OK=OK
+ServerAdd_Cancel=Cancel
+
+# Create Room Waiting screen elements
+CreateRoom_Waiting_Text=Please wait while preset information is retrieved from the server...
+CreateRoom_Waiting_Cancel=Cancel
+CreateRated_Name=Room Name:
+CreateRated_Preset=Room Type:
+CreateRated_MaxPlayers=Max Players (2-6):
+CreateRated_OK=OK
+CreateRated_Custom=Customize...
+CreateRated_Cancel=Cancel
+CreateRated_Name_Tip=Room name will be displayed on lobby and room screens.
+CreateRated_Preset_Tip=Select the type of game this room will have.
+CreateRated_MaxPlayers_Tip=Select the max number of players for this room.
+
+# Create Room screen elements
+CreateRoom_Tab_Main=Main
+CreateRoom_Tab_Speed=Speed
+CreateRoom_Tab_Bonus=Bonus
+CreateRoom_Tab_Garbage=Garbage
+CreateRoom_Tab_Misc=Auto-start
+CreateRoom_Tab_RatedRule=Rated-rule
+CreateRoom_Tab_Preset=Preset
+CreateRoom_Name=Room Name:
+CreateRoom_Mode=Mode:
+CreateRoom_MaxPlayers=Max Players (2-6):
+CreateRoom_AutoStartSeconds=Auto Start Delay in seconds (1-999, 0 to disable it)
+CreateRoom_Gravity=Gravity:
+CreateRoom_Denominator=Denominator (G-MAX):
+CreateRoom_ARE=ARE:
+CreateRoom_ARELine=ARE Line:
+CreateRoom_LineDelay=Line Delay:
+CreateRoom_LockDelay=Lock Delay:
+CreateRoom_DAS=Delayed Auto Shift (DAS):
+CreateRoom_HurryupSeconds=Hurryup Seconds (0-999, -1 to disable it):
+CreateRoom_HurryupInterval=Hurryup Interval (1-99):
+CreateRoom_MapSetID=Map Set ID (0-99):
+CreateRoom_GarbagePercent=Garbage Change Percent (0-100):
+CreateRoom_TargetTimer=Target move delay (0-3600):
+CreateRoom_UseMap=Use Maps
+CreateRoom_RuleLock=Rule Lock
+CreateRoom_TSpinEnableType=Spin Bonus
+CreateRoom_TSpin_Disable=Disable
+CreateRoom_TSpin_TOnly=T-Spin Only
+CreateRoom_TSpin_All=All Spins
+CreateRoom_SpinCheckType=Spin Recognition Type
+CreateRoom_SpinCheck_4Point=4-Point (3-Corner T)
+CreateRoom_SpinCheck_Immobile=Immobile
+CreateRoom_TSpinEnableEZ=EZ Spins
+CreateRoom_B2B=Back to Back
+CreateRoom_Combo=Combo
+CreateRoom_RensaBlock=Garbage Blocking
+CreateRoom_Counter=Garbage Countering
+CreateRoom_Bravo=All Clear Bonus
+CreateRoom_ReduceLineSend=Reduce attack power in 3P+ game
+CreateRoom_GarbageChangePerAttack=Change garbage hole per attack
+CreateRoom_DivideChangeRateByPlayers=Divide hole change rate by number of players
+CreateRoom_B2BChunk=Change garbage hole for B2B
+CreateRoom_UseFractionalGarbage=Use fractional garbage system
+CreateRoom_IsTarget=Use Target system
+CreateRoom_AutoStartTNET2=Use TNET2 style auto start timer
+CreateRoom_DisableTimerAfterSomeoneCancelled=Disable auto start timer after someone cancels ready status
+CreateRoom_PresetID=Preset Number:
+CreateRoom_PresetSave=Save
+CreateRoom_PresetLoad=Load
+CreateRoom_PresetCode=Preset Code:
+CreateRoom_PresetCodeExport=Export to a Preset Code
+CreateRoom_PresetCodeImport=Import from a Preset Code
+CreateRoom_Join=Join
+CreateRoom_Watch=Watch
+CreateRoom_OK=OK
+CreateRoom_Cancel=Cancel
+CreateRoom_Name_Tip=Room name will be displayed on lobby and room screens.
+CreateRoom_Mode_Tip=Select a game mode.
+CreateRoom_MaxPlayers_Tip=Select the max number of players for this room.
+CreateRoom_AutoStartSeconds_Tip=Select the countdown length in seconds.
+CreateRoom_HurryupSeconds_Tip=Select how many seconds it takes before Hurry Up starts.
+CreateRoom_HurryupInterval_Tip=Hurry up garbage will rise after every [This Setting] pieces are placed.
+CreateRoom_TSpinEnableType_Tip=Select which spin bonus type to use. "T-Spin Only" will only recognize T piece twists, while "All Spins" will recognize all pieces.
+CreateRoom_SpinCheckType_Tip=Select which method of spin detection to use. "4-Point" will check if 3 of 4 points around the piece are blocked. "Immobile" which check if the piece cannot move when locked.
+CreateRoom_MapSetID_Tip=Select which map set to use.
+CreateRoom_GarbagePercent_Tip=Select how often the garbage hole changes.
+CreateRoom_TargetTimer_Tip=Select how often the target cursor moves. Only used when "Use Target system" option is checked.
+CreateRoom_UseMap_Tip=If enabled, every match will begin with predefined pattern of blocks.
+CreateRoom_RuleLock_Tip=Forces everyone to use the rule you are currently using.
+CreateRoom_TSpinEnableEZ_Tip=If enabled, EZ spins will count when using "Immobile" recognition type.
+CreateRoom_B2B_Tip=If enabled, a back-to-back bonus will send an extra garbage to the opponents.
+CreateRoom_Combo_Tip=Consecutive line clears (Combo) will send extra garbages to the opponents.
+CreateRoom_RensaBlock_Tip=Consecutive line clears (Combo) will block incoming attacks.
+CreateRoom_Counter_Tip=Outgoing garbage cancels out incoming garbage.
+CreateRoom_Bravo_Tip=Perfectly clearing the playfield sends additional garbage.
+CreateRoom_ReduceLineSend_Tip=All players' attack power will be reduced on 3+ player games.
+CreateRoom_GarbageChangePerAttack_Tip=Garbage hole will change location per attack.
+CreateRoom_DivideChangeRateByPlayers_Tip=Garbage hole change rate will be divided by number of live opposing players/teams.
+CreateRoom_B2BChunk_Tip=Garbage hole of extra B2B add will change location.
+CreateRoom_UseFractionalGarbage_Tip=Number of garbage will be fractional on 3+ player games.
+CreateRoom_IsTarget_Tip=Garbage will send only to the targeted player.
+CreateRoom_AutoStartTNET2_Tip=Countdown starts only when most players are ready. Players who are not ready are become spectators.
+CreateRoom_DisableTimerAfterSomeoneCancelled_Tip=Auto start timer will be disabled when someone cancels ready status.
+CreateRoom_CustomRated_Tip=If not enabled, the game options will be overwritten with the server's predefined settings.
+
+# Create Room 1P screen elements
+CreateRoom1P_Mode_Label=Game Mode:
+CreateRoom1P_Rule_Label=Rule:
+CreateRoom1P_YourRule=ANY RULE
+CreateRoom1P_OK=OK
+CreateRoom1P_OK_Watch=Watch
+CreateRoom1P_Cancel=Cancel
+
+# MPRanking screen elements
+MPRanking_Rank=\#
+MPRanking_Name=Name
+MPRanking_Rating=Rating
+MPRanking_PlayCount=Games
+MPRanking_WinCount=Wins
+MPRanking_OK=OK
+
+# Rule change screen elements
+RuleChange_Tab_Tuning=Game Tuning
+RuleChange_OK=OK
+RuleChange_Cancel=Cancel
+
+# Game Tuning
+GameTuning_ComboboxGeneric_Auto=Auto
+GameTuning_ComboboxGeneric_Disable=Always Disable
+GameTuning_ComboboxGeneric_Enable=Always Enable
+GameTuning_RotateButtonDefaultRight_Label=Rotate direction for A button
+GameTuning_RotateButtonDefaultRight_Auto=Auto (Use rule setting)
+GameTuning_RotateButtonDefaultRight_Left=Left (Counter-clockwise)
+GameTuning_RotateButtonDefaultRight_Right=Right (Clockwise)
+GameTuning_MoveDiagonal_Label=Diagonal Move
+GameTuning_BlockShowOutlineOnly_Label=Show Outline Only
+GameTuning_Skin_Label=Block Skin
+GameTuning_Skin_Auto=Auto (Use rule setting)
+GameTuning_OutlineType_Label=Outline Type
+GameTuning_OutlineType_Auto=Auto (Depends to mode)
+GameTuning_OutlineType_None=None
+GameTuning_OutlineType_Normal=Normal
+GameTuning_OutlineType_Connect=Connect
+GameTuning_OutlineType_SameColor=Same Color
+GameTuning_MinDAS_Label=Minimum DAS (-1:Auto)
+GameTuning_MaxDAS_Label=Maximum DAS (-1:Auto)
+GameTuning_DasDelay_Label=Move Delay (-1:Auto)
+GameTuning_ReverseUpDown_Label=Reverse Up and Down button
+
+# Popup Menu
+Popup_Cut=Cut
+Popup_Copy=Copy
+Popup_Paste=Paste
+Popup_Delete=Delete
+Popup_SelectAll=Select All
+Popup_Clear=Clear
+Popup_RoomTable_Join=Join
+Popup_RoomTable_Watch=Watch
+Popup_RoomTable_Detail=Detail
+Popup_ServerSelect_Connect=Connect
+Popup_ServerSelect_Delete=Delete...
+Popup_ServerSelect_SetObserver=Watch...
+
+# System Messages
+SysMsg_ServerConnected=*** Connected to %s:%d
+SysMsg_ServerVersion=*** Server version:
+SysMsg_NumberOfPlayers=*** Number of players:
+SysMsg_LoginOK=*** Login successful
+SysMsg_YourNickname=*** Your nickname:
+SysMsg_YourUID=*** Your user number:
+SysMsg_LoginFail=*** LOGIN FAILED! Reason:
+SysMsg_LoginFailDifferentVersion=*** Login failed because the server version is different (Client:%s, Server:%s)
+SysMsg_LoginFailDifferentBuild=*** Login failed because the build type of server is different (Client:%s, Server:%s)
+SysMsg_Banned=*** YOU ARE BANNED!! (%s - %s)
+SysMsg_Banned_Permanent=Permanent
+SysMsg_EnterRoom=*** %s has entered the room
+SysMsg_LeaveRoom=*** %s left the room
+SysMsg_EnterRoomWithHost=*** %s {%s} entered the room
+SysMsg_LeaveRoomWithHost=*** %s {%s} left the room
+SysMsg_RoomJoinFail=*** ROOM JOIN FAILED! (Room doesn't exist)
+SysMsg_RoomJoin_Title=*** Current room name:
+SysMsg_RoomJoin_ID=*** Current room ID:
+SysMsg_RoomJoin_Rule=*** Rule:
+SysMsg_RoomJoin_Lobby=*** You returned to lobby
+SysMsg_StatusChange_Spectator=*** %s is spectating
+SysMsg_StatusChange_Queue=*** %s joined the queue
+SysMsg_StatusChange_Joined=*** %s joined the game
+SysMsg_DisconnectedOK=*** DISCONNECTED
+SysMsg_DisconnectedError=*** ERROR DISCONNECTED!
+SysMsg_GameStart=*** Game has started
+SysMsg_GameEnd=*** Game has ended
+SysMsg_Winner=*** %s has won the match
+SysMsg_WinnerTeam=*** Team "%s" has won the match
+SysMsg_SendRuleDataStart=*** Sending rule data...
+SysMsg_SendRuleDataOK=*** Rule data send OK
+SysMsg_AutoStartBegin=*** Game will begin within %s seconds
+SysMsg_ChangeTeam=*** %s is now on team %s
+SysMsg_ChangeTeam_None=*** %s is now alone
+SysMsg_RoomCreateMapReady=*** Sending maps...
+SysMsg_KO=*** %s KO'd %s
+SysMsg_Rating=*** %s's rating: %d (%+d)
+SysMsg_Kicked_0=*** Room "%s" (ID:%s) has been deleted by the admin
+SysMsg_ReplaySaved=*** Replay has been downloaded to replay/netreplay.rep
+
+# TripSeparator
+TripSeparator_EnableConvert=false
+TripSeparator_True=!
+TripSeparator_False=?
