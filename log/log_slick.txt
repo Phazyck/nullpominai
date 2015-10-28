@@ -1,216 +1,216 @@
-15-10-27 19:53:28,748 [main] INFO  mu.nu.nullpo.gui.slick.NullpoMinoSlick: NullpoMinoSlick Start
-15-10-27 19:53:29,213 [main] INFO  mu.nu.nullpo.gui.slick.NullpoMinoSlick: Driver adapter:igdumdim64, Driver version:10.18.15.4256
-15-10-27 19:53:29,243 [main] INFO  Slick: Slick Build #229
-15-10-27 19:53:29,244 [main] INFO  Slick: LWJGL Version: 2.6
-15-10-27 19:53:29,244 [main] INFO  Slick: OriginalDisplayMode: 1680 x 1050 x 32 @59Hz
-15-10-27 19:53:29,244 [main] INFO  Slick: TargetDisplayMode: 640 x 480 x 0 @0Hz
-15-10-27 19:53:29,504 [main] INFO  Slick: Starting display 640x480
-15-10-27 19:53:29,531 [main] INFO  Slick: Use Java PNG Loader = true
-15-10-27 19:53:30,253 [main] INFO  Slick: Found 4 controllers
-15-10-27 19:53:30,254 [main] INFO  Slick: 0 : HID-compliant consumer control device
-15-10-27 19:53:30,254 [main] INFO  Slick: 1 : Surface Type Cover
-15-10-27 19:53:30,254 [main] INFO  Slick: 2 : System Control
-15-10-27 19:53:30,254 [main] INFO  Slick: 3 : System Control
-15-10-27 19:53:30,433 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).MARATHON
-15-10-27 19:53:30,434 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).LINE RACE
-15-10-27 19:53:30,434 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).DIG RACE
-15-10-27 19:53:30,434 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).DIG CHALLENGE
-15-10-27 19:53:30,434 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).ULTRA
-15-10-27 19:53:30,434 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).GRADE MANIA 3
-15-10-27 19:53:30,434 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).SPEED MANIA 2
-15-10-27 19:53:30,435 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).PRACTICE
-15-10-27 19:53:30,435 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).GEM MANIA
-15-10-27 19:53:30,435 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).VS-BATTLE
-15-10-27 19:53:30,435 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.MARATHON
-15-10-27 19:53:30,435 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.MARATHON+
-15-10-27 19:53:30,435 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.EXTREME
-15-10-27 19:53:30,436 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.TECHNICIAN
-15-10-27 19:53:30,436 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.LINE RACE
-15-10-27 19:53:30,436 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.SCORE RACE
-15-10-27 19:53:30,436 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.DIG RACE
-15-10-27 19:53:30,436 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.COMBO RACE
-15-10-27 19:53:30,436 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.ULTRA
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GRADE MANIA
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GRADE MANIA 2
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GRADE MANIA 3
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.SCORE ATTACK
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.SPEED MANIA
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.SPEED MANIA 2
-15-10-27 19:53:30,437 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GARBAGE MANIA
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.PHANTOM MANIA
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.FINAL
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.TIME ATTACK
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GEM MANIA
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RETRO MODES.RETRO MARATHON
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RETRO MODES.RETRO MASTERY
-15-10-27 19:53:30,438 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RETRO MODES.RETRO MANIA
-15-10-27 19:53:30,439 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.SQUARE
-15-10-27 19:53:30,439 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.DIG CHALLENGE
-15-10-27 19:53:30,439 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.VS-LINE RACE
-15-10-27 19:53:30,439 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.VS-DIG RACE
-15-10-27 19:53:30,439 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.VS-BATTLE
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.TOOL-VS MAP EDIT
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE 1P (RC2)
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE 1P FEVER MARATHON (RC2)
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS-BATTLE (RC1)
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS FEVER MARATHON (RC1)
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS DIG RACE (RC1)
-15-10-27 19:53:30,440 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS BOMB BATTLE (RC1)
-15-10-27 19:53:30,441 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE-SPF VS-BATTLE (BETA)
-15-10-27 19:53:30,441 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: PHYSICIAN.PHYSICIAN (RC1)
-15-10-27 19:53:30,441 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: PHYSICIAN.PHYSICIAN VS-BATTLE (RC1)
-15-10-27 19:53:30,441 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: SPF.SPF VS-BATTLE (BETA)
-15-10-27 19:53:30,445 [main] INFO  mu.nu.nullpo.gui.slick.ControllerManager: Found 4 controllers from NullpoMinoSlick app
-15-10-27 19:53:30,445 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:0, AxisCount:0, ButtonCount:31
-15-10-27 19:53:30,446 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:1, AxisCount:0, ButtonCount:31
-15-10-27 19:53:30,446 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:2, AxisCount:0, ButtonCount:3
-15-10-27 19:53:30,446 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:3, AxisCount:0, ButtonCount:24
-15-10-27 19:53:30,452 [main] INFO  mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading Image
-15-10-27 19:53:30,454 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: 29 block skins found
-15-10-27 19:53:30,454 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n0.png
-15-10-27 19:53:30,461 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s0.png
-15-10-27 19:53:30,463 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b0.png
-15-10-27 19:53:30,470 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n1.png
-15-10-27 19:53:30,472 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s1.png
-15-10-27 19:53:30,474 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b1.png
-15-10-27 19:53:30,479 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n2.png
-15-10-27 19:53:30,481 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s2.png
-15-10-27 19:53:30,482 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b2.png
-15-10-27 19:53:30,485 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n3.png
-15-10-27 19:53:30,487 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s3.png
-15-10-27 19:53:30,488 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b3.png
-15-10-27 19:53:30,491 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n4.png
-15-10-27 19:53:30,492 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s4.png
-15-10-27 19:53:30,494 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b4.png
-15-10-27 19:53:30,496 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n5.png
-15-10-27 19:53:30,498 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s5.png
-15-10-27 19:53:30,499 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b5.png
-15-10-27 19:53:30,502 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n6.png
-15-10-27 19:53:30,504 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s6.png
-15-10-27 19:53:30,505 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b6.png
-15-10-27 19:53:30,507 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n7.png
-15-10-27 19:53:30,509 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s7.png
-15-10-27 19:53:30,510 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b7.png
-15-10-27 19:53:30,513 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n8.png
-15-10-27 19:53:30,514 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s8.png
-15-10-27 19:53:30,515 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b8.png
-15-10-27 19:53:30,518 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n9.png
-15-10-27 19:53:30,524 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s9.png
-15-10-27 19:53:30,526 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b9.png
-15-10-27 19:53:30,542 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n10.png
-15-10-27 19:53:30,547 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s10.png
-15-10-27 19:53:30,548 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b10.png
-15-10-27 19:53:30,551 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n11.png
-15-10-27 19:53:30,553 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s11.png
-15-10-27 19:53:30,555 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b11.png
-15-10-27 19:53:30,558 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n12.png
-15-10-27 19:53:30,560 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s12.png
-15-10-27 19:53:30,561 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b12.png
-15-10-27 19:53:30,564 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n13.png
-15-10-27 19:53:30,566 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s13.png
-15-10-27 19:53:30,567 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b13.png
-15-10-27 19:53:30,570 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n14.png
-15-10-27 19:53:30,572 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s14.png
-15-10-27 19:53:30,573 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b14.png
-15-10-27 19:53:30,577 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n15.png
-15-10-27 19:53:30,578 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s15.png
-15-10-27 19:53:30,580 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b15.png
-15-10-27 19:53:30,582 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n16.png
-15-10-27 19:53:30,584 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s16.png
-15-10-27 19:53:30,585 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b16.png
-15-10-27 19:53:30,587 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n17.png
-15-10-27 19:53:30,589 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s17.png
-15-10-27 19:53:30,590 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b17.png
-15-10-27 19:53:30,592 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n18.png
-15-10-27 19:53:30,594 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s18.png
-15-10-27 19:53:30,595 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b18.png
-15-10-27 19:53:30,598 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n19.png
-15-10-27 19:53:30,599 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s19.png
-15-10-27 19:53:30,601 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b19.png
-15-10-27 19:53:30,603 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n20.png
-15-10-27 19:53:30,604 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s20.png
-15-10-27 19:53:30,605 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b20.png
-15-10-27 19:53:30,608 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n21.png
-15-10-27 19:53:30,610 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s21.png
-15-10-27 19:53:30,611 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b21.png
-15-10-27 19:53:30,614 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n22.png
-15-10-27 19:53:30,619 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s22.png
-15-10-27 19:53:30,621 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b22.png
-15-10-27 19:53:30,627 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n23.png
-15-10-27 19:53:30,639 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s23.png
-15-10-27 19:53:30,642 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b23.png
-15-10-27 19:53:30,659 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n24.png
-15-10-27 19:53:30,666 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s24.png
-15-10-27 19:53:30,669 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b24.png
-15-10-27 19:53:30,683 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n25.png
-15-10-27 19:53:30,687 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s25.png
-15-10-27 19:53:30,689 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b25.png
-15-10-27 19:53:30,691 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n26.png
-15-10-27 19:53:30,693 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s26.png
-15-10-27 19:53:30,694 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b26.png
-15-10-27 19:53:30,696 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n27.png
-15-10-27 19:53:30,702 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s27.png
-15-10-27 19:53:30,704 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b27.png
-15-10-27 19:53:30,722 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n28.png
-15-10-27 19:53:30,731 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s28.png
-15-10-27 19:53:30,733 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b28.png
-15-10-27 19:53:30,751 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/font.png
-15-10-27 19:53:30,786 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/font_small.png
-15-10-27 19:53:30,791 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/title.png
-15-10-27 19:53:30,821 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/menu.png
-15-10-27 19:53:30,833 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/frame.png
-15-10-27 19:53:30,835 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/fieldbg2.png
-15-10-27 19:53:30,839 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/fieldbg2_small.png
-15-10-27 19:53:30,841 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/fieldbg2_big.png
-15-10-27 19:53:30,850 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break0_0.png
-15-10-27 19:53:30,862 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break0_1.png
-15-10-27 19:53:30,866 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break1_0.png
-15-10-27 19:53:30,878 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break1_1.png
-15-10-27 19:53:30,882 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break2_0.png
-15-10-27 19:53:30,893 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break2_1.png
-15-10-27 19:53:30,897 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break3_0.png
-15-10-27 19:53:30,912 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break3_1.png
-15-10-27 19:53:30,916 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break4_0.png
-15-10-27 19:53:30,936 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break4_1.png
-15-10-27 19:53:30,941 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break5_0.png
-15-10-27 19:53:30,956 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break5_1.png
-15-10-27 19:53:30,961 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break6_0.png
-15-10-27 19:53:30,974 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break6_1.png
-15-10-27 19:53:30,978 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break7_0.png
-15-10-27 19:53:30,989 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break7_1.png
-15-10-27 19:53:30,994 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase0.png
-15-10-27 19:53:31,002 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase1.png
-15-10-27 19:53:31,012 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase2.png
-15-10-27 19:53:31,017 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase3.png
-15-10-27 19:53:31,023 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase4.png
-15-10-27 19:53:31,028 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase5.png
-15-10-27 19:53:31,033 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase6.png
-15-10-27 19:53:31,039 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back0.png
-15-10-27 19:53:31,080 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back1.png
-15-10-27 19:53:31,101 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back2.png
-15-10-27 19:53:31,118 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back3.png
-15-10-27 19:53:31,140 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back4.png
-15-10-27 19:53:31,168 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back5.png
-15-10-27 19:53:31,185 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back6.png
-15-10-27 19:53:31,198 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back7.png
-15-10-27 19:53:31,209 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back8.png
-15-10-27 19:53:31,228 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back9.png
-15-10-27 19:53:31,249 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back10.png
-15-10-27 19:53:31,281 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back11.png
-15-10-27 19:53:31,307 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back12.png
-15-10-27 19:53:31,332 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back13.png
-15-10-27 19:53:31,353 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back14.png
-15-10-27 19:53:31,395 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back15.png
-15-10-27 19:53:31,410 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back16.png
-15-10-27 19:53:31,431 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back17.png
-15-10-27 19:53:31,453 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back18.png
-15-10-27 19:53:31,475 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back19.png
-15-10-27 19:53:31,923 [main] INFO  Slick: Initialising sounds..
-15-10-27 19:53:32,157 [main] INFO  Slick: - Sound works
-15-10-27 19:53:32,159 [main] INFO  Slick: - 64 OpenAL source available
-15-10-27 19:53:32,160 [main] INFO  Slick: - Sounds source generated
-15-10-27 19:53:32,160 [main] INFO  mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading Sound Effect
-15-10-27 19:53:33,054 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+15-10-28 00:59:38,726 [main] INFO  mu.nu.nullpo.gui.slick.NullpoMinoSlick: NullpoMinoSlick Start
+15-10-28 00:59:38,852 [main] INFO  mu.nu.nullpo.gui.slick.NullpoMinoSlick: Driver adapter:igdumdim64, Driver version:10.18.15.4256
+15-10-28 00:59:38,865 [main] INFO  Slick: Slick Build #229
+15-10-28 00:59:38,866 [main] INFO  Slick: LWJGL Version: 2.6
+15-10-28 00:59:38,866 [main] INFO  Slick: OriginalDisplayMode: 1680 x 1050 x 32 @59Hz
+15-10-28 00:59:38,867 [main] INFO  Slick: TargetDisplayMode: 640 x 480 x 0 @0Hz
+15-10-28 00:59:39,004 [main] INFO  Slick: Starting display 640x480
+15-10-28 00:59:39,028 [main] INFO  Slick: Use Java PNG Loader = true
+15-10-28 00:59:39,651 [main] INFO  Slick: Found 4 controllers
+15-10-28 00:59:39,651 [main] INFO  Slick: 0 : HID-compliant consumer control device
+15-10-28 00:59:39,651 [main] INFO  Slick: 1 : Surface Type Cover
+15-10-28 00:59:39,651 [main] INFO  Slick: 2 : System Control
+15-10-28 00:59:39,652 [main] INFO  Slick: 3 : System Control
+15-10-28 00:59:39,769 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).MARATHON
+15-10-28 00:59:39,769 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).LINE RACE
+15-10-28 00:59:39,769 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).DIG RACE
+15-10-28 00:59:39,769 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).DIG CHALLENGE
+15-10-28 00:59:39,769 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).ULTRA
+15-10-28 00:59:39,770 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).GRADE MANIA 3
+15-10-28 00:59:39,770 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).SPEED MANIA 2
+15-10-28 00:59:39,770 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).PRACTICE
+15-10-28 00:59:39,770 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).GEM MANIA
+15-10-28 00:59:39,770 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: (top-level).VS-BATTLE
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.MARATHON
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.MARATHON+
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.EXTREME
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: STANDARD MODES.TECHNICIAN
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.LINE RACE
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.SCORE RACE
+15-10-28 00:59:39,771 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.DIG RACE
+15-10-28 00:59:39,772 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.COMBO RACE
+15-10-28 00:59:39,772 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RACE MODES.ULTRA
+15-10-28 00:59:39,772 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GRADE MANIA
+15-10-28 00:59:39,772 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GRADE MANIA 2
+15-10-28 00:59:39,774 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GRADE MANIA 3
+15-10-28 00:59:39,774 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.SCORE ATTACK
+15-10-28 00:59:39,774 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.SPEED MANIA
+15-10-28 00:59:39,774 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.SPEED MANIA 2
+15-10-28 00:59:39,774 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GARBAGE MANIA
+15-10-28 00:59:39,774 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.PHANTOM MANIA
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.FINAL
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.TIME ATTACK
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MANIA MODES.GEM MANIA
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RETRO MODES.RETRO MARATHON
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RETRO MODES.RETRO MASTERY
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: RETRO MODES.RETRO MANIA
+15-10-28 00:59:39,775 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.SQUARE
+15-10-28 00:59:39,776 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.DIG CHALLENGE
+15-10-28 00:59:39,776 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.VS-LINE RACE
+15-10-28 00:59:39,776 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.VS-DIG RACE
+15-10-28 00:59:39,776 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.VS-BATTLE
+15-10-28 00:59:39,776 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: MISC MODES.TOOL-VS MAP EDIT
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE 1P (RC2)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE 1P FEVER MARATHON (RC2)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS-BATTLE (RC1)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS FEVER MARATHON (RC1)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS DIG RACE (RC1)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE VS BOMB BATTLE (RC1)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: AVALANCHE.AVALANCHE-SPF VS-BATTLE (BETA)
+15-10-28 00:59:39,777 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: PHYSICIAN.PHYSICIAN (RC1)
+15-10-28 00:59:39,778 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: PHYSICIAN.PHYSICIAN VS-BATTLE (RC1)
+15-10-28 00:59:39,778 [main] DEBUG mu.nu.nullpo.gui.slick.StateSelectModeFolder: SPF.SPF VS-BATTLE (BETA)
+15-10-28 00:59:39,782 [main] INFO  mu.nu.nullpo.gui.slick.ControllerManager: Found 4 controllers from NullpoMinoSlick app
+15-10-28 00:59:39,783 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:0, AxisCount:0, ButtonCount:31
+15-10-28 00:59:39,783 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:1, AxisCount:0, ButtonCount:31
+15-10-28 00:59:39,783 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:2, AxisCount:0, ButtonCount:3
+15-10-28 00:59:39,783 [main] DEBUG mu.nu.nullpo.gui.slick.ControllerManager: ID:3, AxisCount:0, ButtonCount:24
+15-10-28 00:59:39,791 [main] INFO  mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading Image
+15-10-28 00:59:39,793 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: 29 block skins found
+15-10-28 00:59:39,794 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n0.png
+15-10-28 00:59:39,799 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s0.png
+15-10-28 00:59:39,801 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b0.png
+15-10-28 00:59:39,810 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n1.png
+15-10-28 00:59:39,815 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s1.png
+15-10-28 00:59:39,816 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b1.png
+15-10-28 00:59:39,821 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n2.png
+15-10-28 00:59:39,825 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s2.png
+15-10-28 00:59:39,826 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b2.png
+15-10-28 00:59:39,828 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n3.png
+15-10-28 00:59:39,829 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s3.png
+15-10-28 00:59:39,830 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b3.png
+15-10-28 00:59:39,832 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n4.png
+15-10-28 00:59:39,834 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s4.png
+15-10-28 00:59:39,835 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b4.png
+15-10-28 00:59:39,837 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n5.png
+15-10-28 00:59:39,839 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s5.png
+15-10-28 00:59:39,840 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b5.png
+15-10-28 00:59:39,842 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n6.png
+15-10-28 00:59:39,844 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s6.png
+15-10-28 00:59:39,844 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b6.png
+15-10-28 00:59:39,846 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n7.png
+15-10-28 00:59:39,848 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s7.png
+15-10-28 00:59:39,849 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b7.png
+15-10-28 00:59:39,851 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n8.png
+15-10-28 00:59:39,853 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s8.png
+15-10-28 00:59:39,854 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b8.png
+15-10-28 00:59:39,856 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n9.png
+15-10-28 00:59:39,861 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s9.png
+15-10-28 00:59:39,863 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b9.png
+15-10-28 00:59:39,878 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n10.png
+15-10-28 00:59:39,882 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s10.png
+15-10-28 00:59:39,883 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b10.png
+15-10-28 00:59:39,885 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n11.png
+15-10-28 00:59:39,886 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s11.png
+15-10-28 00:59:39,887 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b11.png
+15-10-28 00:59:39,890 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n12.png
+15-10-28 00:59:39,891 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s12.png
+15-10-28 00:59:39,893 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b12.png
+15-10-28 00:59:39,895 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n13.png
+15-10-28 00:59:39,896 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s13.png
+15-10-28 00:59:39,897 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b13.png
+15-10-28 00:59:39,899 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n14.png
+15-10-28 00:59:39,901 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s14.png
+15-10-28 00:59:39,902 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b14.png
+15-10-28 00:59:39,904 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n15.png
+15-10-28 00:59:39,906 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s15.png
+15-10-28 00:59:39,906 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b15.png
+15-10-28 00:59:39,909 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n16.png
+15-10-28 00:59:39,913 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s16.png
+15-10-28 00:59:39,914 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b16.png
+15-10-28 00:59:39,916 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n17.png
+15-10-28 00:59:39,917 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s17.png
+15-10-28 00:59:39,918 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b17.png
+15-10-28 00:59:39,921 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n18.png
+15-10-28 00:59:39,922 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s18.png
+15-10-28 00:59:39,924 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b18.png
+15-10-28 00:59:39,926 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n19.png
+15-10-28 00:59:39,927 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s19.png
+15-10-28 00:59:39,928 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b19.png
+15-10-28 00:59:39,931 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n20.png
+15-10-28 00:59:39,932 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s20.png
+15-10-28 00:59:39,934 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b20.png
+15-10-28 00:59:39,937 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n21.png
+15-10-28 00:59:39,938 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s21.png
+15-10-28 00:59:39,939 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b21.png
+15-10-28 00:59:39,941 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n22.png
+15-10-28 00:59:39,945 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s22.png
+15-10-28 00:59:39,947 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b22.png
+15-10-28 00:59:39,954 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n23.png
+15-10-28 00:59:39,966 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s23.png
+15-10-28 00:59:39,969 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b23.png
+15-10-28 00:59:39,983 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n24.png
+15-10-28 00:59:39,988 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s24.png
+15-10-28 00:59:39,991 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b24.png
+15-10-28 00:59:40,002 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n25.png
+15-10-28 00:59:40,004 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s25.png
+15-10-28 00:59:40,006 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b25.png
+15-10-28 00:59:40,008 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n26.png
+15-10-28 00:59:40,009 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s26.png
+15-10-28 00:59:40,010 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b26.png
+15-10-28 00:59:40,012 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n27.png
+15-10-28 00:59:40,016 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s27.png
+15-10-28 00:59:40,018 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b27.png
+15-10-28 00:59:40,033 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/normal/n28.png
+15-10-28 00:59:40,038 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/small/s28.png
+15-10-28 00:59:40,040 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/blockskin/big/b28.png
+15-10-28 00:59:40,050 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/font.png
+15-10-28 00:59:40,113 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/font_small.png
+15-10-28 00:59:40,118 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/title.png
+15-10-28 00:59:40,136 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/menu.png
+15-10-28 00:59:40,144 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/frame.png
+15-10-28 00:59:40,145 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/fieldbg2.png
+15-10-28 00:59:40,147 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/fieldbg2_small.png
+15-10-28 00:59:40,149 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/fieldbg2_big.png
+15-10-28 00:59:40,154 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break0_0.png
+15-10-28 00:59:40,163 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break0_1.png
+15-10-28 00:59:40,166 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break1_0.png
+15-10-28 00:59:40,177 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break1_1.png
+15-10-28 00:59:40,181 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break2_0.png
+15-10-28 00:59:40,189 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break2_1.png
+15-10-28 00:59:40,193 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break3_0.png
+15-10-28 00:59:40,202 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break3_1.png
+15-10-28 00:59:40,205 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break4_0.png
+15-10-28 00:59:40,214 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break4_1.png
+15-10-28 00:59:40,217 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break5_0.png
+15-10-28 00:59:40,226 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break5_1.png
+15-10-28 00:59:40,229 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break6_0.png
+15-10-28 00:59:40,239 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break6_1.png
+15-10-28 00:59:40,243 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break7_0.png
+15-10-28 00:59:40,253 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/break7_1.png
+15-10-28 00:59:40,257 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase0.png
+15-10-28 00:59:40,263 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase1.png
+15-10-28 00:59:40,266 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase2.png
+15-10-28 00:59:40,269 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase3.png
+15-10-28 00:59:40,272 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase4.png
+15-10-28 00:59:40,277 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase5.png
+15-10-28 00:59:40,280 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/perase6.png
+15-10-28 00:59:40,283 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back0.png
+15-10-28 00:59:40,310 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back1.png
+15-10-28 00:59:40,334 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back2.png
+15-10-28 00:59:40,352 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back3.png
+15-10-28 00:59:40,372 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back4.png
+15-10-28 00:59:40,393 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back5.png
+15-10-28 00:59:40,407 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back6.png
+15-10-28 00:59:40,417 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back7.png
+15-10-28 00:59:40,426 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back8.png
+15-10-28 00:59:40,441 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back9.png
+15-10-28 00:59:40,455 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back10.png
+15-10-28 00:59:40,475 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back11.png
+15-10-28 00:59:40,491 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back12.png
+15-10-28 00:59:40,508 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back13.png
+15-10-28 00:59:40,537 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back14.png
+15-10-28 00:59:40,557 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back15.png
+15-10-28 00:59:40,566 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back16.png
+15-10-28 00:59:40,584 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back17.png
+15-10-28 00:59:40,600 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back18.png
+15-10-28 00:59:40,614 [main] DEBUG mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading image from res/graphics/back19.png
+15-10-28 00:59:40,866 [main] INFO  Slick: Initialising sounds..
+15-10-28 00:59:40,903 [main] INFO  Slick: - Sound works
+15-10-28 00:59:40,904 [main] INFO  Slick: - 64 OpenAL source available
+15-10-28 00:59:40,904 [main] INFO  Slick: - Sounds source generated
+15-10-28 00:59:40,904 [main] INFO  mu.nu.nullpo.gui.slick.ResourceHolderSlick: Loading Sound Effect
+15-10-28 00:59:41,529 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
 java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
 	at java.io.FileOutputStream.open0(Native Method)
 	at java.io.FileOutputStream.open(Unknown Source)
@@ -223,7 +223,7 @@ java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find 
 	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
 	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
 	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
-15-10-27 19:53:33,058 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+15-10-28 00:59:41,532 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
 java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
 	at java.io.FileOutputStream.open0(Native Method)
 	at java.io.FileOutputStream.open(Unknown Source)
@@ -236,8 +236,8 @@ java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find
 	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
 	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
 	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
-15-10-27 19:53:33,068 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
-15-10-27 19:53:33,104 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+15-10-28 00:59:41,543 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 00:59:41,571 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
 java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
 	at java.io.FileOutputStream.open0(Native Method)
 	at java.io.FileOutputStream.open(Unknown Source)
@@ -250,7 +250,7 @@ java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find 
 	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
 	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
 	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
-15-10-27 19:53:33,105 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+15-10-28 00:59:41,572 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
 java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
 	at java.io.FileOutputStream.open0(Native Method)
 	at java.io.FileOutputStream.open(Unknown Source)
@@ -263,4 +263,1213 @@ java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find
 	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
 	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
 	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
-15-10-27 19:53:33,712 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: stopObserverClient called
+15-10-28 00:59:50,658 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigAISelect.updateImpl(StateConfigAISelect.java:286)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 00:59:50,658 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigAISelect.updateImpl(StateConfigAISelect.java:286)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 00:59:51,252 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 00:59:52,105 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 00:59:52,105 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 00:59:52,443 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 00:59:52,444 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 00:59:52,448 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 00:59:52,448 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 00:59:52,451 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 00:59:52,459 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 00:59:52,474 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :-267c3597d6893611
+15-10-28 00:59:53,039 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:07:37,417 [main] INFO  mu.nu.nullpo.game.event.EventReceiver: Saved replay file: replay/2015_10_28_01_07_37.rep
+15-10-28 01:09:11,960 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager reset()
+15-10-28 01:09:11,960 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :230f8a1e1ea60c76
+15-10-28 01:09:11,968 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:09:52,919 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:09:52,920 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:09:54,559 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:09:54,559 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:09:59,744 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:09:59,745 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:09:59,746 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:09:59,746 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:09:59,746 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:09:59,747 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 01:09:59,748 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :b408d72f1adf0a0
+15-10-28 01:09:59,761 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:01,802 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:10:01,802 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:10:02,880 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:02,881 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:03,560 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:03,561 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:03,562 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:10:03,562 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:10:03,562 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:10:03,562 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 01:10:03,563 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :978a8f10c0442e0
+15-10-28 01:10:03,577 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:06,725 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:10:06,725 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:10:09,609 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:09,610 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:11,160 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:11,161 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:11,161 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:10:11,161 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:10:11,161 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:10:11,161 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/StandardFastB.rul
+15-10-28 01:10:11,164 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :2380cc889520aac7
+15-10-28 01:10:11,178 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:27,848 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:10:27,848 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:10:31,226 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:31,226 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:33,317 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:33,317 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:33,317 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:10:33,317 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:10:33,318 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:10:33,318 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/StandardFriends.rul
+15-10-28 01:10:33,318 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :-d7e7c0b6470e066
+15-10-28 01:10:33,334 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:38,657 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:10:38,659 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:10:44,769 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigGeneral.updateImpl(StateConfigGeneral.java:488)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:10:44,770 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigGeneral.updateImpl(StateConfigGeneral.java:488)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:44,375 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:44,376 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:47,340 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:47,341 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:48,756 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:48,756 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:49,848 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:49,849 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:51,350 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:51,351 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigRuleSelect.onDecide(StateConfigRuleSelect.java:245)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:57,815 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigGameTuning.updateImpl(StateConfigGameTuning.java:461)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:11:57,815 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigGameTuning.updateImpl(StateConfigGameTuning.java:461)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:12:04,625 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigGameTuning.updateImpl(StateConfigGameTuning.java:461)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:12:04,626 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigGameTuning.updateImpl(StateConfigGameTuning.java:461)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:12:13,174 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:12:13,180 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:12:13,180 [main] INFO  mu.nu.nullpo.gui.slick.StateConfigGameTuning: Load rule options from config\rule\Standard.rul
+15-10-28 01:12:13,181 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :-252e7ad78e8f5f72
+15-10-28 01:12:25,526 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:13:15,563 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigKeyboard.onKey(StateConfigKeyboard.java:271)
+	at mu.nu.nullpo.gui.slick.StateConfigKeyboard.keyReleased(StateConfigKeyboard.java:230)
+	at org.newdawn.slick.state.StateBasedGame.keyReleased(StateBasedGame.java:458)
+	at org.newdawn.slick.Input.poll(Input.java:1196)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:635)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:15,564 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigKeyboard.onKey(StateConfigKeyboard.java:271)
+	at mu.nu.nullpo.gui.slick.StateConfigKeyboard.keyReleased(StateConfigKeyboard.java:230)
+	at org.newdawn.slick.state.StateBasedGame.keyReleased(StateBasedGame.java:458)
+	at org.newdawn.slick.Input.poll(Input.java:1196)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:635)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:20,211 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:13:22,258 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:22,258 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:24,614 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:24,615 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:24,615 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:13:24,615 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:13:24,615 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:13:24,616 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 01:13:24,616 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :338e9d882e644402
+15-10-28 01:13:24,631 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:36,351 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:13:36,351 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:13:42,513 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigAISelect.updateImpl(StateConfigAISelect.java:286)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:42,514 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigAISelect.updateImpl(StateConfigAISelect.java:286)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:43,398 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:13:44,681 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:44,682 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:45,022 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:45,022 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:13:45,022 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:13:45,022 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:13:45,023 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:13:45,023 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 01:13:45,024 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :-4bd217618f6dd947
+15-10-28 01:13:45,039 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:20:59,901 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:20:59,901 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:21:37,772 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:37,773 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:38,947 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:38,948 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:38,949 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:21:38,949 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:21:38,949 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:21:38,950 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 01:21:38,952 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :6f402fd05ea014c6
+15-10-28 01:21:40,662 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:43,111 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager shutdown()
+15-10-28 01:21:43,111 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:21:53,385 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateConfigGameTuning.updateImpl(StateConfigGameTuning.java:461)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:53,385 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateConfigGameTuning.updateImpl(StateConfigGameTuning.java:461)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:53,877 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: startObserverClient called
+15-10-28 01:21:55,123 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:55,124 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectMode.onDecide(StateSelectMode.java:199)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:55,378 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save Slick-specific config
+java.io.FileNotFoundException: config\setting\slick.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:442)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:55,378 [main] ERROR mu.nu.nullpo.gui.slick.NullpoMinoSlick: Failed to save global config
+java.io.FileNotFoundException: config\setting\global.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.saveConfig(NullpoMinoSlick.java:450)
+	at mu.nu.nullpo.gui.slick.StateSelectRuleFromList.onDecide(StateSelectRuleFromList.java:179)
+	at mu.nu.nullpo.gui.slick.DummyMenuChooseState.updateImpl(DummyMenuChooseState.java:94)
+	at mu.nu.nullpo.gui.slick.BaseGameState.update(BaseGameState.java:71)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:21:55,379 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager constructor called
+15-10-28 01:21:55,379 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager init()
+15-10-28 01:21:55,379 [main] DEBUG mu.nu.nullpo.game.subsystem.mode.NetDummyMode: modeInit() on NetDummyMode
+15-10-28 01:21:55,379 [main] INFO  mu.nu.nullpo.gui.slick.StateInGame: Load rule options from config/rule/Standard.rul
+15-10-28 01:21:55,379 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :c24e6d2dadbdc9e
+15-10-28 01:21:55,395 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:32:38,534 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.saveReplay(MarathonMode.java:725)
+	at mu.nu.nullpo.game.play.GameEngine.saveReplay(GameEngine.java:1649)
+	at mu.nu.nullpo.game.play.GameManager.saveReplay(GameManager.java:311)
+	at mu.nu.nullpo.game.play.GameEngine.statGameOver(GameEngine.java:3214)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1778)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:32:38,559 [main] INFO  mu.nu.nullpo.game.event.EventReceiver: Saved replay file: replay/2015_10_28_01_32_38.rep
+15-10-28 01:32:46,360 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager reset()
+15-10-28 01:32:46,360 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :-5f5653721b310a9e
+15-10-28 01:32:46,378 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:33:17,378 [main] DEBUG mu.nu.nullpo.game.play.GameManager: GameManager reset()
+15-10-28 01:33:17,379 [main] DEBUG mu.nu.nullpo.game.play.GameEngine: Player + 0Random seed :186e905751658332
+15-10-28 01:33:17,380 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.onSetting(MarathonMode.java:286)
+	at mu.nu.nullpo.game.play.GameEngine.statSetting(GameEngine.java:1905)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1747)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:40:13,526 [main] ERROR mu.nu.nullpo.game.event.EventReceiver: Failed to save mode config
+java.io.FileNotFoundException: config\setting\mode.cfg (The system cannot find the path specified)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at mu.nu.nullpo.game.event.EventReceiver.saveModeConfig(EventReceiver.java:893)
+	at mu.nu.nullpo.game.subsystem.mode.MarathonMode.saveReplay(MarathonMode.java:725)
+	at mu.nu.nullpo.game.play.GameEngine.saveReplay(GameEngine.java:1649)
+	at mu.nu.nullpo.game.play.GameManager.saveReplay(GameManager.java:311)
+	at mu.nu.nullpo.game.play.GameEngine.statGameOver(GameEngine.java:3214)
+	at mu.nu.nullpo.game.play.GameEngine.update(GameEngine.java:1778)
+	at mu.nu.nullpo.game.play.GameManager.updateAll(GameManager.java:290)
+	at mu.nu.nullpo.gui.slick.StateInGame.update(StateInGame.java:539)
+	at org.newdawn.slick.state.StateBasedGame.update(StateBasedGame.java:268)
+	at org.newdawn.slick.GameContainer.updateAndRender(GameContainer.java:657)
+	at org.newdawn.slick.AppGameContainer.gameLoop(AppGameContainer.java:412)
+	at org.newdawn.slick.AppGameContainer.start(AppGameContainer.java:322)
+	at mu.nu.nullpo.gui.slick.NullpoMinoSlick.main(NullpoMinoSlick.java:404)
+15-10-28 01:40:13,539 [main] INFO  mu.nu.nullpo.game.event.EventReceiver: Saved replay file: replay/2015_10_28_01_40_13.rep
+15-10-28 01:40:13,832 [main] DEBUG mu.nu.nullpo.gui.slick.NullpoMinoSlick: stopObserverClient called
