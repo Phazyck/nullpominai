@@ -104,6 +104,14 @@ public class NullpoMinoSlick extends StateBasedGame {
 	/** AppGameContainer */
 	public static AppGameContainer appGameContainer;
 
+	
+	
+	/** NOTE(oliver): This is our training states! */
+	public static dk.itu.ai.StateSelectTraining stateSelectTraining;
+	public static dk.itu.ai.StateInTraining stateInTraining;
+	
+	
+	
 	/** ãƒ­ãƒ¼ãƒ‰ç”»é�¢ã�®ã‚¹ãƒ†ãƒ¼ãƒˆ */
 	public static StateLoading stateLoading;
 
@@ -704,6 +712,9 @@ public class NullpoMinoSlick extends StateBasedGame {
 	 */
 	@Override
 	public void initStatesList(GameContainer container) throws SlickException {
+		
+		
+		// NOTE(oliver): Different game states are prepared here!
 		stateLoading = new StateLoading();
 		stateTitle = new StateTitle();
 		stateInGame = new StateInGame();
@@ -724,7 +735,11 @@ public class NullpoMinoSlick extends StateBasedGame {
 		stateConfigKeyboardReset = new StateConfigKeyboardReset();
 		stateSelectRuleFromList = new StateSelectRuleFromList();
 		stateSelectModeFolder = new StateSelectModeFolder();
-
+		// NOTE(oliver): Preparing our training state here!
+		stateSelectTraining = new dk.itu.ai.StateSelectTraining();
+		stateInTraining = new dk.itu.ai.StateInTraining();
+		
+		// NOTE(oliver): Different game states are added here!
 		addState(stateLoading);
 		addState(stateTitle);
 		addState(stateInGame);
@@ -745,6 +760,9 @@ public class NullpoMinoSlick extends StateBasedGame {
 		addState(stateConfigKeyboardReset);
 		addState(stateSelectRuleFromList);
 		addState(stateSelectModeFolder);
+		// NOTE(oliver): Adding our training state here!
+		addState(stateSelectTraining);
+		addState(stateInTraining);
 	}
 
 	/**
