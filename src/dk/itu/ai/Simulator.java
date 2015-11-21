@@ -23,48 +23,13 @@ public class Simulator {
 	
 	public static void main(String[] args) {
 		
-		
-		
-//		/* Shit stolen from GeneralUtil.java:265 */ 
-//		CustomProperties prop = new CustomProperties();
-//
-//		try {
-//			FileInputStream in = new FileInputStream(filename);
-//			prop.load(in);
-//			in.close();
-//		} catch (Exception e) {
-//			System.out.println("Failed to load rule from " + filename);
-//		}
-//
-//		RuleOptions ruleopt = new RuleOptions();
-//		ruleopt.readProperty(prop, 0);
-//		/*----------------------------------------*/
-//		
-//		
-//		GameManager gManager = new GameManager(new EventReceiver());
-//		gManager.backgroundStatus = new BackgroundStatus();
-////		gManager.bgmStatus = new BGMStatus();
-//		gManager.mode = new GradeMania3Mode();
-//		gManager.modeConfig = prop;
-//		
-//		
-//		GameEngine gEngine = new GameEngine(
-//				gManager,
-//				0,
-//				ruleopt,
-//				new ClassicPlusWallkick(),
-//				new History6RollsRandomizer());
-
 		GameEngine gEngine = makeNewGame(
 				new GradeMania3Mode(), 
 				filename, 
 				new BasicAI());
 		
-		
-		
 		runGame(gEngine);
 		
-//		gEngine.stat == 
 	}
 	
 	/**
