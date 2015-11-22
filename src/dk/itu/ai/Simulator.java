@@ -25,7 +25,6 @@ public class Simulator {
 		PropertyConfigurator.configure("config/etc/log_slick.cfg");
 		Log.setLogSystem(new LogSystemLog4j());
 		
-		
 		// NOTE(oliver): For other GameModes, look inside src/mu/nu/nullpo/game/subsystem/mode
 		GameMode mode = 
 			new GradeMania3Mode();
@@ -44,13 +43,15 @@ public class Simulator {
 		// Actual simulation.
 		Simulator simulator = new Simulator(mode, rulePath, ai);
 		
-		simulator.runSimulations(5);
+		simulator.setCustomSeed("-2fac0ecd9c988463");
 		
+		simulator.runSimulations(100);
 	}
 	
 	private GameManager gameManager;
 	private GameEngine gameEngine;
-
+	private String customSeed = null;
+	
 	/**
 	 * Make a new Simulator object, ready to go.
 	 * @param mode Game mode Object
@@ -114,6 +115,12 @@ public class Simulator {
 		// Start a new game.
 		gameEngine.init();
 		
+		if(customSeed != null)
+		{
+			gameEngine.randSeed = Long.parseLong(customSeed, 16);
+			log.debug("Engine seed overwritten with " + customSeed);
+		}
+		
 		// You have to spend at least 5 frames in the menu before you can start the game.
 		for(int i = 0; i < 5; ++i)
 		{
@@ -145,6 +152,16 @@ public class Simulator {
 			log.info(String.format("-------- Simulation %d of %d --------", i, count));
 			runSimulation();
 		}
+	}
+	
+	/**
+	 * Sets a custom random seed for use in simulations. 
+	 * 
+	 * @param seed The seed.
+	 */
+	public void setCustomSeed(String seed) 
+	{
+		customSeed = seed;
 	}
 
 	static Logger log = Logger.getLogger(Simulator.class);
