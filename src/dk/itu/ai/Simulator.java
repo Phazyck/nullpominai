@@ -14,33 +14,42 @@ import mu.nu.nullpo.game.subsystem.ai.BasicAI;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 import mu.nu.nullpo.game.subsystem.mode.GameMode;
 import mu.nu.nullpo.game.subsystem.mode.GradeMania3Mode;
-import mu.nu.nullpo.game.subsystem.wallkick.Wallkick;
 import mu.nu.nullpo.gui.slick.LogSystemLog4j;
 import mu.nu.nullpo.util.GeneralUtil;
-import net.omegaboshi.nullpomino.game.subsystem.randomizer.Randomizer;
 
 public class Simulator {
 
 	public static void main(String[] args) {
 		
+		// Logger initialization.
 		PropertyConfigurator.configure("config/etc/log_slick.cfg");
 		Log.setLogSystem(new LogSystemLog4j());
 		
+		
+		// NOTE(oliver): For other GameModes, look inside src/mu/nu/nullpo/game/subsystem/mode
 		GameMode mode = 
 			new GradeMania3Mode();
 		
+		
+		// NOTE(oliver): For other rules, look inside config/rule.
 		String rulePath = 
 			"config\\rule\\Classic3.rul";
 		
+		
+		// NOTE(oliver): For other AIs, look inside src/mu/nu/nullpo/game/subsystem/ai, or src/dk/itu/ai
 		DummyAI ai = 
 			new BasicAI();
 		
+		
+		// Actual simulation.
 		Simulator simulator = new Simulator(mode, rulePath, ai);
 		
 		simulator.runSimulations(5);
+		
 	}
 	
-	private GameEngine engine;
+	private GameManager gameManager;
+	private GameEngine gameEngine;
 
 	/**
 	 * Make a new Simulator object, ready to go.
@@ -65,35 +74,36 @@ public class Simulator {
 		 * NOTE(oliver): This code is a domain-specific version of 
 		 * mu.nu.nullpo.gui.slick.StateInGame.startNewGame(String strRulePath)
 		 */
-		GameManager gameManager = new GameManager();
+		
+		// Manager setup
+		gameManager = new GameManager();
 		
 		gameManager.mode = mode;
 		
 		gameManager.init();
 		
-		engine = gameManager.engine[0]; 
-		
-		// Rules
-		engine.ruleopt = rules;
-		
-		// Randomizer
-		Randomizer randomizerObject = GeneralUtil.loadRandomizer(rules.strRandomizer);
-		engine.randomizer = randomizerObject;
-
-		// Wallkick	
-		Wallkick wallkickObject = GeneralUtil.loadWallkick(rules.strWallkick);
-		engine.wallkick = wallkickObject;
-		
-		// AI
-		engine.ai = ai;
-		engine.aiMoveDelay = 0;
-		engine.aiThinkDelay = 0;
-		engine.aiUseThread = false;
-		engine.aiShowHint = false;
-		engine.aiPrethink = false;
-		engine.aiShowState = false;
-		
 		gameManager.showInput = false;
+		
+		// Engine setup
+		gameEngine = gameManager.engine[0]; 
+		
+		// - Rules
+		gameEngine.ruleopt = rules;
+		
+		// - Randomizer
+		gameEngine.randomizer = GeneralUtil.loadRandomizer(rules.strRandomizer);
+
+		// - Wallkick	
+		gameEngine.wallkick = GeneralUtil.loadWallkick(rules.strWallkick);
+		
+		// - AI
+		gameEngine.ai = ai;
+		gameEngine.aiMoveDelay = 0;
+		gameEngine.aiThinkDelay = 0;
+		gameEngine.aiUseThread = false;
+		gameEngine.aiShowHint = false;
+		gameEngine.aiPrethink = false;
+		gameEngine.aiShowState = false;
 	}
 
 	/**
@@ -101,25 +111,28 @@ public class Simulator {
 	 */
 	public void runSimulation() 
 	{
-		// Called at initialization
-		engine.init();
+		// Start a new game.
+		gameEngine.init();
 		
-		// Have to spend at least 5 frames in the menu before you can start the game
+		// You have to spend at least 5 frames in the menu before you can start the game.
 		for(int i = 0; i < 5; ++i)
 		{
-			engine.update();
+			gameEngine.update();
 		}
-		engine.ctrl.setButtonPressed(Controller.BUTTON_A); // Press A to start game
-		engine.update(); 
-		engine.ctrl.setButtonUnpressed(Controller.BUTTON_A);
 		
-		while (engine.stat != Status.GAMEOVER) {
-			engine.update();
+		// Press and release A to start game.
+		gameEngine.ctrl.setButtonPressed(Controller.BUTTON_A); 
+		gameEngine.update(); 
+		gameEngine.ctrl.setButtonUnpressed(Controller.BUTTON_A);
+		
+		// Run the game until Game Over.
+		while (gameEngine.stat != Status.GAMEOVER) {
+			gameEngine.update();
 //			logGameState();
 		}
 
 		log.info("Game is over!");
-		log.info("Final Level: " + engine.statistics.level);
+		log.info("Final Level: " + gameEngine.statistics.level);
 	}
 	
 	/**
@@ -129,7 +142,6 @@ public class Simulator {
 	{
 		for(int i = 1; i <= count; ++i)
 		{
-			
 			log.info(String.format("-------- Simulation %d of %d --------", i, count));
 			runSimulation();
 		}
@@ -139,14 +151,14 @@ public class Simulator {
 	
 	private void logGameState()
 	{
-		int level = engine.statistics.level;
+		int level = gameEngine.statistics.level;
 		
 		String piece = 
-			engine.nowPieceObject == null 
+			gameEngine.nowPieceObject == null 
 				? " " 
-				: Piece.PIECE_NAMES[engine.nowPieceObject.id];
+				: Piece.PIECE_NAMES[gameEngine.nowPieceObject.id];
 		
-		String state = engine.stat.toString();
+		String state = gameEngine.stat.toString();
 		
 		log.info(String.format("\tLevel: %3d \tPiece: %s \tState: %s", level, piece, state));
 	}
