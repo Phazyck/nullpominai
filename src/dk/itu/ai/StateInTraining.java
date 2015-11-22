@@ -21,13 +21,11 @@ import org.newdawn.slick.state.StateBasedGame;
 
 /**
  * Training game screen state (AI play)
- * 
- * prop.getProperty("option.maxfps", 60);
- * prop.setProperty("option.maxfps", maxfps);
  */
 public class StateInTraining extends BasicGameState {
 	
 	public static final int TRAINING_ROUNDS = 10;
+	public static final int CUSTOM_FPS = 6000;
 	public static final String CUSTOM_SEED = "-2fac0ecd9c988463";
 	
 	/** This state's ID */
@@ -100,7 +98,7 @@ public class StateInTraining extends BasicGameState {
 		cursor = 0;
 		
 		// NOTE(oliver): Removing FPS cap for training games.
-		NullpoMinoSlick.altMaxFPS = 6000;
+		NullpoMinoSlick.altMaxFPS = CUSTOM_FPS;
 		
 		prevInGameFlag = false;
 		
