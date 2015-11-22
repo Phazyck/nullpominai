@@ -3,6 +3,7 @@ package dk.itu.ai;
 import org.apache.log4j.Logger;
 
 import mu.nu.nullpo.game.component.RuleOptions;
+import mu.nu.nullpo.game.play.GameEngine;
 import mu.nu.nullpo.game.play.GameEngine.Status;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 import mu.nu.nullpo.game.subsystem.mode.GameMode;
@@ -27,6 +28,7 @@ import org.newdawn.slick.state.StateBasedGame;
 public class StateInTraining extends BasicGameState {
 	
 	public static final int TRAINING_ROUNDS = 10;
+	public static final String CUSTOM_SEED = "-2fac0ecd9c988463";
 	
 	/** This state's ID */
 	public static final int ID = 421;
@@ -204,9 +206,24 @@ public class StateInTraining extends BasicGameState {
 
 			// Called at initialization
 			gameManager.engine[i].init();
+			forceCustomSeed();
 		}
 
 		updateTitleBarCaption();
+	}
+	
+	private void forceCustomSeed()
+	{
+		if(CUSTOM_SEED == null)
+		{
+			return;
+		}
+		
+		for (int i = 0; i < gameManager.getPlayers(); i++) {
+			gameManager.engine[i].randSeed = Long.parseLong(CUSTOM_SEED, 16);
+		}
+		
+		log.debug("Engine seed overwritten with " + CUSTOM_SEED);
 	}
 
 	/**
@@ -400,7 +417,7 @@ public class StateInTraining extends BasicGameState {
 			return;
 		}
 		
-		
+		log.info("Final Level: " + gameManager.engine[0].statistics.level);
 		
 		trainingRound++;
 		GameKeySlick.gamekey[0].setInputState(GameKeySlick.BUTTON_RETRY, 1);
@@ -512,6 +529,7 @@ public class StateInTraining extends BasicGameState {
 					ResourceHolderSlick.bgmStop();
 					pause = false;
 					gameManager.reset();
+					forceCustomSeed();
 				} else if (cursor == 2) {
 					// End
 					ResourceHolderSlick.bgmStop();
@@ -610,6 +628,7 @@ public class StateInTraining extends BasicGameState {
 				ResourceHolderSlick.bgmStop();
 				pause = false;
 				gameManager.reset();
+				forceCustomSeed();
 			}
 
 			// Return to title
