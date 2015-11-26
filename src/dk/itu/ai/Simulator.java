@@ -37,7 +37,7 @@ public class Simulator {
 		
 		// NOTE(oliver): For other AIs, look inside src/mu/nu/nullpo/game/subsystem/ai, or src/dk/itu/ai
 		DummyAI ai = 
-			new BasicAI();
+			new BasicAIProxy();
 		
 		
 		// Actual simulation.

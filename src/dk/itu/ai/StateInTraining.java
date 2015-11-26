@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 import mu.nu.nullpo.game.component.RuleOptions;
 import mu.nu.nullpo.game.play.GameEngine;
 import mu.nu.nullpo.game.play.GameEngine.Status;
+import mu.nu.nullpo.game.subsystem.ai.BasicAI;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 import mu.nu.nullpo.game.subsystem.mode.GameMode;
 import mu.nu.nullpo.game.subsystem.wallkick.Wallkick;
@@ -25,7 +26,7 @@ import org.newdawn.slick.state.StateBasedGame;
 public class StateInTraining extends BasicGameState {
 	
 	public static final int TRAINING_ROUNDS = 10;
-	public static final int CUSTOM_FPS = 6000;
+	public static final int CUSTOM_FPS = 60;
 	public static final String CUSTOM_SEED = "-2fac0ecd9c988463";
 	
 	/** This state's ID */
@@ -192,6 +193,7 @@ public class StateInTraining extends BasicGameState {
 			String aiName = NullpoMinoSlick.propGlobal.getProperty(i + ".ai", "");
 			if (aiName.length() > 0) {
 				DummyAI aiObj = GeneralUtil.loadAIPlayer(aiName);
+				aiObj = new BasicAIProxy();
 				gameManager.engine[i].ai = aiObj;
 				gameManager.engine[i].aiMoveDelay = NullpoMinoSlick.propGlobal.getProperty(i + ".aiMoveDelay", 0);
 				gameManager.engine[i].aiThinkDelay = NullpoMinoSlick.propGlobal.getProperty(i + ".aiThinkDelay", 0);
@@ -339,13 +341,13 @@ public class StateInTraining extends BasicGameState {
 	 * Draw the screen
 	 */
 	public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
-		
+		/*
 		if (!container.hasFocus()) {
 			if (!NullpoMinoSlick.alternateFPSTiming)
 				NullpoMinoSlick.alternateFPSSleep(true);
 			return;
 		}
-
+		*/
 		
 		// Game screen
 		if (gameManager != null) {
