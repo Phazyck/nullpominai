@@ -250,7 +250,7 @@ public static void main( String[] args ) throws Throwable {
 //			System.exit( -1 );
 //		}
 
-		Properties props = new Properties( "xor.properties" );
+		Properties props = new Properties( "nullpomino.properties" );
 		Evolver evolver = new Evolver();
 		evolver.init( props );
 		evolver.run();
