@@ -1,0 +1,8 @@
+<chromosome id="1141" primary-parent-id="270"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="3.8562836885474123"/>
+<connection id="5" src-id="1" dest-id="3" weight="0.43639863849719074"/>
+<connection id="6" src-id="2" dest-id="3" weight="0.501984786200123"/>
+</chromosome>

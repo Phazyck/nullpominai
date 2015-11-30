@@ -1,0 +1,13 @@
+<chromosome id="1139" primary-parent-id="1024" secondary-parent-id="940"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="1.3991874255914154"/>
+<connection id="5" src-id="1" dest-id="3" weight="-0.4332450333062605"/>
+<neuron id="166" type="hid" activation="sigmoid"/>
+<connection id="167" src-id="2" dest-id="166" weight="-5.298098573182552"/>
+<neuron id="671" type="hid" activation="sigmoid"/>
+<connection id="672" src-id="166" dest-id="671" weight="2.3918304922816445"/>
+<connection id="673" src-id="671" dest-id="3" weight="3.372213556150136"/>
+<connection id="799" src-id="2" dest-id="671" weight="-3.959686187262296"/>
+</chromosome>

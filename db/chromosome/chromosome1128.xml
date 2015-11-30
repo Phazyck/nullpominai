@@ -1,0 +1,18 @@
+<chromosome id="1128" primary-parent-id="998"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<neuron id="166" type="hid" activation="sigmoid"/>
+<connection id="168" src-id="166" dest-id="3" weight="-1.8630989797786537"/>
+<neuron id="293" type="hid" activation="sigmoid"/>
+<connection id="294" src-id="0" dest-id="293" weight="-6.178378270962419"/>
+<neuron id="544" type="hid" activation="sigmoid"/>
+<connection id="545" src-id="1" dest-id="544" weight="0.5199391352856508"/>
+<connection id="546" src-id="544" dest-id="3" weight="-2.3193230321627007"/>
+<neuron id="674" type="hid" activation="sigmoid"/>
+<connection id="675" src-id="2" dest-id="674" weight="-5.992038594638995"/>
+<connection id="676" src-id="674" dest-id="166" weight="4.878650334401534"/>
+<neuron id="934" type="hid" activation="sigmoid"/>
+<connection id="935" src-id="293" dest-id="934" weight="0.47655771117998325"/>
+<connection id="936" src-id="934" dest-id="3" weight="0.04817613855285985"/>
+</chromosome>

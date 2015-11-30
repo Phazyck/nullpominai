@@ -1,0 +1,12 @@
+<chromosome id="1092" primary-parent-id="908" secondary-parent-id="923"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="5" src-id="1" dest-id="3" weight="-1.3874155858810229"/>
+<neuron id="166" type="hid" activation="sigmoid"/>
+<connection id="167" src-id="2" dest-id="166" weight="0.5692792517704577"/>
+<connection id="168" src-id="166" dest-id="3" weight="2.493706879776674"/>
+<neuron id="293" type="hid" activation="sigmoid"/>
+<connection id="294" src-id="0" dest-id="293" weight="-2.7097210574461927"/>
+<connection id="295" src-id="293" dest-id="3" weight="1.930799261267992"/>
+</chromosome>

@@ -1,0 +1,12 @@
+<chromosome id="978" primary-parent-id="834"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="5.275791129436922"/>
+<connection id="5" src-id="1" dest-id="3" weight="2.803374271988883"/>
+<neuron id="166" type="hid" activation="sigmoid"/>
+<connection id="167" src-id="2" dest-id="166" weight="3.3472015048616433"/>
+<neuron id="671" type="hid" activation="sigmoid"/>
+<connection id="672" src-id="166" dest-id="671" weight="-2.7216848289897557"/>
+<connection id="673" src-id="671" dest-id="3" weight="1.735425711553782"/>
+</chromosome>

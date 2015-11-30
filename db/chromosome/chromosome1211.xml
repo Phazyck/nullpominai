@@ -1,0 +1,12 @@
+<chromosome id="1211" primary-parent-id="1081"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="8.913853480901997"/>
+<connection id="5" src-id="1" dest-id="3" weight="3.856861797495025"/>
+<neuron id="166" type="hid" activation="sigmoid"/>
+<connection id="167" src-id="2" dest-id="166" weight="4.17442948850848"/>
+<neuron id="671" type="hid" activation="sigmoid"/>
+<connection id="672" src-id="166" dest-id="671" weight="0.6356494560725561"/>
+<connection id="673" src-id="671" dest-id="3" weight="-2.233467379683286"/>
+</chromosome>
