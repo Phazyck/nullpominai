@@ -1,8 +1,8 @@
-<chromosome id="270" primary-parent-id="149" secondary-parent-id="95"><neuron id="0" type="in" activation="linear"/>
+<chromosome id="270" primary-parent-id="90" secondary-parent-id="152"><neuron id="0" type="in" activation="linear"/>
 <neuron id="1" type="in" activation="linear"/>
 <neuron id="2" type="in" activation="linear"/>
 <neuron id="3" type="out" activation="sigmoid"/>
-<connection id="4" src-id="0" dest-id="3" weight="0.7513664960861206"/>
-<connection id="5" src-id="1" dest-id="3" weight="-0.6667517930856572"/>
-<connection id="6" src-id="2" dest-id="3" weight="-0.43601667881011963"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.2049999237060547"/>
+<connection id="5" src-id="1" dest-id="3" weight="0.33844611928924395"/>
+<connection id="6" src-id="2" dest-id="3" weight="-0.07141292095184326"/>
 </chromosome>

@@ -1,0 +1,8 @@
+<chromosome id="209" primary-parent-id="62" secondary-parent-id="109"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.85293663305408"/>
+<connection id="5" src-id="1" dest-id="3" weight="-0.25687944889068604"/>
+<connection id="6" src-id="2" dest-id="3" weight="-1.7826503651754595"/>
+</chromosome>

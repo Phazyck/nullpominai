@@ -1,0 +1,10 @@
+<chromosome id="309" primary-parent-id="219"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="0.9999647780843853"/>
+<connection id="5" src-id="1" dest-id="3" weight="-3.0102123372926255"/>
+<neuron id="164" type="hid" activation="sigmoid"/>
+<connection id="165" src-id="2" dest-id="164" weight="-0.11948565813997658"/>
+<connection id="166" src-id="164" dest-id="3" weight="-2.589062160452888"/>
+</chromosome>
