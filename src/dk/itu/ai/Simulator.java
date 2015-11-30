@@ -1,5 +1,7 @@
 package dk.itu.ai;
 
+import java.lang.reflect.Field;
+
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.newdawn.slick.util.Log;
@@ -51,6 +53,48 @@ public class Simulator {
 	private GameManager gameManager;
 	private GameEngine gameEngine;
 	private String customSeed = null;
+	
+	/**
+	 * Really ugly and temporary
+	 * @return
+	 */
+	public int getGM3Grade(){
+		GradeMania3Mode gm3m = (GradeMania3Mode) gameEngine.owner.mode;
+		Field field;
+		try {
+			field = gm3m.getClass().getDeclaredField("grade");
+			return field.getInt(gm3m);
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		
+		return -1;
+	}
+	
+	/**
+	 * Really ugly and temporary
+	 * @return
+	 */
+	public int getGM3Level(){
+		GradeMania3Mode gm3m = (GradeMania3Mode) gameEngine.owner.mode;
+		Field field;
+		try {
+			field = gm3m.getClass().getDeclaredField("internalLevel");
+			return field.getInt(gm3m);
+		} catch (NoSuchFieldException | SecurityException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		}
+		
+		return -1;
+	}
 	
 	/**
 	 * Make a new Simulator object, ready to go.
