@@ -63,6 +63,7 @@ public class Simulator {
 		Field field;
 		try {
 			field = gm3m.getClass().getDeclaredField("grade");
+			field.setAccessible(true);
 			return field.getInt(gm3m);
 		} catch (NoSuchFieldException | SecurityException e) {
 			e.printStackTrace();
@@ -84,6 +85,7 @@ public class Simulator {
 		Field field;
 		try {
 			field = gm3m.getClass().getDeclaredField("internalLevel");
+			field.setAccessible(true);
 			return field.getInt(gm3m);
 		} catch (NoSuchFieldException | SecurityException e) {
 			e.printStackTrace();
@@ -94,6 +96,10 @@ public class Simulator {
 		}
 		
 		return -1;
+	}
+	
+	public int getLevel() {
+		return gameEngine.statistics.level;
 	}
 	
 	/**
@@ -182,8 +188,8 @@ public class Simulator {
 //			logGameState();
 		}
 
-		log.info("Game is over!");
-		log.info("Final Level: " + gameEngine.statistics.level);
+//		log.info("Game is over!");
+//		log.info("Final Level: " + gameEngine.statistics.level);
 	}
 	
 	/**

@@ -13,12 +13,16 @@ import com.anji.integration.Activator;
 import com.anji.integration.ActivatorTranscriber;
 import com.anji.integration.TargetFitnessFunction;
 import com.anji.integration.TranscriberException;
+import com.anji.tournament.PlayerTranscriber;
 import com.anji.util.Configurable;
 import com.anji.util.Properties;
 
 public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 
 	private static final long serialVersionUID = 1L;
+	
+	private final static String TRANSCRIBER_CLASS_KEY = "nullpominai.transcriber";
+	
 
 	private ActivatorTranscriber activatorFactory;
 
@@ -26,8 +30,7 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 	
 	@Override
 	public void init(Properties props) throws Exception {
-		// TODO Auto-generated method stub
-		
+		activatorFactory = (ActivatorTranscriber) props.newObjectProperty( TRANSCRIBER_CLASS_KEY );
 	}
 
 	@Override
@@ -43,7 +46,7 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 				activator = activatorFactory.newActivator( chromosome );
 				simulation = new Simulator(simulationMode, simulationRulePath, new BasicNeatAI(activator));
 				simulation.runSimulation();
-				int fitness = simulation.getGM3Level();
+				int fitness = simulation.getLevel();
 				chromosome.setFitnessValue(fitness);
 			} catch (TranscriberException e) {
 				logger.warn( "transcriber error: " + e.getMessage() );

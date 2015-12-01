@@ -32,7 +32,7 @@ public class BasicNeatAI extends BasicAI {
 
 		// Find and Execute move with highest score
 		Move maxMove = null;
-		double maxScore = Double.MIN_VALUE;
+		double maxScore = Double.NEGATIVE_INFINITY;
 		for (Move move : moves) {
 			if (move.score > maxScore) {
 				maxMove = move;
@@ -119,19 +119,20 @@ public class BasicNeatAI extends BasicAI {
 		int highestBlockY = Integer.MAX_VALUE;
 		
 		for (int x = 0; x < 10; x++) {
-			int rowHeight = field.getHighestBlockY(x);
-			result[x] = rowHeight;
-			highestBlockY = Math.min(highestBlockY, rowHeight);
+			int rowHeight = field.getHighestBlockY(x); // getHighestBLockY returns -1 if no blocks are present, very inconverinienentnte
+			int y = rowHeight < 0 ? 20 : rowHeight;
+			result[x] = y;
+//			highestBlockY = Math.min(highestBlockY, y);
 		}
 		
-		assert(highestBlockY >= 0);
-		assert(highestBlockY < 20);
+//		assert(highestBlockY >= 0);
+//		assert(highestBlockY < 20);
 		
-		for (int x = 0; x < 10; x++) {
-			result[x] -= highestBlockY;
-			
-			assert(result[x] >= 0);
-		}
+//		for (int x = 0; x < 10; x++) {
+//			result[x] -= highestBlockY;
+//			
+//			assert(result[x] >= 0);
+//		}
 		
 		result[10] = field.getHighestBlockY();
 		
