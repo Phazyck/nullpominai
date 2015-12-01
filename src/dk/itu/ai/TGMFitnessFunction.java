@@ -28,6 +28,9 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 
 	private static Logger logger = Logger.getLogger( TargetFitnessFunction.class );
 	
+	private static final String[] FITNESS_TEST_SEEDS = {"15478945", "897494638", "4697358"}; // I facerolled my numpad, sue me!  -Kas
+	
+	
 	@Override
 	public void init(Properties props) throws Exception {
 		activatorFactory = (ActivatorTranscriber) props.newObjectProperty( TRANSCRIBER_CLASS_KEY );
@@ -44,9 +47,20 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 			Activator activator;
 			try {
 				activator = activatorFactory.newActivator( chromosome );
-				simulation = new Simulator(simulationMode, simulationRulePath, new BasicNeatAI(activator));
-				simulation.runSimulation();
-				int fitness = simulation.getLevel();
+				
+				// Get average fitness over all test runs
+				int fitness = 0;
+				
+				int total = 0;
+				for (String seed : FITNESS_TEST_SEEDS) {
+					simulation = new Simulator(simulationMode, simulationRulePath, new BasicNeatAI(activator));
+					simulation.setCustomSeed(seed);
+					simulation.runSimulation();
+					total += simulation.getLevel();
+				}
+				
+				fitness = total / FITNESS_TEST_SEEDS.length;
+				
 				chromosome.setFitnessValue(fitness);
 			} catch (TranscriberException e) {
 				logger.warn( "transcriber error: " + e.getMessage() );
