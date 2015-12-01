@@ -1,0 +1,8 @@
+<chromosome id="169" primary-parent-id="90" secondary-parent-id="118"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="-5.2770450090089085"/>
+<connection id="5" src-id="1" dest-id="3" weight="1.124400083052973"/>
+<connection id="6" src-id="2" dest-id="3" weight="-1.8990127834719395"/>
+</chromosome>

@@ -1,0 +1,8 @@
+<chromosome id="335" primary-parent-id="184" secondary-parent-id="276"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="1.3644064025208682"/>
+<connection id="5" src-id="1" dest-id="3" weight="-2.054105364567013"/>
+<connection id="6" src-id="2" dest-id="3" weight="-0.4143183243435792"/>
+</chromosome>

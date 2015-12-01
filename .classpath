@@ -12,5 +12,17 @@
 	<classpathentry kind="lib" path="lib/slick.jar"/>
 	<classpathentry kind="lib" path="lib/swing-layout-1.0.4.jar"/>
 	<classpathentry kind="lib" path="lib/swing-worker-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/anji.jar"/>
+	<classpathentry kind="lib" path="lib/clibwrapper_jiio.jar"/>
+	<classpathentry kind="lib" path="lib/hb16.jar"/>
+	<classpathentry kind="lib" path="lib/jai_imageio.jar"/>
+	<classpathentry kind="lib" path="lib/jakarta-regexp-1.3.jar"/>
+	<classpathentry kind="lib" path="lib/jcommon.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart.jar"/>
+	<classpathentry kind="lib" path="lib/jgap.jar"/>
+	<classpathentry kind="lib" path="lib/jmagick.jar"/>
+	<classpathentry kind="lib" path="lib/junit.jar"/>
+	<classpathentry kind="lib" path="lib/log4j.jar"/>
+	<classpathentry kind="lib" path="lib/mlibwrapper_jai.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

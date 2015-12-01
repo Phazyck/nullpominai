@@ -1,0 +1,8 @@
+<chromosome id="278" primary-parent-id="50" secondary-parent-id="135"><neuron id="0" type="in" activation="linear"/>
+<neuron id="1" type="in" activation="linear"/>
+<neuron id="2" type="in" activation="linear"/>
+<neuron id="3" type="out" activation="sigmoid"/>
+<connection id="4" src-id="0" dest-id="3" weight="-0.8941305875778198"/>
+<connection id="5" src-id="1" dest-id="3" weight="0.9676624536514282"/>
+<connection id="6" src-id="2" dest-id="3" weight="-1.061364199442386"/>
+</chromosome>
