@@ -235,6 +235,7 @@ private static void logConclusion( int generationOfFirstSolution, Chromosome cha
 	logger.info( "champ # hidden nodes == "
 			+ NeatChromosomeUtility.getNeuronList( champ.getAlleles(), NeuronType.HIDDEN ).size() );
 	logger.info( "champ ID == " + champ.getId().toString() );
+	logger.info( "champ Fitness == " + champ.getFitnessValue() );
 }
 
 /**

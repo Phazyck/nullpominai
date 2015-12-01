@@ -80,7 +80,7 @@ public Properties( java.util.Properties values ) {
 public Properties( String resource ) throws IOException {
 	super();
 	loadFromResource( resource );
-	logger.info( "loaded properties from " + resource );
+//	logger.info( "loaded properties from " + resource );
 }
 
 /**
@@ -549,7 +549,7 @@ public Class getClassProperty( String key ) {
 		String value = super.getProperty( key );
 		if ( value == null )
 			throw new IllegalArgumentException( "no value for " + key );
-		log( key, value, null );
+//		log( key, value, null );
 		Class myClass = Class.forName( value );
 		return myClass;
 	}

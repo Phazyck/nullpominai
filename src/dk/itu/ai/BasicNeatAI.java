@@ -1,6 +1,5 @@
 package dk.itu.ai;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +15,7 @@ import com.anji.persistence.FilePersistence;
 import com.anji.persistence.Persistence;
 import com.anji.util.Properties;
 
+import dk.itu.ai.stimulus.StimulusGenerator;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
@@ -23,30 +23,55 @@ import mu.nu.nullpo.game.subsystem.ai.BasicAI;
 
 public class BasicNeatAI extends BasicAI {
 
+	/**
+	 * Property key for Stimulus generation object
+	 *  When changing this object, make sure that the property "stimulus.size"
+	 *  in the properties file is set to the corresponding value as well.
+	 *  The corresponding Stimulus class should specify this value. 
+	 */
+	private final static String STIMULUS_CLASS_KEY = "nullpominai.stimulusgenerator";
+
+	StimulusGenerator stimulusGenerator;
+
 	// Values for loading neural networks
 	private final static String TRANSCRIBER_CLASS_KEY = "nullpominai.transcriber";
-	private final static String CHROMOSONE_ID = "20603";
+	private final static String CHROMOSONE_ID_KEY = "nullpominai.chromosone.id";
+
+	Properties properties;
+
 
 	@Override
 	public String getName() {
 		return "NeatAI";
 	}
-	
-	
+
 	// Neural Network activation object
 	private Activator networkActivator;
-	
+
 	/**
 	 * This constructor should only be called by the game
 	 */
 	public BasicNeatAI() {
 		this(null);
 	}
-	
+
+	/**
+	 * This constructor intended for when used as part of fitness evaluation during evolution
+	 * @param ac Pre-initialized network activator
+	 */
 	public BasicNeatAI(Activator ac) {
 		networkActivator = ac;
+
+		try {
+			properties = new Properties( "nullpomino.properties" );
+			stimulusGenerator = (StimulusGenerator) properties.newObjectProperty(STIMULUS_CLASS_KEY);
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); // TODO figure out to do something smarter here? 
+		}
 	}
-	
+
 	/**
 	 * This is for enabling playing with a specific chromosone 
 	 */
@@ -56,35 +81,35 @@ public class BasicNeatAI extends BasicAI {
 
 		// Load and initialize a preexisting network, if no network was supplied
 		if (networkActivator == null) {
-			Properties props;
 			try {
-				props = new Properties( "nullpomino.properties" );
-				
-				NeatConfiguration config = new NeatConfiguration( props );
-				
+
+				NeatConfiguration config = new NeatConfiguration( properties );
+
 				Persistence persistence = new FilePersistence();
-				persistence.init(props);
-				
-				Chromosome chromosome = persistence.loadChromosome(CHROMOSONE_ID, config);
-				
-				ActivatorTranscriber transcriber = (ActivatorTranscriber) props.newObjectProperty( TRANSCRIBER_CLASS_KEY );
-						
+				persistence.init(properties);
+
+				String chromosone_ID = properties.getProperty(CHROMOSONE_ID_KEY);
+
+				Chromosome chromosome = persistence.loadChromosome(chromosone_ID, config);
+
+				ActivatorTranscriber transcriber = (ActivatorTranscriber) properties.newObjectProperty( TRANSCRIBER_CLASS_KEY );
+
 				networkActivator = transcriber.newActivator( chromosome );
-				
-			} catch (IOException | InvalidConfigurationException | TranscriberException e) {
+
+			} catch (InvalidConfigurationException | TranscriberException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
 
 	@Override
 	public void newPiece(GameEngine engine, int playerID) {
-		
+
 		// Get the available moves
 		List<Move> moves = generatePossibleMoves(engine);
-		
+
 		// Score these moves by using the network activator object
 		for (Move move : moves) {
 			move.score = scoreMove(move, engine);
@@ -100,10 +125,10 @@ public class BasicNeatAI extends BasicAI {
 			}
 		}
 		assert(maxMove != null);
-		
+
 		makeMove(maxMove);
 	}
-	
+
 
 	/**
 	 * Get a collection of different available moves
@@ -112,22 +137,22 @@ public class BasicNeatAI extends BasicAI {
 	 */
 	private List<Move> generatePossibleMoves(GameEngine engine) {
 		List<Move> result = new ArrayList<>();
-	
+
 		Piece pieceNow = engine.nowPieceObject;
 		int nowX = engine.nowPieceX;
 		int nowY = engine.nowPieceY;
-		
-			for(int rt = 0; rt < Piece.DIRECTION_COUNT; rt++) {
-				int minX = pieceNow.getMostMovableLeft(nowX, nowY, rt, engine.field);
-				int maxX = pieceNow.getMostMovableRight(nowX, nowY, rt, engine.field);
-				
-				for(int x = minX; x <= maxX; x++) {
-					int y = pieceNow.getBottom(x, nowY, rt, engine.field);
-					
-					result.add(new Move(x, y, rt));
-				}
+
+		for(int rt = 0; rt < Piece.DIRECTION_COUNT; rt++) {
+			int minX = pieceNow.getMostMovableLeft(nowX, nowY, rt, engine.field);
+			int maxX = pieceNow.getMostMovableRight(nowX, nowY, rt, engine.field);
+
+			for(int x = minX; x <= maxX; x++) {
+				int y = pieceNow.getBottom(x, nowY, rt, engine.field);
+
+				result.add(new Move(x, y, rt));
 			}
-		
+		}
+
 		return result;
 	}
 
@@ -142,16 +167,16 @@ public class BasicNeatAI extends BasicAI {
 		// Make copy of field with piece placed
 		Field field = new Field(engine.field);
 		engine.nowPieceObject.placeToField(move.x, move.y, move.rotation, field);
-		
+
 		// Get the stimuli for the network
 		double[] stimuli = makeStimuli(engine, field);
-		
+
 		// return the activators response, since it's the score for the move.  
 		double[] result = networkActivator.next(stimuli);
-		
+
 		// (We assume only one output node)
 		assert(result.length == 1);
-		
+
 		return result[0]; 
 	}
 
@@ -163,39 +188,7 @@ public class BasicNeatAI extends BasicAI {
 	 * @return array of input values. MAKE SURE THE NETWORK IS ABLE TO ACCEPT THIS COUNT OF INPUTS
 	 */
 	private double[] makeStimuli(GameEngine engine, Field field) {
-		/**
-		 * Current plan, 11 inputs:
-		 * 0-9: Contour of block field surface. Top row of contour is Y=0.
-		 * 10: Absolute block field height of top row of contour. 
-		 */
-		
-		
-		final int INPUT_COUNT = 11;
-		
-		double[] result = new double[INPUT_COUNT];
-		
-		// Find the Y-value of the higest row as well
-		// (Y is positive going downward, just as in screen pixels
-		int highestBlockY = field.getHighestBlockY(); // Can this ever be 20? think it takes a clear field...
-		
-		for (int x = 0; x < 10; x++) {
-			result[x] = field.getHighestBlockY(x); // getHighestBLockY returns -1 if no blocks are present, very inconvenient
-		}
-		
-		// assert(highestBlockY >= 0); // Apparently blocks can be outside field (y < 0), so this assertion is incorrect
-		assert(highestBlockY <= 20); // But they should never be BELOW the ground... right?
-		
-		// Make all the heights relative, so that the tallest column is 0, and the other columns in relation to this
-		for (int x = 0; x < 10; x++) {
-			result[x] -= highestBlockY;
-			
-			assert(result[x] >= 0);
-		}
-		
-		// Pass the total height as well
-		result[10] = field.getHighestBlockY();
-		
-		return result;
+		return stimulusGenerator.makeStimuli(engine, field);
 	}
 
 	/**
@@ -224,7 +217,7 @@ public class BasicNeatAI extends BasicAI {
 		int y;
 		int rotation;
 		double score;
-		
+
 		public Move(int x, int y, int rotation) {
 			super();
 			this.x = x;
