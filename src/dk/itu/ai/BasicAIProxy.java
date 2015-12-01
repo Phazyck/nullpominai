@@ -9,9 +9,9 @@ import mu.nu.nullpo.game.component.Controller;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
-import mu.nu.nullpo.game.subsystem.ai.BasicAI;
+import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 
-public class BasicAIProxy extends BasicAI {
+public class BasicAIProxy extends DummyAI {
 	
 	private int debugWidth = 14;
 	private int debugHeight = 24;
@@ -124,17 +124,87 @@ public class BasicAIProxy extends BasicAI {
 			int y = engine.nowPieceY;
 			int rt = piece.direction;
 			printStage(engine, x, y, rt, 'Y');
-			String pieceName = Piece.getPieceName(piece.id);
-			int offsetX = piece.dataOffsetX[rt];
-			int offsetY = piece.dataOffsetY[rt];
-			if(offsetX != 0 || offsetY != 0)
+			
+			
+			int input = 0;
+			
+			int nowX = engine.nowPieceX;
+			int nowY = engine.nowPieceY;
+			int nowRt = engine.nowPieceObject.direction;
+			
+			int diffX = lastPieceX - nowX;
+			int diffY = lastPieceY - nowY;
+			int diffRt = lastPieceRt - nowRt;
+			
+			todoRt -= diffRt;
+			todoMove -= diffX;
+			
+			if(todoDrop)
 			{
-				pieceName = "piece: " + pieceName;
+				// Piece has not been dropped yet.
+				
+				System.out.println("SETTING CONTROL");
+				
+				if(todoRt > 0 && !ctrl.isPress(Controller.BUTTON_A))
+				{
+					// Piece needs to be rotated counter-clockwise.
+					input |= Controller.BUTTON_BIT_A;
+				}
+				
+				if(todoRt < 0 && !ctrl.isPress(Controller.BUTTON_B))
+				{
+					// Piece needs to be rotated clockwise.
+					input |= Controller.BUTTON_BIT_B;
+				}
+				
+				if(todoMove > 0 && !ctrl.isPress(Controller.BUTTON_LEFT))
+				{
+					// Piece needs to be moved to the left.
+					input |= Controller.BUTTON_BIT_LEFT;
+					
+				}
+				
+				if(todoMove < 0 && !ctrl.isPress(Controller.BUTTON_RIGHT))
+				{
+					// Piece needs to be moved to the right.
+					input |= Controller.BUTTON_BIT_RIGHT;
+				}
+				
+				if(todoRt == 0 && todoMove == 0)
+				{
+					if(targetY != nowY && !ctrl.isPress(Controller.BUTTON_UP))
+					{
+						// DROP!
+						input |= Controller.BUTTON_BIT_UP;
+					}
+					else if(targetY != nowY && !ctrl.isPress(Controller.BUTTON_DOWN))
+					{
+						// LOCK!
+						input |= Controller.BUTTON_BIT_DOWN;
+				
+					}
+				}
+				
+				
 			}
+			
+			ctrl.setButtonBit(input);
+			
+			lastPieceX = nowX;
+			lastPieceY = nowY;
+			lastPieceRt = nowRt;
+
+//			String pieceName = Piece.getPieceName(piece.id);
+//			int offsetX = piece.dataOffsetX[rt];
+//			int offsetY = piece.dataOffsetY[rt];
+//			if(offsetX != 0 || offsetY != 0)
+//			{
+//				pieceName = "piece: " + pieceName;
+//			}
 			
 		}
 		
-		super.setControl(engine, playerID, ctrl);
+		//super.setControl(engine, playerID, ctrl);
 	}
 	
 	private boolean userConfirmed()
@@ -164,6 +234,16 @@ public class BasicAIProxy extends BasicAI {
 		}
 	}
 	
+	private int lastPieceRt;
+	private int lastPieceX;
+	private int lastPieceY;
+	
+	
+	private int todoRt;
+	private int todoMove;
+	private int targetY;
+	private boolean todoDrop;
+	
 	@Override
 	public void newPiece(GameEngine engine, int playerID) {
 		
@@ -188,7 +268,9 @@ public class BasicAIProxy extends BasicAI {
 					
 					System.out.println("\nSuggested move:\n");
 					
-					switch(nowRt - rt)
+					int diffRt = nowRt - rt;
+					
+					switch(diffRt)
 					{
 						case -1: {
 							System.out.println("> 1xCW rotation.");
@@ -209,11 +291,11 @@ public class BasicAIProxy extends BasicAI {
 					
 					String moveDir = "left";
 					int diffX = nowX - x;
-					
+					int moves = diffX;
 					if(diffX < 0)
 					{
 						moveDir = "right";
-						diffX *= -1;
+						moves *= -1;
 					}
 					
 					if(diffX == 0)
@@ -222,7 +304,7 @@ public class BasicAIProxy extends BasicAI {
 					}
 					else
 					{
-						System.out.println("> Move " + diffX + " times " + moveDir + ".");
+						System.out.println("> Move " + moves + " times " + moveDir + ".");
 					}
 					
 					System.out.println("> Drop.\n");
@@ -233,35 +315,20 @@ public class BasicAIProxy extends BasicAI {
 						bestX = x;
 						bestY = y;
 						bestRt = rt;
-						bestXSub = x;
-						bestYSub = y;
-						bestRtSub = -1;
-						bestPts = Integer.MAX_VALUE;
+						
+						todoRt = diffRt;
+						todoMove = diffX;
+						todoDrop = true;
+						targetY = y;
+						
+						lastPieceX = engine.nowPieceX;
+						lastPieceY = engine.nowPieceY;
+						lastPieceRt = engine.nowPieceObject.direction;
+						
 						return;
 					}
 				}
 			}
 		}
-//		
-//		
-//		
-//		if(pieceNow != null)
-//		{
-//			
-//			int rt = pieceNow.direction;
-//			printStage(engine, nowX, nowY, rt, 'Y');
-//			
-//			
-//			String pieceName = Piece.getPieceName(pieceNow.id);
-//			int offsetX = pieceNow.dataOffsetX[rt];
-//			int offsetY = pieceNow.dataOffsetY[rt];
-//			if(offsetX != 0 || offsetY != 0)
-//			{
-//				pieceName = "piece: " + pieceName;
-//			}
-//			
-//		}
-//		
-//		super.newPiece(engine,  playerID);
 	}
 }
