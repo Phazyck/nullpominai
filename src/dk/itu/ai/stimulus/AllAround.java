@@ -5,40 +5,36 @@ import com.anji.util.Properties;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.play.GameEngine;
 
+
 /**
  * Stimulus set: 
  * 0-9: Relative block field surface contour. 
  * 		 Tallest column is 0, every column that is N lower than tallest is set to N. 
  * 10:  Highest block absolute y-coordinate 
+ * 11:  Amount of Amount of empty cells in the field, that has a block covering above it.
+ * 12:  Amount of lines cleared by that move 
  * 
- * When using this class, set the property "stimulus.size" to 11
+ * When using this class, set the property "stimulus.size" to 13
  * 
  * @author Kas
  */
-public class ContourAndHeight implements StimulusGenerator {
+public class AllAround implements StimulusGenerator {
 
 	@Override
 	public void init(Properties props) throws Exception {
-		// No initialization needed here
+		// Nothing to initialize here
 	}
-	
+
 	@Override
 	public double[] makeStimuli(GameEngine engine, Field field) {
-		/**
-		 * 11 inputs:
-		 * 0-9: Contour of block field surface. Top row of contour is Y=0.
-		 * 10: Absolute block field height of top row of contour. 
-		 */
+		double[] result = new double[13];
 		
 		// Process potetial line clears
-		if (field.checkLine() > 0) {
+		int linesCleared = field.checkLine();  
+		if (linesCleared > 0) {
 			field.clearLine();
 			field.downFloatingBlocks();
 		}
-		
-		
-		
-		double[] result = new double[11];
 		
 		// Find the Y-value of the higest row as well
 		// (Y is positive going downward, just as in screen pixels
@@ -61,9 +57,12 @@ public class ContourAndHeight implements StimulusGenerator {
 		// Pass the total height as well
 		result[10] = field.getHighestBlockY();
 		
+		result[11] = field.getHowManyBlocksCovered();
+		
+		result[12] = linesCleared;
+		
 		return result;
-	}
-
 	
+	}
 
 }
