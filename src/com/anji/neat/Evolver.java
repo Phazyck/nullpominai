@@ -229,10 +229,12 @@ public void run() throws Exception {
  */
 private static void logConclusion( int generationOfFirstSolution, Chromosome champ ) {
 	logger.info( "generation of first solution == " + generationOfFirstSolution );
+	
 	logger.info( "champ # connections == "
 			+ NeatChromosomeUtility.getConnectionList( champ.getAlleles() ).size() );
 	logger.info( "champ # hidden nodes == "
 			+ NeatChromosomeUtility.getNeuronList( champ.getAlleles(), NeuronType.HIDDEN ).size() );
+	logger.info( "champ ID == " + champ.getId().toString() );
 }
 
 /**

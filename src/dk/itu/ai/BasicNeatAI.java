@@ -1,9 +1,20 @@
 package dk.itu.ai;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.jgap.Chromosome;
+import org.jgap.InvalidConfigurationException;
+
 import com.anji.integration.Activator;
+import com.anji.integration.ActivatorTranscriber;
+import com.anji.integration.TranscriberException;
+import com.anji.neat.NeatConfiguration;
+import com.anji.persistence.FilePersistence;
+import com.anji.persistence.Persistence;
+import com.anji.util.Properties;
 
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
@@ -11,12 +22,61 @@ import mu.nu.nullpo.game.play.GameEngine;
 import mu.nu.nullpo.game.subsystem.ai.BasicAI;
 
 public class BasicNeatAI extends BasicAI {
+
+	// Values for loading neural networks
+	private final static String TRANSCRIBER_CLASS_KEY = "nullpominai.transcriber";
+	private final static String CHROMOSONE_ID = "20603";
+
+	@Override
+	public String getName() {
+		return "NeatAI";
+	}
+	
 	
 	// Neural Network activation object
 	private Activator networkActivator;
 	
+	/**
+	 * This constructor should only be called by the game
+	 */
+	public BasicNeatAI() {
+		this(null);
+	}
+	
 	public BasicNeatAI(Activator ac) {
 		networkActivator = ac;
+	}
+	
+	/**
+	 * This is for enabling playing with a specific chromosone 
+	 */
+	@Override
+	public void init(GameEngine engine, int playerID) {
+		super.init(engine, playerID);
+
+		// Load and initialize a preexisting network, if no network was supplied
+		if (networkActivator == null) {
+			Properties props;
+			try {
+				props = new Properties( "nullpomino.properties" );
+				
+				NeatConfiguration config = new NeatConfiguration( props );
+				
+				Persistence persistence = new FilePersistence();
+				persistence.init(props);
+				
+				Chromosome chromosome = persistence.loadChromosome(CHROMOSONE_ID, config);
+				
+				ActivatorTranscriber transcriber = (ActivatorTranscriber) props.newObjectProperty( TRANSCRIBER_CLASS_KEY );
+						
+				networkActivator = transcriber.newActivator( chromosome );
+				
+			} catch (IOException | InvalidConfigurationException | TranscriberException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
 	}
 
 	@Override
@@ -116,24 +176,23 @@ public class BasicNeatAI extends BasicAI {
 		
 		// Find the Y-value of the higest row as well
 		// (Y is positive going downward, just as in screen pixels
-		int highestBlockY = Integer.MAX_VALUE;
+		int highestBlockY = field.getHighestBlockY(); // Can this ever be 20? think it takes a clear field...
 		
 		for (int x = 0; x < 10; x++) {
-			int rowHeight = field.getHighestBlockY(x); // getHighestBLockY returns -1 if no blocks are present, very inconverinienentnte
-			int y = rowHeight < 0 ? 20 : rowHeight;
-			result[x] = y;
-//			highestBlockY = Math.min(highestBlockY, y);
+			result[x] = field.getHighestBlockY(x); // getHighestBLockY returns -1 if no blocks are present, very inconvenient
 		}
 		
-//		assert(highestBlockY >= 0);
-//		assert(highestBlockY < 20);
+		// assert(highestBlockY >= 0); // Apparently blocks can be outside field (y < 0), so this assertion is incorrect
+		assert(highestBlockY <= 20); // But they should never be BELOW the ground... right?
 		
-//		for (int x = 0; x < 10; x++) {
-//			result[x] -= highestBlockY;
-//			
-//			assert(result[x] >= 0);
-//		}
+		// Make all the heights relative, so that the tallest column is 0, and the other columns in relation to this
+		for (int x = 0; x < 10; x++) {
+			result[x] -= highestBlockY;
+			
+			assert(result[x] >= 0);
+		}
 		
+		// Pass the total height as well
 		result[10] = field.getHighestBlockY();
 		
 		return result;
