@@ -42,7 +42,7 @@ public class BasicNeatAI extends BasicAI {
 
 	@Override
 	public String getName() {
-		return "NeatAI";
+		return "Neaty v0.1A";
 	}
 
 	// Neural Network activation object

@@ -42,7 +42,7 @@ public class NeatAI extends DummyAI {
 
 	@Override
 	public String getName() {
-		return "NeatAI";
+		return "Neaty v0.1B";
 	}
 
 	// Neural Network activation object
@@ -222,7 +222,7 @@ public class NeatAI extends DummyAI {
 		
 		Field fld = new Field(engine.field);
 		
-		double bestScore = 0.0f;
+		double bestScore = Double.NEGATIVE_INFINITY;
 		
 		for(int toRt = 0; toRt < Piece.DIRECTION_COUNT; toRt++) {
 			int minX = pieceNow.getMostMovableLeft(fromX, fromY, toRt, engine.field);

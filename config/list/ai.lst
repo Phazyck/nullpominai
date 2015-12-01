@@ -5,6 +5,5 @@ net.tetrisconcept.poochy.nullpomino.ai.PoochyBotDefensive
 mu.nu.nullpo.game.subsystem.ai.RanksAI
 net.tetrisconcept.poochy.nullpomino.ai.Nohoho
 net.tetrisconcept.poochy.nullpomino.ai.ComboRaceBot
-dk.itu.ai.ItuAI
-mu.nu.nullpo.game.subsystem.ai.DummyAI
 dk.itu.ai.BasicNeatAI
+dk.itu.ai.NeatAI
