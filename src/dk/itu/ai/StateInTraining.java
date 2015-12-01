@@ -193,7 +193,7 @@ public class StateInTraining extends BasicGameState {
 			String aiName = NullpoMinoSlick.propGlobal.getProperty(i + ".ai", "");
 			if (aiName.length() > 0) {
 				DummyAI aiObj = GeneralUtil.loadAIPlayer(aiName);
-				aiObj = new BasicAIProxy();
+				aiObj = new NeatAI();
 				gameManager.engine[i].ai = aiObj;
 				gameManager.engine[i].aiMoveDelay = NullpoMinoSlick.propGlobal.getProperty(i + ".aiMoveDelay", 0);
 				gameManager.engine[i].aiThinkDelay = NullpoMinoSlick.propGlobal.getProperty(i + ".aiThinkDelay", 0);

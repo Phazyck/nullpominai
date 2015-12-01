@@ -13,62 +13,12 @@ import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 
 public class PromptingAI extends DummyAI {
 	
-	/**
-	 * This method calculates a delta rotation between a current rotation (fromRt) and a target rotation (toRt).
-	 * 
-	 * The return values are either:
-	 * -1 - The delta to get from the fromRt to the toRt is a single counter-clockwise rotation. 
-	 * 	0 - No delta, the fromRt and toRt rotations are alike.
-	 *  1 - The delta to get from the fromRt to the toRt is a single clockwise rotation.
-	 *  2 - The delta to get from the fromRt to the toRt is two clockwise rotations.
-	 *  		(two counter-clockwise rotations can be used for the same result.) 
-	 *  
-	 * @param fromRt The rotation the piece is currently in.
-	 * @param toRt The rotation the piece should rotate towards.
-	 * @return The rotation delta.
-	 */
-	private static int getDeltaRt(int fromRt, int toRt)
-	{
-		int diffRt = ((toRt - fromRt) + 4) % 4;
-		
-		if(diffRt > 2)
-		{
-			diffRt -= 4;
-		}
-		
-		return(diffRt);
-	}
-	
-	/**
-	 * This method calculates the delta movement between a current X-coordinate (fromX) and a target X-coordinate (toX).
-	 * 
-	 * The return value 'd', is to be interpreted as follows:
-	 * 
-	 *  if d < 0 then: 
-	 *  	The delta to get from the fromX coordinate to the toX coordinate is 'd' moves to the left.
-	 *   
-	 * 	if d = 0 then: 
-	 * 		No delta, the fromX and toX coordinates are alike.
-	 * 
-	 *  if d > 0 then:
-	 *  	The delta to get from the fromX coordinate to the toX coordinate is 'd' moves to the right. 
-	 * 
-	 * @param fromX The X-coordinate the piece is currently in.
-	 * @param toX The X-coordinate the piece should move towards.
-	 * @return The movement delta along the X-axis.
-	 */
-	private static int getDeltaX(int fromX, int toX)
-	{
-		int diffX = toX - fromX;
-		return(diffX);
-	}
-	
 	private int getInput(int x, int y, int rt, Controller ctrl)
 	{
 		int input = 0;
 		
-		int deltaRt = getDeltaRt(rt, bestRt);
-		int deltaX = getDeltaX(x, bestX);
+		int deltaRt = Util.getDeltaRt(rt, bestRt);
+		int deltaX = Util.getDeltaX(x, bestX);
 		
 		//--- Rotation
 		
@@ -142,7 +92,7 @@ public class PromptingAI extends DummyAI {
 	{
 		
 		System.out.println("\nSuggested move:\n");
-		int deltaRt = getDeltaRt(toRt, fromRt);
+		int deltaRt = Util.getDeltaRt(toRt, fromRt);
 		
 		switch(deltaRt)
 		{
@@ -164,7 +114,7 @@ public class PromptingAI extends DummyAI {
 		}
 		
 		String moveDir = "right";
-		int moves = getDeltaX(fromX, toX);
+		int moves = Util.getDeltaX(fromX, toX);
 		if(moves < 0)
 		{
 			moveDir = "left";
