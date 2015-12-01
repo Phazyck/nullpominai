@@ -8,92 +8,181 @@ import mu.nu.nullpo.game.component.Controller;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
+import mu.nu.nullpo.game.play.GameEngine.Status;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 
 public class BasicAIProxy extends DummyAI {
+	
+	/**
+	 * This method calculates a delta rotation between a current rotation (fromRt) and a target rotation (toRt).
+	 * 
+	 * The return values are either:
+	 * -1 - The delta to get from the fromRt to the toRt is a single counter-clockwise rotation. 
+	 * 	0 - No delta, the fromRt and toRt rotations are alike.
+	 *  1 - The delta to get from the fromRt to the toRt is a single clockwise rotation.
+	 *  2 - The delta to get from the fromRt to the toRt is two clockwise rotations.
+	 *  		(two counter-clockwise rotations can be used for the same result.) 
+	 *  
+	 * @param fromRt The rotation the piece is currently in.
+	 * @param toRt The rotation the piece should rotate towards.
+	 * @return The rotation delta.
+	 */
+	private static int getDeltaRt(int fromRt, int toRt)
+	{
+		int diffRt = ((toRt - fromRt) + 4) % 4;
+		
+		if(diffRt > 2)
+		{
+			diffRt -= 4;
+		}
+		
+		return(diffRt);
+	}
+	
+	/**
+	 * This method calculates the delta movement between a current X-coordinate (fromX) and a target X-coordinate (toX).
+	 * 
+	 * The return value 'd', is to be interpreted as follows:
+	 * 
+	 *  if d < 0 then: 
+	 *  	The delta to get from the fromX coordinate to the toX coordinate is 'd' moves to the left.
+	 *   
+	 * 	if d = 0 then: 
+	 * 		No delta, the fromX and toX coordinates are alike.
+	 * 
+	 *  if d > 0 then:
+	 *  	The delta to get from the fromX coordinate to the toX coordinate is 'd' moves to the right. 
+	 * 
+	 * @param fromX The X-coordinate the piece is currently in.
+	 * @param toX The X-coordinate the piece should move towards.
+	 * @return The movement delta along the X-axis.
+	 */
+	private static int getDeltaX(int fromX, int toX)
+	{
+		int diffX = toX - fromX;
+		return(diffX);
+	}
+	
+	private int getInput(int x, int y, int rt, Controller ctrl)
+	{
+		int input = 0;
+		
+		int deltaRt = getDeltaRt(rt, bestRt);
+		int deltaX = getDeltaX(x, bestX);
+		
+		//--- Rotation
+		
+		if(deltaRt < 0 && !ctrl.isPress(Controller.BUTTON_A))
+		{
+			// Rotate counter-clockwise.
+			input |= Controller.BUTTON_BIT_A;
+		} 
+		else if(deltaRt > 0 && !ctrl.isPress(Controller.BUTTON_B))
+		{
+			// Rotate clockwise.
+			input |= Controller.BUTTON_BIT_B;
+		}
+		
+		//--- Movement
+		
+		if(deltaX < 0 && !ctrl.isPress(Controller.BUTTON_LEFT))
+		{
+			// Move left.
+			input |= Controller.BUTTON_BIT_LEFT;			
+		}
+		else if(deltaX > 0 && !ctrl.isPress(Controller.BUTTON_RIGHT))
+		{
+			// Move right.
+			input |= Controller.BUTTON_BIT_RIGHT;
+		}
+		
+		//--- Drop/Lock
+		
+		if(deltaRt == 0 && deltaX == 0)
+		{
+			if(y != bestY 
+			   && !ctrl.isPress(Controller.BUTTON_UP))
+			{
+				// Drop
+				input |= Controller.BUTTON_BIT_UP;
+			}
+			else if(y == bestY
+					&& !ctrl.isPress(Controller.BUTTON_DOWN))
+			{ 
+				// Lock
+				input |= Controller.BUTTON_BIT_DOWN;
+			}
+		}
+		
+		return(input);
+	}
 		
 	@Override
 	public void setControl(GameEngine engine, int playerID, Controller ctrl) {
 		Piece piece = engine.nowPieceObject;
 		
-		if(piece != null)
+		int input = 0;
+		
+		if(piece != null && engine.stat == Status.MOVE)
 		{
 			int x = engine.nowPieceX;
 			int y = engine.nowPieceY;
 			int rt = piece.direction;
+			
 			Debug.printStage(engine, x, y, rt, 'Y');
-			
-			
-			int input = 0;
-			
-			int nowX = engine.nowPieceX;
-			int nowY = engine.nowPieceY;
-			int nowRt = engine.nowPieceObject.direction;
-			
-			int diffX = lastPieceX - nowX;
-			int diffRt = lastPieceRt - nowRt;
-			
-			todoRt -= diffRt;
-			todoMove -= diffX;
-			
-			if(todoDrop)
-			{
-				// Piece has not been dropped yet.
-				
-				System.out.println("SETTING CONTROL");
-				
-				if(todoRt > 0 && !ctrl.isPress(Controller.BUTTON_A))
-				{
-					// Piece needs to be rotated counter-clockwise.
-					input |= Controller.BUTTON_BIT_A;
-				}
-				
-				if(todoRt < 0 && !ctrl.isPress(Controller.BUTTON_B))
-				{
-					// Piece needs to be rotated clockwise.
-					input |= Controller.BUTTON_BIT_B;
-				}
-				
-				if(todoMove > 0 && !ctrl.isPress(Controller.BUTTON_LEFT))
-				{
-					// Piece needs to be moved to the left.
-					input |= Controller.BUTTON_BIT_LEFT;
-					
-				}
-				
-				if(todoMove < 0 && !ctrl.isPress(Controller.BUTTON_RIGHT))
-				{
-					// Piece needs to be moved to the right.
-					input |= Controller.BUTTON_BIT_RIGHT;
-				}
-				
-				if(todoRt == 0 && todoMove == 0)
-				{
-					if(targetY != nowY && !ctrl.isPress(Controller.BUTTON_UP))
-					{
-						// DROP!
-						input |= Controller.BUTTON_BIT_UP;
-					}
-					else if(targetY != nowY && !ctrl.isPress(Controller.BUTTON_DOWN))
-					{
-						// LOCK!
-						input |= Controller.BUTTON_BIT_DOWN;
-				
-					}
-				}
-				
-				
-			}
-			
-			ctrl.setButtonBit(input);
-			
-			lastPieceX = nowX;
-			lastPieceRt = nowRt;
+			input = getInput(x, y, rt, ctrl);
 		}
+		
+		ctrl.setButtonBit(input);
 	}
 	
-	private boolean userConfirmed()
+	private static boolean promptUser( 
+			int fromX, int fromY, int fromRt, 
+			int toX, int toY, int toRt)
 	{
+		
+		System.out.println("\nSuggested move:\n");
+		int deltaRt = getDeltaRt(toRt, fromRt);
+		
+		switch(deltaRt)
+		{
+			case -1: {
+				System.out.println("> 1xCW rotation.");
+			} break;
+			case 0: {
+				System.out.println("> No rotation.");
+			} break;
+			case 1: {
+				System.out.println("> 1xCCW rotation.");
+			} break;
+			case 2: {
+				System.out.println("> 2xCCW rotation.");
+			} break;
+			default: {
+				System.out.println("Error in rotation code.");
+			} break;
+		}
+		
+		String moveDir = "right";
+		int moves = getDeltaX(fromX, toX);
+		if(moves < 0)
+		{
+			moveDir = "left";
+			moves *= -1;
+		}
+		
+		if(moves == 0)
+		{
+			System.out.println("> No movement.");
+		}
+		else
+		{
+			System.out.println("> Move " + moves + " times " + moveDir + ".");
+		}
+		
+		System.out.println("> Drop.\n");
+		System.out.println("> Lock.\n");
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String answer = null;
 		
@@ -115,98 +204,39 @@ public class BasicAIProxy extends DummyAI {
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}	
+			}
 		}
 	}
-	
-	private int lastPieceRt;
-	private int lastPieceX;
-	
-	private int todoRt;
-	private int todoMove;
-	private int targetY;
-	private boolean todoDrop;
 	
 	@Override
 	public void newPiece(GameEngine engine, int playerID) {
 		
 		Piece pieceNow = engine.nowPieceObject;
-		int nowRt = pieceNow.direction;
-		int nowX = engine.nowPieceX;
-		int nowY = engine.nowPieceY;
+		int fromX = engine.nowPieceX;
+		int fromY = engine.nowPieceY;
+		int fromRt = pieceNow.direction;
 		
 		Field fld = new Field(engine.field);
 		
 		while(true)
 		{
-			for(int rt = 0; rt < Piece.DIRECTION_COUNT; rt++) {
-				int minX = pieceNow.getMostMovableLeft(nowX, nowY, rt, engine.field);
-				int maxX = pieceNow.getMostMovableRight(nowX, nowY, rt, engine.field);
+			for(int toRt = 0; toRt < Piece.DIRECTION_COUNT; toRt++) {
+				int minX = pieceNow.getMostMovableLeft(fromX, fromY, toRt, engine.field);
+				int maxX = pieceNow.getMostMovableRight(fromX, fromY, toRt, engine.field);
 				
-				for(int x = minX; x <= maxX; x++) {
+				for(int toX = minX; toX <= maxX; toX++) {
 					fld.copy(engine.field);
-					int y = pieceNow.getBottom(x, nowY, rt, fld);
+					int toY = pieceNow.getBottom(toX, fromY, toRt, fld);
 					
-					Debug.printStage(engine, x, y, rt, (char)9633);
+					Debug.printStage(engine, toX, toY, toRt, (char)9633);
+					boolean confirmed = promptUser(fromX, fromY, fromRt, toX, toY, toRt);
 					
-					System.out.println("\nSuggested move:\n");
-					
-					int diffRt = nowRt - rt;
-					
-					switch(diffRt)
-					{
-						case -1: {
-							System.out.println("> 1xCW rotation.");
-						} break;
-						case 0: {
-							//System.out.println("No rotation.");
-						} break;
-						case 1: {
-							System.out.println("> 1xCCW rotation.");
-						} break;
-						case 2: {
-							System.out.println("> 2xCCW rotation.");
-						} break;
-						default: {
-							System.out.println("Error in rotation code.");
-						} break;
-					}
-					
-					String moveDir = "left";
-					int diffX = nowX - x;
-					int moves = diffX;
-					if(diffX < 0)
-					{
-						moveDir = "right";
-						moves *= -1;
-					}
-					
-					if(diffX == 0)
-					{
-//						System.out.println("No movement.");
-					}
-					else
-					{
-						System.out.println("> Move " + moves + " times " + moveDir + ".");
-					}
-					
-					System.out.println("> Drop.\n");
-					
-					if(userConfirmed())
+					if(confirmed)
 					{
 						bestHold = false;
-						bestX = x;
-						bestY = y;
-						bestRt = rt;
-						
-						todoRt = diffRt;
-						todoMove = diffX;
-						todoDrop = true;
-						targetY = y;
-						
-						lastPieceX = engine.nowPieceX;
-						lastPieceRt = engine.nowPieceObject.direction;
-						
+						bestX = toX;
+						bestY = toY;
+						bestRt = toRt;
 						return;
 					}
 				}
