@@ -30,6 +30,10 @@ public class NeatAI extends DummyAI {
 	 *  The corresponding Stimulus class should specify this value. 
 	 */
 	private final static String STIMULUS_CLASS_KEY = "nullpominai.stimulusgenerator";
+	
+	private boolean targetObtained = false;
+	private int pieceNr = 0;
+	private int missCount = 0;
 
 	StimulusGenerator stimulusGenerator;
 	
@@ -149,7 +153,8 @@ public class NeatAI extends DummyAI {
 			}
 			else if(y == bestY
 					&& !ctrl.isPress(Controller.BUTTON_DOWN))
-			{ 
+			{
+				targetObtained = true;
 				// Lock
 				input |= Controller.BUTTON_BIT_DOWN;
 			}
@@ -214,6 +219,25 @@ public class NeatAI extends DummyAI {
 	@Override
 	public void newPiece(GameEngine engine, int playerID) {
 		
+		if(pieceNr > 0)
+		{
+			int level = engine.statistics.level;
+			
+			if(targetObtained)
+			{
+				//System.out.printf("Piece %3d\tLevel %3d\tTarget obtained.\n", pieceNr, level);
+			}
+			else
+			{
+				missCount++;
+				System.out.printf("Piece %3d\tLevel %3d\tTarget missed!\t%3d misses.\n", pieceNr, level, missCount);
+			}
+		}
+		
+		pieceNr++;
+		targetObtained = false;
+		
+		
 		Piece pieceNow = engine.nowPieceObject;
 		int fromX = engine.nowPieceX;
 		int fromY = engine.nowPieceY;
@@ -225,8 +249,18 @@ public class NeatAI extends DummyAI {
 		double bestScore = Double.NEGATIVE_INFINITY;
 		
 		for(int toRt = 0; toRt < Piece.DIRECTION_COUNT; toRt++) {
-			int minX = pieceNow.getMostMovableLeft(fromX, fromY, toRt, engine.field);
-			int maxX = pieceNow.getMostMovableRight(fromX, fromY, toRt, engine.field);
+			
+			int tmpY = fromY;
+//			if(engine.statistics.level > 100)
+			if(false)
+			{
+				fld.copy(engine.field);
+				tmpY = pieceNow.getBottom(fromX, fromY, toRt, fld);
+			}
+			
+			
+			int minX = pieceNow.getMostMovableLeft(fromX, tmpY, toRt, engine.field);
+			int maxX = pieceNow.getMostMovableRight(fromX, tmpY, toRt, engine.field);
 			
 			for(int toX = minX; toX <= maxX; toX++) {
 				fld.copy(engine.field);

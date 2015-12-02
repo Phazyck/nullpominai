@@ -45,9 +45,16 @@ public class Simulator {
 		// Actual simulation.
 		Simulator simulator = new Simulator(mode, rulePath, ai);
 		
-		simulator.setCustomSeed("-2fac0ecd9c988463");
+		String customSeed = 
+//			"-2fac0ecd9c988463"
+//			"15478945"
+//			"897494638"
+			"4697358"
+			;
 		
-		simulator.runSimulations(100);
+		simulator.setCustomSeed(customSeed);
+		
+		simulator.runSimulation();
 	}
 	
 	private GameManager gameManager;
@@ -188,8 +195,8 @@ public class Simulator {
 //			logGameState();
 		}
 
-//		log.info("Game is over!");
-//		log.info("Final Level: " + gameEngine.statistics.level);
+		log.info("Game is over!");
+		log.info("Final Level: " + gameEngine.statistics.level);
 	}
 	
 	/**
