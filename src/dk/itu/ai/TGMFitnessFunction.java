@@ -53,7 +53,7 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 				
 				int total = 0;
 				for (String seed : FITNESS_TEST_SEEDS) {
-					simulation = new Simulator(simulationMode, simulationRulePath, new BasicNeatAI(activator));
+					simulation = new Simulator(simulationMode, simulationRulePath, new NeatAI(activator));
 					simulation.setCustomSeed(seed);
 					simulation.runSimulation();
 					total += simulation.getLevel();
