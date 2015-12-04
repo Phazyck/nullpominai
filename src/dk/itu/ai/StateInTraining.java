@@ -25,9 +25,15 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class StateInTraining extends BasicGameState {
 	
-	public static final int TRAINING_ROUNDS = 10;
+	public static final int TRAINING_ROUNDS = 1;
 	public static final int CUSTOM_FPS = 60;
-	public static final String CUSTOM_SEED = "-2fac0ecd9c988463";
+	public static final String CUSTOM_SEED = 
+			null
+//			"-2fac0ecd9c988463"
+//			"15478945"
+//			"897494638"
+//			"4697358"
+			;
 	
 	/** This state's ID */
 	public static final int ID = 421;

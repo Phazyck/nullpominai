@@ -28,7 +28,7 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 
 	private static Logger logger = Logger.getLogger( TargetFitnessFunction.class );
 	
-	private static final String[] FITNESS_TEST_SEEDS = {"15478945", "897494638", "4697358"}; // I facerolled my numpad, sue me!  -Kas
+	private static final String[] FITNESS_TEST_SEEDS = {"15478945", "897494638", "4697358", "62c2fb46d0bb6b53", "5a9fbb07dd13c6fc", "-dd27fc1755162cd", "-3bd84a30fecd8f13"}; // I facerolled my numpad, sue me!  -Kas
 	
 	
 	@Override

@@ -27,6 +27,7 @@ import dk.itu.ai.navigation.Move;
 import mu.nu.nullpo.game.component.Controller;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
+import mu.nu.nullpo.game.component.WallkickResult;
 import mu.nu.nullpo.game.play.GameEngine;
 import mu.nu.nullpo.game.play.GameEngine.Status;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
@@ -40,6 +41,10 @@ public class NeatAI extends DummyAI {
 	 *  The corresponding Stimulus class should specify this value. 
 	 */
 	private final static String STIMULUS_CLASS_KEY = "nullpominai.stimulusgenerator";
+	
+	private boolean targetObtained = false;
+	private int pieceNr = 0;
+	private int missCount = 0;
 
 	StimulusGenerator stimulusGenerator;
 	
@@ -59,6 +64,12 @@ public class NeatAI extends DummyAI {
 
 	// Neural Network activation object
 	private Activator networkActivator;
+
+	private String moveStackString;
+
+	private Move nextMove;
+
+	private int lastInput;
 
 	/**
 	 * This constructor should only be called by the game
@@ -163,7 +174,8 @@ public class NeatAI extends DummyAI {
 			}
 			else if(y == bestY
 					&& !ctrl.isPress(Controller.BUTTON_DOWN))
-			{ 
+			{
+				targetObtained = true;
 				// Lock
 				input |= Controller.BUTTON_BIT_DOWN;
 			}
@@ -264,6 +276,55 @@ public class NeatAI extends DummyAI {
 	private int getInput(int x, int y, int rt, boolean lock, Controller ctrl)
 	{
 		int input = 0;
+				
+		if (lock)
+		{
+			targetObtained = true;
+			input |= Controller.BUTTON_BIT_DOWN;
+		}
+		else if(lastInput != Controller.BUTTON_BIT_UP)
+		{
+			// Always press up, emulate 20G
+			input = Controller.BUTTON_BIT_UP;
+		}
+		else
+		{
+			switch (nextMove.dx) {
+				case Move.LEFT:
+					input |= Controller.BUTTON_BIT_LEFT;
+					break;
+				case Move.RIGHT:
+					input |= Controller.BUTTON_BIT_RIGHT;
+					break;
+				case Move.NONE:
+					break;
+				default:
+					assert(false);
+					break;
+			}
+			switch (nextMove.drt) {
+				case Move.CCW:
+					input |= Controller.BUTTON_BIT_A;
+					break;
+				case Move.CW:
+					input |= Controller.BUTTON_BIT_B;
+					break;
+				case Move.NONE:
+					break;
+				default:
+					assert(false);
+					break;
+			}	
+		}
+		
+		lastInput = input;
+		
+		return(input);
+	}
+	
+	private int getInputOld(int x, int y, int rt, boolean lock, Controller ctrl)
+	{
+		int input = 0;
 		
 		int deltaRt = Util.getDeltaRt(rt, bestRt);
 		int deltaX = Util.getDeltaX(x, bestX);
@@ -308,6 +369,7 @@ public class NeatAI extends DummyAI {
 					&& !ctrl.isPress(Controller.BUTTON_DOWN)
 					&& lock)
 			{ 
+				targetObtained = true;
 				// Lock
 				input |= Controller.BUTTON_BIT_DOWN;
 			}
@@ -326,11 +388,12 @@ public class NeatAI extends DummyAI {
 	 */
 	private double scoreMove(Move move, GameEngine engine) {
 		// Make copy of field with piece placed
-		Field field = new Field(engine.field);
-		engine.nowPieceObject.placeToField(move.x, move.y, move.rotation, field);
+		Field oldField = new Field(engine.field);
+		Field newField = new Field(engine.field);
+		engine.nowPieceObject.placeToField(move.x, move.y, move.rotation, newField);
 
 		// Get the stimuli for the network
-		double[] stimuli = makeStimuli(engine, field);
+		double[] stimuli = makeStimuli(engine, newField, oldField);
 
 		// return the activators response, since it's the score for the move.  
 		double[] result = networkActivator.next(stimuli);
@@ -348,8 +411,8 @@ public class NeatAI extends DummyAI {
 	 * @param field 
 	 * @return array of input values. MAKE SURE THE NETWORK IS ABLE TO ACCEPT THIS COUNT OF INPUTS
 	 */
-	private double[] makeStimuli(GameEngine engine, Field field) {
-		return stimulusGenerator.makeStimuli(engine, field);
+	private double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
+		return stimulusGenerator.makeStimuli(engine, field, oldField);
 	}
 	
 	@Override
@@ -357,6 +420,30 @@ public class NeatAI extends DummyAI {
 		
 		double bestScore = Double.NEGATIVE_INFINITY;
 		Move bestMove = null;
+		
+		if(pieceNr > 0)
+		{
+			int level = engine.statistics.level;
+			
+			if(targetObtained)
+			{
+				//System.out.printf("Piece %3d\tLevel %3d\tTarget obtained.\n", pieceNr, level);
+			}
+			else
+			{
+				missCount++;
+				System.out.printf("Piece %3d\tLevel %3d\tTarget missed!\t%3d misses.\n", pieceNr, level, missCount);
+//				String pieceName = Piece.getPieceName(engine.nextPieceArrayObject[engine.nextPieceCount-2].id);
+//				System.out.println(pieceName);
+				System.out.println(moveStackString);
+				System.out.println();
+			}
+		}
+		
+		pieceNr++;
+		targetObtained = false;
+		
+		
 		
 		Collection<Move> moves = generatePossibleMoves(engine);
 		
@@ -373,7 +460,8 @@ public class NeatAI extends DummyAI {
 		}
 
 		inputMoves = makeMoveStack(bestMove);
-		
+		moveStackString = moveStackToString(inputMoves);
+			
 		// Set up first destination for navigation
 		nextDestination();
 		
@@ -391,7 +479,7 @@ public class NeatAI extends DummyAI {
 		
 //		System.out.println(moveStackToString(inputMoves));
 		
-		Move nextMove = inputMoves.pop();
+		nextMove = inputMoves.pop();
 		
 		bestX = nextMove.x;
 		bestY = nextMove.y;
@@ -419,6 +507,9 @@ public class NeatAI extends DummyAI {
 				nowX, 
 				nowPiece.getBottom(nowX, nowY, engine.field), 
 				nowRt, 
+				0,
+				0,
+				0,
 				null);
 		
 		moves.add(root);
@@ -428,8 +519,7 @@ public class NeatAI extends DummyAI {
 		while (!exploreQueue.isEmpty()) {
 			// Expand next in queue
 			Collection<Move> newNeighbours = getMoveUnexploredNeighbours(
-					engine.field, 
-					nowPiece, 
+					engine,  
 					exploreQueue.remove(), 
 					moves);
 			
@@ -442,27 +532,88 @@ public class NeatAI extends DummyAI {
 	}
 	
 	// TODO better collection than set for this?
-	private Set<Move> getMoveUnexploredNeighbours(Field field, Piece piece, Move prevMove, Set<Move> exploredMoves) {
+	private Set<Move> getMoveUnexploredNeighbours(GameEngine engine, Move prevMove, Set<Move> exploredMoves) {
+		
+		Field field = engine.field;
+		Piece piece = engine.nowPieceObject;
+		
 		Set<Move> result = new HashSet<>();
+		
+		int oldX = prevMove.x;
+		int oldY = prevMove.y;
+		int oldRt = prevMove.rotation;
+		int oldKicks = prevMove.floorKicksPerformed;
 		
 		// For each combination of rotation and x movement
 		// TODO skip rt=0,x=0 entirely 
-		for (int rt : Move.ROTATIONS) {
-			for (int x : Move.TRANSLATIONS) {
-				int newX = prevMove.x + x;
-				int newRt = piece.getRotateDirection(rt, prevMove.rotation);
+		for (int drt : Move.ROTATIONS) {
+			for (int dx : Move.TRANSLATIONS) {
 				
-				// If the piece can't be rotated, skip
-				if (piece.checkCollision(newX, prevMove.y, newRt, field)) {
-					// NOTE(oliver): We could do kicks her.
-					continue;
+				if (drt == 0 && dx == 0) continue;
+				
+				int newRt = oldRt;
+				int newX = oldX;
+				int newY = oldY;
+				int newKicks = oldKicks;
+				
+				if(drt != 0)
+				{
+					// Apply rotation
+					newRt = piece.getRotateDirection(drt, oldRt);
+					
+					
+					// If the piece can't be rotated, try kicks
+					if (piece.checkCollision(oldX, oldY, newRt, field)) 
+					{
+						if((engine.wallkick != null) && (engine.ruleopt.rotateWallkick)) 
+						{
+							boolean allowUpward = (engine.ruleopt.rotateMaxUpwardWallkick < 0) ||
+												  (oldKicks < engine.ruleopt.rotateMaxUpwardWallkick);
+							WallkickResult kick = engine.wallkick.executeWallkick(oldX, oldY, drt, oldRt, newRt,
+												  allowUpward, piece, field, null);
+							
+							if(kick != null) 
+							{
+//								System.out.println("\n" + pieceNr);
+//								System.out.printf("Kick (%d,%d)\n", kick.offsetX, kick.offsetY);
+
+								newX += kick.offsetX;
+								newY += kick.offsetY;
+								if(kick.isUpward())
+								{
+									++newKicks;
+								}
+							}
+							else
+							{
+								continue;
+							}
+						}
+					}
 				}
+				
+				if(dx != 0)
+				{
+					// Apply movement
+					
+					newX += dx;
+					if(piece.checkCollision(newX, newY, newRt, field))
+					{
+						continue;
+					}
+				}
+				
+				// Simulate 20G
+				newY = piece.getBottom(newX, newY, newRt, field);
 				
 				// Make new move
 				Move newMove = new Move(
 						newX,
-						piece.getBottom(newX, prevMove.y, newRt, field), // Assume 20G always
+						newY,
 						newRt, 
+						dx,
+						drt,
+						newKicks,
 						prevMove);
 				
 				// If piece already explored earlier, ignore

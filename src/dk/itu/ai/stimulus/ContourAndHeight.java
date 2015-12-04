@@ -23,7 +23,7 @@ public class ContourAndHeight implements StimulusGenerator {
 	}
 	
 	@Override
-	public double[] makeStimuli(GameEngine engine, Field field) {
+	public double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
 		/**
 		 * 11 inputs:
 		 * 0-9: Contour of block field surface. Top row of contour is Y=0.

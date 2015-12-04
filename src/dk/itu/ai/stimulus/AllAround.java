@@ -26,7 +26,7 @@ public class AllAround implements StimulusGenerator {
 	}
 
 	@Override
-	public double[] makeStimuli(GameEngine engine, Field field) {
+	public double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
 		double[] result = new double[13];
 		
 		// Process potetial line clears

@@ -22,7 +22,7 @@ public class LinesCleared implements StimulusGenerator {
 	}
 
 	@Override
-	public double[] makeStimuli(GameEngine engine, Field field) {
+	public double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
 		double[] result = new double[1];
 		
 		result[0] = engine.field.checkLineNoFlag();

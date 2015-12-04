@@ -45,9 +45,16 @@ public class Simulator {
 		// Actual simulation.
 		Simulator simulator = new Simulator(mode, rulePath, ai);
 		
-		simulator.setCustomSeed("-2fac0ecd9c988463");
+		String customSeed = 
+//			"-2fac0ecd9c988463"
+//			"15478945"
+//			"897494638"
+			"4697358"
+			;
 		
-		simulator.runSimulations(100);
+//		simulator.setCustomSeed(customSeed);
+		
+		simulator.runSimulation();
 	}
 	
 	private GameManager gameManager;
@@ -165,6 +172,7 @@ public class Simulator {
 		// Start a new game.
 		gameEngine.init();
 		
+//		System.out.println(Long.toString(gameEngine.randSeed, 16));
 		if(customSeed != null)
 		{
 			gameEngine.randSeed = Long.parseLong(customSeed, 16);

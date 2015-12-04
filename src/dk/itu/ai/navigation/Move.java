@@ -6,6 +6,8 @@ package dk.itu.ai.navigation;
  */
 public class Move
 {
+	public static final int NONE = 0;
+	
 	// X-axis translation (-1 <-> +1)
 	public static final int LEFT = -1;
 	public static final int RIGHT = 1;
@@ -23,12 +25,20 @@ public class Move
 	public final int y;
 	public final int rotation;
 	
+	public final int dx;
+	public final int drt;
+	
+	public final int floorKicksPerformed;
+	
 	public final Move parent;
 
-	public Move(int x, int y, int rotation, Move parent) {
+	public Move(int x, int y, int rotation, int dx, int drt, int floorKicksPerformed, Move parent) {
 		this.x = x;
 		this.y = y;
 		this.rotation = rotation;
+		this.dx = dx;
+		this.drt = drt;
+		this.floorKicksPerformed = floorKicksPerformed;
 		this.parent = parent;
 	}
 
@@ -41,6 +51,7 @@ public class Move
 		result = prime * result + rotation;
 		result = prime * result + x;
 		result = prime * result + y;
+		result = prime * result + floorKicksPerformed;
 		return result;
 	}
 
@@ -58,6 +69,8 @@ public class Move
 		if (x != other.x)
 			return false;
 		if (y != other.y)
+			return false;
+		if (floorKicksPerformed != other.floorKicksPerformed)
 			return false;
 		return true;
 	}

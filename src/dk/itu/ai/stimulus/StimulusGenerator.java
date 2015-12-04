@@ -14,5 +14,5 @@ import mu.nu.nullpo.game.play.GameEngine;
  * @author Kas
  */
 public interface StimulusGenerator extends Configurable { 
-	public double[] makeStimuli(GameEngine engine, Field field);
+	public double[] makeStimuli(GameEngine engine, Field newField, Field oldField);
 }
