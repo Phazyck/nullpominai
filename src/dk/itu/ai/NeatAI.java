@@ -356,24 +356,23 @@ public class NeatAI extends DummyAI {
 	public void newPiece(GameEngine engine, int playerID) {
 		
 		double bestScore = Double.NEGATIVE_INFINITY;
+		Move bestMove = null;
 		
 		Collection<Move> moves = generatePossibleMoves(engine);
 		
 		for (Move move : moves) {
 			double score = scoreMove(move, engine);
 			
-			
-			//TODO: Use motion stack instead, to help in setControl
-			if(score > bestScore)
+			if(score > bestScore || bestMove == null)
 			{
 				// TODO get rid of this
 				bestScore = score;
 				bestHold = false;
-				
-				// TODO use this instead
-				inputMoves = makeMoveStack(move);
+				bestMove = move;
 			}
 		}
+
+		inputMoves = makeMoveStack(bestMove);
 		
 		// Set up first destination for navigation
 		nextDestination();
@@ -455,6 +454,7 @@ public class NeatAI extends DummyAI {
 				
 				// If the piece can't be rotated, skip
 				if (piece.checkCollision(newX, prevMove.y, newRt, field)) {
+					// NOTE(oliver): We could do kicks her.
 					continue;
 				}
 				
