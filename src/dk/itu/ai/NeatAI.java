@@ -101,6 +101,22 @@ public class NeatAI extends DummyAI {
 	public void init(GameEngine engine, int playerID) {
 		super.init(engine, playerID);
 
+		this.bestHold = false;
+		this.bestRt = 0;
+		this.bestX = 0;
+		this.bestY = 0;
+		
+		this.inputMoves = null;
+		this.lastInput = 0;
+		this.missCount = 0;
+		this.moveStackString = "";
+		this.nextMove = null;
+		this.pieceNr = 0;
+		this.targetObtained = false;
+		
+		
+		
+		
 		// Load and initialize a preexisting network, if no network was supplied
 		if (networkActivator == null) {
 			try {
@@ -246,28 +262,40 @@ public class NeatAI extends DummyAI {
 		
 		if(piece != null && engine.stat == Status.MOVE)
 		{			
-			int x = engine.nowPieceX;
-			int y = engine.nowPieceY;
-			int rt = piece.direction;
-			
-			boolean lockAllowed = false;
-			
-			// If we reach current target position, pop next one.
-			// If no more target positions, we lock the piece
-			if (x == bestX &&
-				y == bestY &&
-				rt == bestRt &&
-				bestHold == false) {
-				if (!inputMoves.isEmpty()) {
-					nextDestination();
+			if(bestHold == true)
+			{
+//				System.out.println("HOLD " + pieceNr);
+				input = Controller.BUTTON_BIT_D;
+			}
+			else
+			{
+				int x = engine.nowPieceX;
+				int y = engine.nowPieceY;
+				int rt = piece.direction;
+				
+//				Debug.printStage(engine, x, y, rt, piece, 'X');
+//				Debug.printStage(engine, bestX, bestY, bestRt, piece, 'Y');
+				
+				boolean lockAllowed = false;
+				
+				// If we reach current target position, pop next one.
+				// If no more target positions, we lock the piece
+				if (x == bestX &&
+					y == bestY &&
+					rt == bestRt) {
+					if (!inputMoves.isEmpty()) {
+						nextDestination();
+					}
+					else lockAllowed = true;
 				}
-				else lockAllowed = true;
+				
+//				Debug.printStage(engine, x, y, rt, piece, 'X');
+//				Debug.printStage(engine, bestX, bestY, bestRt, piece, 'Y');
+				
+				input = getInput(piece, lockAllowed, ctrl);
 			}
 			
-			
-			
-			//Debug.printStage(engine, x, y, rt, 'Y');
-			input = getInput(piece, lockAllowed, ctrl);
+			lastInput = input;
 		}
 		
 		ctrl.setButtonBit(input);
@@ -275,26 +303,20 @@ public class NeatAI extends DummyAI {
 	
 	private int getInput(Piece piece, boolean lock, Controller ctrl)
 	{
-		int input = 0;
-		
-		if(bestHold == true)
+		if(lastInput != Controller.BUTTON_BIT_UP)
 		{
-			input = Controller.BUTTON_BIT_D;
-			System.out.println("HORUDO!!!");
-			bestHold = false;
+			// Always press up, emulate 20G
+			return(Controller.BUTTON_BIT_UP);
 		}
 		else if (lock)
 		{
 			targetObtained = true;
-			input |= Controller.BUTTON_BIT_DOWN;
-		}
-		else if(lastInput != Controller.BUTTON_BIT_UP)
-		{
-			// Always press up, emulate 20G
-			input = Controller.BUTTON_BIT_UP;
+			return(Controller.BUTTON_BIT_DOWN);
 		}
 		else
 		{
+			int input = 0;
+			
 			switch (nextMove.dx) {
 				case Move.LEFT:
 					input |= Controller.BUTTON_BIT_LEFT;
@@ -320,12 +342,10 @@ public class NeatAI extends DummyAI {
 				default:
 					assert(false);
 					break;
-			}	
+			}
+			
+			return(input);
 		}
-		
-		lastInput = input;
-		
-		return(input);
 	}
 	
 	private int getInputOld(int x, int y, int rt, boolean lock, Controller ctrl)
@@ -421,8 +441,23 @@ public class NeatAI extends DummyAI {
 		return stimulusGenerator.makeStimuli(engine, field, oldField);
 	}
 	
+	private static Piece checkOffset(Piece p, GameEngine engine)
+	{
+		Piece result = new Piece(p);
+		result.big = engine.big;
+		if (!p.offsetApplied)
+			result.applyOffsetArray(engine.ruleopt.pieceOffsetX[p.id], engine.ruleopt.pieceOffsetY[p.id]);
+		return result;
+	}
+	
 	@Override
 	public void newPiece(GameEngine engine, int playerID) {
+		
+		if(bestHold == true)
+		{
+			bestHold = false;
+			return;
+		}
 		
 		double bestScore = Double.NEGATIVE_INFINITY;
 		Move bestMove = null;
@@ -430,6 +465,11 @@ public class NeatAI extends DummyAI {
 		if(pieceNr > 0)
 		{
 			int level = engine.statistics.level;
+			if(level == 0)
+			{
+				pieceNr = 1;
+				missCount = 0;
+			}
 			
 			if(targetObtained)
 			{
@@ -449,10 +489,13 @@ public class NeatAI extends DummyAI {
 		pieceNr++;
 		targetObtained = false;
 		
-		
-		
-		Collection<Move> moves = generatePossibleMoves(engine);
-		Collection<Move> holds = generatePossibleHoldMoves(engine);
+		Piece nowPiece = engine.nowPieceObject;
+		int nowX = engine.nowPieceX;
+		int nowY = engine.nowPieceY;
+		int nowRt = nowPiece.direction;
+		String nowName = Piece.getPieceName(nowPiece.id);
+				
+		Collection<Move> moves = generatePossibleMoves(engine, nowPiece, nowX, nowY, nowRt);
 		
 		for (Move move : moves) {
 			double score = scoreMove(move, engine);
@@ -466,18 +509,43 @@ public class NeatAI extends DummyAI {
 			}
 		}
 		
-		for (Move move : holds) {
-			double score = scoreMove(move, engine);
+		boolean holdOK = engine.isHoldOK();
+		
+		Piece holdPiece = engine.holdPieceObject;
+		String holdName = "none";
+		if(holdPiece == null) 
+		{
+			holdPiece = engine.getNextObject(engine.nextPieceCount);
+		}
+		
+		if(holdOK && // no holding if the game doesn't allow it
+		   holdPiece != null && // no holding, if there is no hold-piece
+		   holdPiece.id != nowPiece.id // no holding if it results in the same piece
+		   )
+		{
+			holdPiece = checkOffset(holdPiece, engine);
+			int holdX = engine.getSpawnPosX(engine.field, holdPiece);
+			int holdY = engine.getSpawnPosY(holdPiece);
+			int holdRt = holdPiece.direction;
+			holdName = Piece.getPieceName(holdPiece.id);
 			
-			if(score > bestScore || bestMove == null)
-			{
-				// TODO get rid of this
-				bestScore = score;
-				bestHold = true;
-				bestMove = move;
+			Collection<Move> holds = generatePossibleMoves(engine, holdPiece, holdX, holdY, holdRt);
+			
+			for (Move move : holds) {
+				double score = scoreMove(move, engine);
+				
+				if(score > bestScore || bestMove == null)
+				{
+					// TODO get rid of this
+					bestScore = score;
+					bestHold = true;
+					bestMove = move;
+				}
 			}
 		}
-
+		
+//		System.out.printf("NEW: %s\t NEXT: %s\t HOLD:%b\n", nowName, holdName, bestHold);
+		
 		inputMoves = makeMoveStack(bestMove);
 		moveStackString = moveStackToString(inputMoves);
 			
@@ -525,48 +593,6 @@ public class NeatAI extends DummyAI {
 		}
 	}
 	
-	private Set<Move> generatePossibleHoldMoves(GameEngine engine)
-	{	
-		Set<Move> moves = new HashSet<>();
-		
-		boolean holdOK = engine.isHoldOK();
-		
-		if(holdOK == false)
-		{
-			return(moves);
-		}
-		
-		Piece holdPiece = engine.holdPieceObject;
-		if(holdPiece == null) 
-		{
-			holdPiece = engine.getNextObject(engine.nextPieceCount);
-		}
-		
-		if(holdPiece == null)
-		{
-			return(moves);
-		}
-		
-		int holdX = engine.getSpawnPosX(engine.field, holdPiece);
-		int holdY = engine.getSpawnPosY(holdPiece);
-		int holdRt = holdPiece.direction;
-		
-		// Root move -> the idle move, do no input and just let it fall
-		Move root = new Move(
-				holdX, 
-				holdPiece.getBottom(holdX, holdY, engine.field), 
-				holdRt, 
-				0,
-				0,
-				0,
-				null);
-		moves.add(root);
-		
-		exploreMoves(engine, holdPiece, root, moves);
-		
-		return(moves);
-	}
-	
 	// TODO somehow verify this generates correct set of moves every time	
 	// Figured out this doesn't account for floorkicks
 	/**
@@ -574,20 +600,15 @@ public class NeatAI extends DummyAI {
 	 * @param engine Game Engine object
 	 * @return collection of possible moves
 	 */
-	private Set<Move> generatePossibleMoves(GameEngine engine) 
+	private Set<Move> generatePossibleMoves(GameEngine engine, Piece piece, int x, int y, int rt) 
 	{
 		Set<Move> moves = new HashSet<>();
-		
-		Piece nowPiece = engine.nowPieceObject;
-		int nowX = engine.nowPieceX;
-		int nowY = engine.nowPieceY;
-		int nowRt = nowPiece.direction;
-
+	
 		// Root move -> the idle move, do no input and just let it fall
 		Move root = new Move(
-				nowX, 
-				nowPiece.getBottom(nowX, nowY, engine.field), 
-				nowRt, 
+				x, 
+				piece.getBottom(x, y, engine.field), 
+				rt, 
 				0,
 				0,
 				0,
@@ -595,7 +616,7 @@ public class NeatAI extends DummyAI {
 		
 		moves.add(root);
 		
-		exploreMoves(engine, nowPiece, root, moves);
+		exploreMoves(engine, piece, root, moves);
 
 		return moves;
 	}
@@ -624,11 +645,18 @@ public class NeatAI extends DummyAI {
 				int newY = oldY;
 				int newKicks = oldKicks;
 				
+				if(oldX == 3 && oldY == 17 && oldRt == 1 && piece.id == 5 && drt == -1 && dx == 1)
+				{
+//					Debug.printStage(engine, oldX, oldY, oldRt, piece, 'X');
+//					Debug.printStage(engine, newX, newY, newRt, piece, '0');
+//					System.out.println("BREAK");
+				}
+				
 				if(drt != 0)
 				{
 					// Apply rotation
 					newRt = piece.getRotateDirection(drt, oldRt);
-					
+//					Debug.printStage(engine, newX, newY, newRt, piece, '1');
 					
 					// If the piece can't be rotated, try kicks
 					if (piece.checkCollision(oldX, oldY, newRt, field)) 
@@ -647,6 +675,7 @@ public class NeatAI extends DummyAI {
 
 								newX += kick.offsetX;
 								newY += kick.offsetY;
+								
 								if(kick.isUpward())
 								{
 									++newKicks;
@@ -665,6 +694,7 @@ public class NeatAI extends DummyAI {
 					// Apply movement
 					
 					newX += dx;
+//					Debug.printStage(engine, newX, newY, newRt, piece, '2');
 					if(piece.checkCollision(newX, newY, newRt, field))
 					{
 						continue;
@@ -673,7 +703,8 @@ public class NeatAI extends DummyAI {
 				
 				// Simulate 20G
 				newY = piece.getBottom(newX, newY, newRt, field);
-				
+//				Debug.printStage(engine, newX, newY, newRt, piece, '3');
+						
 				// Make new move
 				Move newMove = new Move(
 						newX,
@@ -692,8 +723,10 @@ public class NeatAI extends DummyAI {
 				// This is a new neighbour, add!
 				result.add(newMove);
 				
-				// assume new move is always valid (never collides)
+				// assume new move is always valid (never collides), and is resting on something
 				assert(!piece.checkCollision(newMove.x, newMove.y, newMove.rotation, field));
+				assert(piece.checkCollision(newMove.x, newMove.y+1, newMove.rotation, field));
+				
 			}
 		}
 		
@@ -728,11 +761,21 @@ public class NeatAI extends DummyAI {
 		
 		StringBuilder sb = new StringBuilder();
 		
+		int l = moves.size();
+		Move[] moveArr = new Move[l];
+		
+		
 		for (Move move : moves) {
-			sb.append("\t <- ");
-
-			sb.append(move.x + ", " + move.y + ", " + move.rotation);
+			moveArr[--l] = move;
 		}
+		
+		for (Move move : moveArr)
+		{	
+			String s = String.format("(%2d,%2d) %2d \n", move.x, move.y, move.rotation);
+			sb.append(s);
+		}
+		
+		sb.append("LOCK");
 		
 		return sb.toString();
 	}

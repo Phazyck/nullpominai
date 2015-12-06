@@ -61,7 +61,7 @@ public class Debug
 		debugField[debugOffsetY + y][debugOffsetX + x] = c;
 	}
 	
-	public static void printStage(GameEngine engine, int pieceX, int pieceY, int pieceRt, char pieceChar)
+	public static void printStage(GameEngine engine, int pieceX, int pieceY, int pieceRt, Piece piece, char pieceChar)
 	{
 		Field field = engine.field;
 		int height = field.getHeight();
@@ -82,8 +82,6 @@ public class Debug
 				}
 			}
 		}
-		
-		Piece piece = engine.nowPieceObject;
 		
 		int[] dataX = piece.dataX[pieceRt];
 		int[] dataY = piece.dataY[pieceRt];

@@ -79,7 +79,7 @@ public class PromptingAI extends DummyAI {
 			int y = engine.nowPieceY;
 			int rt = piece.direction;
 			
-			Debug.printStage(engine, x, y, rt, 'Y');
+			Debug.printStage(engine, x, y, rt, engine.nowPieceObject, 'Y');
 			input = getInput(x, y, rt, ctrl);
 		}
 		
@@ -178,7 +178,7 @@ public class PromptingAI extends DummyAI {
 					fld.copy(engine.field);
 					int toY = pieceNow.getBottom(toX, fromY, toRt, fld);
 					
-					Debug.printStage(engine, toX, toY, toRt, (char)9633);
+					Debug.printStage(engine, toX, toY, toRt, engine.nowPieceObject, (char)9633);
 					boolean confirmed = promptUser(fromX, fromY, fromRt, toX, toY, toRt);
 					
 					if(confirmed)

@@ -25,8 +25,8 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class StateInTraining extends BasicGameState {
 	
-	public static final int TRAINING_ROUNDS = 1;
-	public static final int CUSTOM_FPS = 60;
+	public static final int TRAINING_ROUNDS = 100;
+	public static final int CUSTOM_FPS = 6090;
 	public static final String CUSTOM_SEED = 
 			null
 //			"-2fac0ecd9c988463"
@@ -147,7 +147,7 @@ public class StateInTraining extends BasicGameState {
 
 		// Initialization for each player
 		for (int i = 0; i < gameManager.getPlayers(); i++) {
-			// チューニング設定
+			// ãƒ�ãƒ¥ãƒ¼ãƒ‹ãƒ³ã‚°è¨­å®š
 			gameManager.engine[i].owRotateButtonDefaultRight = NullpoMinoSlick.propGlobal
 					.getProperty(i + ".tuning.owRotateButtonDefaultRight", -1);
 			gameManager.engine[i].owSkin = NullpoMinoSlick.propGlobal.getProperty(i + ".tuning.owSkin", -1);
@@ -163,7 +163,7 @@ public class StateInTraining extends BasicGameState {
 			gameManager.engine[i].owBlockShowOutlineOnly = NullpoMinoSlick.propGlobal
 					.getProperty(i + ".tuning.owBlockShowOutlineOnly", -1);
 
-			// ルール
+			// ãƒ«ãƒ¼ãƒ«
 			RuleOptions ruleopt = null;
 			String rulename = strRulePath;
 			if (rulename == null) {
@@ -183,7 +183,7 @@ public class StateInTraining extends BasicGameState {
 			}
 			gameManager.engine[i].ruleopt = ruleopt;
 
-			// NEXT順生成アルゴリズム
+			// NEXTé †ç”Ÿæˆ�ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ 
 			if ((ruleopt.strRandomizer != null) && (ruleopt.strRandomizer.length() > 0)) {
 				Randomizer randomizerObject = GeneralUtil.loadRandomizer(ruleopt.strRandomizer);
 				gameManager.engine[i].randomizer = randomizerObject;
@@ -259,12 +259,12 @@ public class StateInTraining extends BasicGameState {
 
 		// Initialization for each player
 		for (int i = 0; i < gameManager.getPlayers(); i++) {
-			// ルール
+			// ãƒ«ãƒ¼ãƒ«
 			RuleOptions ruleopt = new RuleOptions();
 			ruleopt.readProperty(prop, i);
 			gameManager.engine[i].ruleopt = ruleopt;
 
-			// NEXT順生成アルゴリズム
+			// NEXTé †ç”Ÿæˆ�ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ 
 			if ((ruleopt.strRandomizer != null) && (ruleopt.strRandomizer.length() > 0)) {
 				Randomizer randomizerObject = GeneralUtil.loadRandomizer(ruleopt.strRandomizer);
 				gameManager.engine[i].randomizer = randomizerObject;
@@ -276,7 +276,7 @@ public class StateInTraining extends BasicGameState {
 				gameManager.engine[i].wallkick = wallkickObject;
 			}
 
-			// AI (リプレイ追記用）
+			// AI (ãƒªãƒ—ãƒ¬ã‚¤è¿½è¨˜ç”¨ï¼‰
 			String aiName = NullpoMinoSlick.propGlobal.getProperty(i + ".ai", "");
 			if (aiName.length() > 0) {
 				DummyAI aiObj = GeneralUtil.loadAIPlayer(aiName);
@@ -430,7 +430,7 @@ public class StateInTraining extends BasicGameState {
 	}
 	
 	/*
-	 * ゲーム stateを更新
+	 * ã‚²ãƒ¼ãƒ  stateã‚’æ›´æ–°
 	 */
 	public void update(GameContainer container, StateBasedGame game, int delta) throws SlickException {
 		
