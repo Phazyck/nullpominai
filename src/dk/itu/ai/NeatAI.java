@@ -412,14 +412,9 @@ public class NeatAI extends DummyAI {
 	 * @param engine Game Engine Object
 	 * @return the network's score for that move
 	 */
-	private double scoreMove(Move move, GameEngine engine) {
-		// Make copy of field with piece placed
-		Field oldField = new Field(engine.field);
-		Field newField = new Field(engine.field);
-		engine.nowPieceObject.placeToField(move.x, move.y, move.rotation, newField);
-
+	private double scoreMove(GameEngine engine, Move move) {
 		// Get the stimuli for the network
-		double[] stimuli = makeStimuli(engine, newField, oldField);
+		double[] stimuli = stimulusGenerator.makeStimuli(engine, move);
 
 		// return the activators response, since it's the score for the move.  
 		double[] result = networkActivator.next(stimuli);
@@ -437,9 +432,9 @@ public class NeatAI extends DummyAI {
 	 * @param field 
 	 * @return array of input values. MAKE SURE THE NETWORK IS ABLE TO ACCEPT THIS COUNT OF INPUTS
 	 */
-	private double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
-		return stimulusGenerator.makeStimuli(engine, field, oldField);
-	}
+//	private double[] makeStimuli(GameEngine engine, Move move) {
+//		return stimulusGenerator.makeStimuli(engine, move);
+//	}
 	
 	private static Piece checkOffset(Piece p, GameEngine engine)
 	{
@@ -498,7 +493,7 @@ public class NeatAI extends DummyAI {
 		Collection<Move> moves = generatePossibleMoves(engine, nowPiece, nowX, nowY, nowRt);
 		
 		for (Move move : moves) {
-			double score = scoreMove(move, engine);
+			double score = scoreMove(engine, move);
 			
 			if(score > bestScore || bestMove == null)
 			{
@@ -532,7 +527,7 @@ public class NeatAI extends DummyAI {
 			Collection<Move> holds = generatePossibleMoves(engine, holdPiece, holdX, holdY, holdRt);
 			
 			for (Move move : holds) {
-				double score = scoreMove(move, engine);
+				double score = scoreMove(engine, move);
 				
 				if(score > bestScore || bestMove == null)
 				{
@@ -612,6 +607,7 @@ public class NeatAI extends DummyAI {
 				0,
 				0,
 				0,
+				piece,
 				null);
 		
 		moves.add(root);
@@ -713,6 +709,7 @@ public class NeatAI extends DummyAI {
 						dx,
 						drt,
 						newKicks,
+						piece,
 						prevMove);
 				
 				// If piece already explored earlier, ignore

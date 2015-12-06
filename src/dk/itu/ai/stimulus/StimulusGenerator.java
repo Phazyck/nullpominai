@@ -2,7 +2,7 @@ package dk.itu.ai.stimulus;
 
 import com.anji.util.Configurable;
 
-import mu.nu.nullpo.game.component.Field;
+import dk.itu.ai.navigation.Move;
 import mu.nu.nullpo.game.play.GameEngine;
 
 /**
@@ -14,5 +14,5 @@ import mu.nu.nullpo.game.play.GameEngine;
  * @author Kas
  */
 public interface StimulusGenerator extends Configurable { 
-	public double[] makeStimuli(GameEngine engine, Field newField, Field oldField);
+	public double[] makeStimuli(GameEngine engine, Move move);
 }

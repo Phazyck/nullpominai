@@ -1,5 +1,7 @@
 package dk.itu.ai.navigation;
 
+import mu.nu.nullpo.game.component.Piece;
+
 /**
  * Move representation class, with accompanying required input to get to this position
  * @author Kas
@@ -31,14 +33,17 @@ public class Move
 	public final int floorKicksPerformed;
 	
 	public final Move parent;
+	
+	public final Piece piece;
 
-	public Move(int x, int y, int rotation, int dx, int drt, int floorKicksPerformed, Move parent) {
+	public Move(int x, int y, int rotation, int dx, int drt, int floorKicksPerformed, Piece piece, Move parent) {
 		this.x = x;
 		this.y = y;
 		this.rotation = rotation;
 		this.dx = dx;
 		this.drt = drt;
 		this.floorKicksPerformed = floorKicksPerformed;
+		this.piece = piece;
 		this.parent = parent;
 	}
 

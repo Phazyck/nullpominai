@@ -112,7 +112,7 @@ public class BasicNeatAI extends BasicAI {
 
 		// Score these moves by using the network activator object
 		for (Move move : moves) {
-			move.score = scoreMove(move, engine);
+			move.score = scoreMove(engine, move);
 		}
 
 		// Find and Execute move with highest score
@@ -163,15 +163,23 @@ public class BasicNeatAI extends BasicAI {
 	 * @param engine Game Engine Object
 	 * @return the network's score for that move
 	 */
-	private double scoreMove(Move move, GameEngine engine) {
+	private double scoreMove(GameEngine engine, Move move) {
 		// Make copy of field with piece placed
 		Field oldField = new Field(engine.field);
 		Field field = new Field(engine.field);
 		engine.nowPieceObject.placeToField(move.x, move.y, move.rotation, field);
 
 		// Get the stimuli for the network
-		double[] stimuli = makeStimuli(engine, field, oldField);
+		
+		double[] stimuli =
+			null;
+//			stimulusGenerator.makeStimuli(engine, move);
 
+		if(stimuli == null)
+		{
+			throw new RuntimeException("METHOD NOT SUPPORTED AT THE MOMENT");
+		}
+		
 		// return the activators response, since it's the score for the move.  
 		double[] result = networkActivator.next(stimuli);
 
@@ -188,10 +196,10 @@ public class BasicNeatAI extends BasicAI {
 	 * @param field 
 	 * @return array of input values. MAKE SURE THE NETWORK IS ABLE TO ACCEPT THIS COUNT OF INPUTS
 	 */
-	private double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
-		
-		return stimulusGenerator.makeStimuli(engine, field, oldField);
-	}
+//	private double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
+//		
+//		return stimulusGenerator.makeStimuli(engine, field, oldField);
+//	}
 
 	/**
 	 * Set fields to let the BasicAI functions navigate to that position

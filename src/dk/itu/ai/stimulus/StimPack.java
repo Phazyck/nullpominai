@@ -2,6 +2,8 @@ package dk.itu.ai.stimulus;
 
 import com.anji.util.Properties;
 
+import dk.itu.ai.Util;
+import dk.itu.ai.navigation.Move;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.play.GameEngine;
 
@@ -26,10 +28,22 @@ public class StimPack implements StimulusGenerator{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 	@Override
-	public double[] makeStimuli(GameEngine engine, Field newField, Field oldField) {
-double[] result = new double[15];
+	public double[] makeStimuli(GameEngine engine, Move move) {
+		Field newField = Util.getFieldAfter(engine, move);
+		
+		Field oldField = new Field(engine.field);
+		
+		
+		
+		double[] stimuli = makeStimuli(engine, newField, oldField);
+		
+		return(stimuli);
+	}
+
+	private double[] makeStimuli(GameEngine engine, Field newField, Field oldField) {
+		double[] result = new double[15];
 		
 		// Process potetial line clears
 		int linesCleared = newField.checkLine();  

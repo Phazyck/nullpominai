@@ -2,6 +2,8 @@ package dk.itu.ai.stimulus;
 
 import com.anji.util.Properties;
 
+import dk.itu.ai.Util;
+import dk.itu.ai.navigation.Move;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.play.GameEngine;
 
@@ -23,7 +25,15 @@ public class ContourAndHeight implements StimulusGenerator {
 	}
 	
 	@Override
-	public double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
+	public double[] makeStimuli(GameEngine engine, Move move) {
+		Field field = Util.getFieldAfter(engine, move);
+		
+		double[] stimuli = makeStimuli(field);
+		
+		return(stimuli);
+	}
+	
+	private double[] makeStimuli(Field field) {
 		/**
 		 * 11 inputs:
 		 * 0-9: Contour of block field surface. Top row of contour is Y=0.

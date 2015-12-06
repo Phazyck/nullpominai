@@ -2,6 +2,8 @@ package dk.itu.ai.stimulus;
 
 import com.anji.util.Properties;
 
+import dk.itu.ai.Util;
+import dk.itu.ai.navigation.Move;
 import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.play.GameEngine;
 
@@ -20,9 +22,18 @@ public class BlocksCoveredAndHeight implements StimulusGenerator {
 	public void init(Properties props) throws Exception {
 		// Nothing to initialize here
 	}
-
+	
 	@Override
-	public double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
+	public double[] makeStimuli(GameEngine engine, Move move) {
+		Field field = Util.getFieldAfter(engine, move);
+		
+		double[] stimuli = makeStimuli(field);
+		
+		return(stimuli);
+	}
+
+	
+	private double[] makeStimuli(Field field) {
 		double[] result = new double[2];
 		
 		// Process potetial line clears

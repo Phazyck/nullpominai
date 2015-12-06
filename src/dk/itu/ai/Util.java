@@ -1,5 +1,10 @@
 package dk.itu.ai;
 
+import dk.itu.ai.navigation.Move;
+import mu.nu.nullpo.game.component.Field;
+import mu.nu.nullpo.game.component.Piece;
+import mu.nu.nullpo.game.play.GameEngine;
+
 public class Util {
 	private Util() {}
 	
@@ -51,5 +56,14 @@ public class Util {
 	{
 		int diffX = toX - fromX;
 		return(diffX);
+	}
+	
+	public static Field getFieldAfter(GameEngine engine, Move move) {
+		Piece piece = new Piece(move.piece);
+		Field field = new Field(engine.field);
+		
+		piece.placeToField(move.x, move.y, move.rotation, field);
+		
+		return(field);
 	}
 }
