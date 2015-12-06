@@ -256,7 +256,8 @@ public class NeatAI extends DummyAI {
 			// If no more target positions, we lock the piece
 			if (x == bestX &&
 				y == bestY &&
-				rt == bestRt) {
+				rt == bestRt &&
+				bestHold == false) {
 				if (!inputMoves.isEmpty()) {
 					nextDestination();
 				}
@@ -266,17 +267,23 @@ public class NeatAI extends DummyAI {
 			
 			
 			//Debug.printStage(engine, x, y, rt, 'Y');
-			input = getInput(x, y, rt, lockAllowed, ctrl);
+			input = getInput(piece, lockAllowed, ctrl);
 		}
 		
 		ctrl.setButtonBit(input);
 	}
 	
-	private int getInput(int x, int y, int rt, boolean lock, Controller ctrl)
+	private int getInput(Piece piece, boolean lock, Controller ctrl)
 	{
 		int input = 0;
-				
-		if (lock)
+		
+		if(bestHold == true)
+		{
+			input = Controller.BUTTON_BIT_D;
+			System.out.println("HORUDO!!!");
+			bestHold = false;
+		}
+		else if (lock)
 		{
 			targetObtained = true;
 			input |= Controller.BUTTON_BIT_DOWN;
@@ -445,6 +452,7 @@ public class NeatAI extends DummyAI {
 		
 		
 		Collection<Move> moves = generatePossibleMoves(engine);
+		Collection<Move> holds = generatePossibleHoldMoves(engine);
 		
 		for (Move move : moves) {
 			double score = scoreMove(move, engine);
@@ -454,6 +462,18 @@ public class NeatAI extends DummyAI {
 				// TODO get rid of this
 				bestScore = score;
 				bestHold = false;
+				bestMove = move;
+			}
+		}
+		
+		for (Move move : holds) {
+			double score = scoreMove(move, engine);
+			
+			if(score > bestScore || bestMove == null)
+			{
+				// TODO get rid of this
+				bestScore = score;
+				bestHold = true;
 				bestMove = move;
 			}
 		}
@@ -485,6 +505,68 @@ public class NeatAI extends DummyAI {
 		bestRt = nextMove.rotation;
 	}
 	
+	private void exploreMoves(GameEngine engine, Piece piece, Move root, Set<Move> moves)
+	{
+		Queue<Move> exploreQueue = new LinkedList<>();
+		exploreQueue.add(root);
+		
+		// Keep exploring until all posibilities exhausted
+		while (!exploreQueue.isEmpty()) {
+			// Expand next in queue
+			Collection<Move> newNeighbours = getMoveUnexploredNeighbours(
+					engine,  
+					piece,
+					exploreQueue.remove(), 
+					moves);
+			
+			// Add new neighbours to queue and result set
+			moves.addAll(newNeighbours);
+			exploreQueue.addAll(newNeighbours);
+		}
+	}
+	
+	private Set<Move> generatePossibleHoldMoves(GameEngine engine)
+	{	
+		Set<Move> moves = new HashSet<>();
+		
+		boolean holdOK = engine.isHoldOK();
+		
+		if(holdOK == false)
+		{
+			return(moves);
+		}
+		
+		Piece holdPiece = engine.holdPieceObject;
+		if(holdPiece == null) 
+		{
+			holdPiece = engine.getNextObject(engine.nextPieceCount);
+		}
+		
+		if(holdPiece == null)
+		{
+			return(moves);
+		}
+		
+		int holdX = engine.getSpawnPosX(engine.field, holdPiece);
+		int holdY = engine.getSpawnPosY(holdPiece);
+		int holdRt = holdPiece.direction;
+		
+		// Root move -> the idle move, do no input and just let it fall
+		Move root = new Move(
+				holdX, 
+				holdPiece.getBottom(holdX, holdY, engine.field), 
+				holdRt, 
+				0,
+				0,
+				0,
+				null);
+		moves.add(root);
+		
+		exploreMoves(engine, holdPiece, root, moves);
+		
+		return(moves);
+	}
+	
 	// TODO somehow verify this generates correct set of moves every time	
 	// Figured out this doesn't account for floorkicks
 	/**
@@ -492,10 +574,10 @@ public class NeatAI extends DummyAI {
 	 * @param engine Game Engine object
 	 * @return collection of possible moves
 	 */
-	private Set<Move> generatePossibleMoves(GameEngine engine) {
+	private Set<Move> generatePossibleMoves(GameEngine engine) 
+	{
 		Set<Move> moves = new HashSet<>();
-		Queue<Move> exploreQueue = new LinkedList<>();
-
+		
 		Piece nowPiece = engine.nowPieceObject;
 		int nowX = engine.nowPieceX;
 		int nowY = engine.nowPieceY;
@@ -512,29 +594,16 @@ public class NeatAI extends DummyAI {
 				null);
 		
 		moves.add(root);
-		exploreQueue.add(root);
 		
-		// Keep exploring until all posibilities exhausted
-		while (!exploreQueue.isEmpty()) {
-			// Expand next in queue
-			Collection<Move> newNeighbours = getMoveUnexploredNeighbours(
-					engine,  
-					exploreQueue.remove(), 
-					moves);
-			
-			// Add new neighbours to queue and result set
-			moves.addAll(newNeighbours);
-			exploreQueue.addAll(newNeighbours);
-		}
+		exploreMoves(engine, nowPiece, root, moves);
 
 		return moves;
 	}
 	
 	// TODO better collection than set for this?
-	private Set<Move> getMoveUnexploredNeighbours(GameEngine engine, Move prevMove, Set<Move> exploredMoves) {
+	private Set<Move> getMoveUnexploredNeighbours(GameEngine engine, Piece piece, Move prevMove, Set<Move> exploredMoves) {
 		
 		Field field = engine.field;
-		Piece piece = engine.nowPieceObject;
 		
 		Set<Move> result = new HashSet<>();
 		
