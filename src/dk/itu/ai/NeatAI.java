@@ -22,7 +22,6 @@ import com.anji.persistence.Persistence;
 import com.anji.util.Properties;
 
 import dk.itu.ai.stimulus.StimulusGenerator;
-import dk.itu.ai.navigation.Motion;
 import dk.itu.ai.navigation.Move;
 import mu.nu.nullpo.game.component.Controller;
 import mu.nu.nullpo.game.component.Field;

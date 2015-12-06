@@ -165,11 +165,12 @@ public class BasicNeatAI extends BasicAI {
 	 */
 	private double scoreMove(Move move, GameEngine engine) {
 		// Make copy of field with piece placed
+		Field oldField = new Field(engine.field);
 		Field field = new Field(engine.field);
 		engine.nowPieceObject.placeToField(move.x, move.y, move.rotation, field);
 
 		// Get the stimuli for the network
-		double[] stimuli = makeStimuli(engine, field);
+		double[] stimuli = makeStimuli(engine, field, oldField);
 
 		// return the activators response, since it's the score for the move.  
 		double[] result = networkActivator.next(stimuli);
@@ -187,8 +188,9 @@ public class BasicNeatAI extends BasicAI {
 	 * @param field 
 	 * @return array of input values. MAKE SURE THE NETWORK IS ABLE TO ACCEPT THIS COUNT OF INPUTS
 	 */
-	private double[] makeStimuli(GameEngine engine, Field field) {
-		return stimulusGenerator.makeStimuli(engine, field);
+	private double[] makeStimuli(GameEngine engine, Field field, Field oldField) {
+		
+		return stimulusGenerator.makeStimuli(engine, field, oldField);
 	}
 
 	/**
