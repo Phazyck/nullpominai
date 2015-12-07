@@ -21,12 +21,19 @@ import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
 /**
- * Training game screen state (AI play)
+ * A custom game state for AI traning (In-game Dojo).
+ * 
+ * NOTE: This is a copy of mu.nu.nullpo.gui.slick.StateInGame that has been customized for training purposes.
  */
 public class StateInTraining extends BasicGameState {
 	
+	/** The number of rounds training should be performed. */
 	public static final int TRAINING_ROUNDS = 1;
+	
+	/** The custom fps limit */
 	public static final int CUSTOM_FPS = 6000;
+	
+	/** The custom game seed. */
 	public static final String CUSTOM_SEED = 
 //			"-2fac0ecd9c988463"
 //			null
@@ -101,14 +108,13 @@ public class StateInTraining extends BasicGameState {
 	 */
 	@Override
 	public void enter(GameContainer container, StateBasedGame game) throws SlickException {
-		log.debug("LOG(oliver): Entering training game!");
 		enableframestep = NullpoMinoSlick.propConfig.getProperty("option.enableframestep", false);
 		container.setTargetFrameRate(Integer.MAX_VALUE);
 		showbg = NullpoMinoSlick.propConfig.getProperty("option.showbg", true);
 		fastforward = 0;
 		cursor = 0;
 		
-		// NOTE(oliver): Removing FPS cap for training games.
+		// NOTE(oliver): Custom FPS cap for training games.
 		NullpoMinoSlick.altMaxFPS = CUSTOM_FPS;
 		
 		prevInGameFlag = false;
@@ -222,6 +228,9 @@ public class StateInTraining extends BasicGameState {
 		updateTitleBarCaption();
 	}
 	
+	/**
+	 * Custom method for enforcing a custom game seed, if such is set.
+	 */
 	private void forceCustomSeed()
 	{
 		if(CUSTOM_SEED == null)
@@ -302,7 +311,7 @@ public class StateInTraining extends BasicGameState {
 	}
 
 	/**
-	 * Update title bar text
+	 * Custom title bar text with FPS and game count.
 	 */
 	public void updateTitleBarCaption() {
 		
@@ -352,6 +361,7 @@ public class StateInTraining extends BasicGameState {
 	 */
 	public void render(GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
 		/*
+		 * NOTE(oliver): Rendering allowed when out of focus.
 		if (!container.hasFocus()) {
 			if (!NullpoMinoSlick.alternateFPSTiming)
 				NullpoMinoSlick.alternateFPSSleep(true);
@@ -405,7 +415,10 @@ public class StateInTraining extends BasicGameState {
 
 	private int trainingRound;
 	
-	
+	/**
+	 * Custom function for automatic retries.
+	 * Used for automatic runs.
+	 */
 	private void doRetry()
 	{
 		if(trainingRound >= TRAINING_ROUNDS)

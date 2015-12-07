@@ -12,13 +12,17 @@ import mu.nu.nullpo.game.component.RuleOptions;
 import mu.nu.nullpo.game.play.GameEngine;
 import mu.nu.nullpo.game.play.GameEngine.Status;
 import mu.nu.nullpo.game.play.GameManager;
-import mu.nu.nullpo.game.subsystem.ai.BasicAI;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 import mu.nu.nullpo.game.subsystem.mode.GameMode;
 import mu.nu.nullpo.game.subsystem.mode.GradeMania3Mode;
 import mu.nu.nullpo.gui.slick.LogSystemLog4j;
 import mu.nu.nullpo.util.GeneralUtil;
 
+/**
+ * A class for running sped-up simulations of tetris games without rendering, akin to the Ms. Pac-Man AI framework.
+ * 
+ * @author Oliver Phillip
+ */
 public class Simulator {
 
 	public static void main(String[] args) {
@@ -45,12 +49,14 @@ public class Simulator {
 		// Actual simulation.
 		Simulator simulator = new Simulator(mode, rulePath, ai);
 		
-		String customSeed = 
+		// Custom seeding.
+		
+//		String customSeed = 
 //			"-2fac0ecd9c988463"
 //			"15478945"
 //			"897494638"
-			"4697358"
-			;
+//			"4697358"
+//			;
 		
 //		simulator.setCustomSeed(customSeed);
 		
@@ -63,8 +69,9 @@ public class Simulator {
 	private String customSeed = null;
 	
 	/**
-	 * Really ugly and temporary
-	 * @return
+	 * Get the current in-game grade from a game of Tetris The Grand Master 3: Terror Instinct.
+	 * 
+	 * @return The TGM3 grade.
 	 */
 	public int getGM3Grade(){
 		GradeMania3Mode gm3m = (GradeMania3Mode) gameEngine.owner.mode;
@@ -85,33 +92,17 @@ public class Simulator {
 	}
 	
 	/**
-	 * Really ugly and temporary
-	 * @return
+	 * Get the current in-game level.
+	 * 
+	 * @return The level.
 	 */
-	public int getGM3Level(){
-		GradeMania3Mode gm3m = (GradeMania3Mode) gameEngine.owner.mode;
-		Field field;
-		try {
-			field = gm3m.getClass().getDeclaredField("internalLevel");
-			field.setAccessible(true);
-			return field.getInt(gm3m);
-		} catch (NoSuchFieldException | SecurityException e) {
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			e.printStackTrace();
-		}
-		
-		return -1;
-	}
-	
 	public int getLevel() {
 		return gameEngine.statistics.level;
 	}
 	
 	/**
 	 * Make a new Simulator object, ready to go.
+	 * 
 	 * @param mode Game mode Object
 	 * @param rulePath path string to the rules file
 	 * @param ai AI object to play (MAKE SURE IT SUPPORTS UNTHREADED !!! )
@@ -202,7 +193,9 @@ public class Simulator {
 	}
 	
 	/**
-	 * Performs multiple sequential simulations to completion (STATE == GAMEOVER)
+	 * Performs multiple sequential simulations to completion (STATE == GAMEOVER).
+	 * 
+	 * @param count The number of simulations.
 	 */
 	public void runSimulations(int count) 
 	{
@@ -212,9 +205,12 @@ public class Simulator {
 			runSimulation();
 		}
 	}
-	
+
 	/**
-	 * Performs multiple sequential simulations to completion (STATE == GAMEOVER)
+	 * Performs multiple sequential simulations to completion (STATE == GAMEOVER),
+	 * and records statistics.
+	 * 
+	 * @param count The number of simulations.
 	 */
 	public void runStatisticsSimulations(int count) 
 	{
@@ -257,6 +253,9 @@ public class Simulator {
 
 	static Logger log = Logger.getLogger(Simulator.class);
 	
+	/**
+	 * Log the current game state.
+	 */
 	private void logGameState()
 	{
 		int level = gameEngine.statistics.level;

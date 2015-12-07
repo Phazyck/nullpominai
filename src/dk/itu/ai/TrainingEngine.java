@@ -9,6 +9,11 @@ import mu.nu.nullpo.game.play.GameManager;
 import mu.nu.nullpo.game.subsystem.wallkick.Wallkick;
 import net.omegaboshi.nullpomino.game.subsystem.randomizer.Randomizer;
 
+/**
+ * A proxy for the mu.nu.nullpo.game.play.GameEngine class, costumized for training purposes (In-game Dojo Mode).
+ * 
+ * @author Oliver Phillip
+ */
 public class TrainingEngine extends GameEngine {
 	
 	/** Log (Apache log4j) */

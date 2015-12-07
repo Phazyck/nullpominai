@@ -13,7 +13,9 @@ import mu.nu.nullpo.gui.slick.ResourceHolderSlick;
 import mu.nu.nullpo.gui.slick.StateTitle;
 
 /**
- * Custom AI training state.
+ * Custom selection screen for AI training (In-game Dojo).
+ * 
+ * NOTE: This is a copy of mu.nu.nullpo.gui.slick.StateSelectMode that has been customized for training purposes.
  */
 public class StateSelectTraining  extends DummyMenuScrollState {
 	

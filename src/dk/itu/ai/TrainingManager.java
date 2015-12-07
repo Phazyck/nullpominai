@@ -10,6 +10,11 @@ import mu.nu.nullpo.game.play.GameManager;
 import mu.nu.nullpo.gui.slick.RendererSlick;
 import mu.nu.nullpo.util.CustomProperties;
 
+/**
+ * A proxy for the mu.nu.nullpo.game.play.GameManager class, costumized for training purposes (In-game Dojo Mode).
+ * 
+ * @author Oliver Phillip
+ */
 public class TrainingManager extends GameManager 
 {
 	/** Log (Apache log4j) */

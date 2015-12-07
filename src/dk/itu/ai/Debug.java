@@ -5,6 +5,11 @@ import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
 
+/**
+ * A class with various debugging functions such as printing the stage to the console.
+ * 
+ * @author OliverPhillip
+ */
 public class Debug 
 {
 	private static int debugWidth = 14;
@@ -14,6 +19,12 @@ public class Debug
 	
 	private static char[][] debugField = new char[debugHeight][debugWidth];
 	
+	/**
+	 * Reset the internal stage representation.
+	 * 
+	 * @param width The stage width.
+	 * @param height The stage height.
+	 */
 	private static void resetDebugStage(int width, int height) 
 	{
 		for(int y = 0; y < debugHeight; ++y)
@@ -39,6 +50,9 @@ public class Debug
 		}
 	}
 	
+	/**
+	 * Print the internal debug stage.
+	 */
 	private static void printDebugStage()
 	{
 		StringBuilder sb = new StringBuilder();
@@ -56,11 +70,28 @@ public class Debug
 		
 	}
 	
+	/**
+	 * Set a character in the internal debug stage representation.
+	 * 
+	 * @param c The character.
+	 * @param x The x-coordinate.
+	 * @param y The y-coordinate.
+	 */
 	private static void setDebugChar(char c, int x, int y)
 	{
 		debugField[debugOffsetY + y][debugOffsetX + x] = c;
 	}
 	
+	/**
+	 * Print a stage to the console.
+	 * 
+	 * @param engine The game engine containing the stage.
+	 * @param pieceX The x-coordinate of a piece.
+	 * @param pieceY The y-coordinate of a piece.
+	 * @param pieceRt The rotation of a piece.
+	 * @param piece The piece.
+	 * @param pieceChar The character that should be used to represent the piece.
+	 */
 	public static void printStage(GameEngine engine, int pieceX, int pieceY, int pieceRt, Piece piece, char pieceChar)
 	{
 		Field field = engine.field;

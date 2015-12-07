@@ -1,11 +1,9 @@
 package dk.itu.ai;
 
-import java.util.Iterator;
 import java.util.List;
 
 import mu.nu.nullpo.game.subsystem.mode.GameMode;
 import mu.nu.nullpo.game.subsystem.mode.GradeMania3Mode;
-import sdljava.cdrom.FrameInfo;
 
 import org.apache.log4j.Logger;
 import org.jgap.BulkFitnessFunction;
@@ -15,7 +13,6 @@ import com.anji.integration.Activator;
 import com.anji.integration.ActivatorTranscriber;
 import com.anji.integration.TargetFitnessFunction;
 import com.anji.integration.TranscriberException;
-import com.anji.tournament.PlayerTranscriber;
 import com.anji.util.Configurable;
 import com.anji.util.Properties;
 
