@@ -54,7 +54,8 @@ public class Simulator {
 		
 //		simulator.setCustomSeed(customSeed);
 		
-		simulator.runSimulation();
+//		simulator.runSimulation();
+		simulator.runStatisticsSimulations(100);
 	}
 	
 	private GameManager gameManager;
@@ -210,6 +211,38 @@ public class Simulator {
 			log.info(String.format("-------- Simulation %d of %d --------", i, count));
 			runSimulation();
 		}
+	}
+	
+	/**
+	 * Performs multiple sequential simulations to completion (STATE == GAMEOVER)
+	 */
+	public void runStatisticsSimulations(int count) 
+	{
+		int gm = 0;
+	
+		for(int i = 0; i < count; i++)
+		{
+			log.info(String.format("-------- Simulation %d of %d --------", i+1, count));
+			runSimulation();
+			if (getGM3Grade() == 32) {
+				gm++;
+			}
+		}
+		
+		log.info("-------- COMPLETE --------");
+		
+		log.info("Total:\t" + count);
+		log.info("GM grades:\t" + gm);
+		
+		double prop = (double) gm / (double) count;
+		
+		log.info("Sample Proportion:\t" + prop);
+		
+		double confidenceMultiplier = 1.96;
+		
+		double interval = confidenceMultiplier * Math.sqrt(prop * (1 - prop)/ count );
+		
+		log.info("Confidence interval:\t" + interval);
 	}
 	
 	/**
