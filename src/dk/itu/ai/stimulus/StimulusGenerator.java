@@ -14,5 +14,13 @@ import mu.nu.nullpo.game.play.GameEngine;
  * @author Kas
  */
 public interface StimulusGenerator extends Configurable { 
+	
+	/**
+	 * Makes an array of stimuli when given a game engine and a move to be considered.
+	 * 
+	 * @param engine The current game engine.
+	 * @param move The potential move.
+	 * @return The stimuli.
+	 */
 	public double[] makeStimuli(GameEngine engine, Move move);
 }

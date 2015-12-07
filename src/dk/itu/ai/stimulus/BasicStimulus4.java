@@ -7,6 +7,22 @@ import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
 
+/**
+ * Stimulus set: 
+ * 0-2: Are there neighbors to the left, right and/or top? (0/1)
+ * 3: Line clears (0,1,2,3,4 maps to 0, 2, 12, 13, 30 respectively - then normalized)
+ * 4: Is this an allClear? (0/1)
+ * 5: Are we in danger aka. new height is >= 12 (0/1)
+ * 6: How many holes have appeared/disappeared? (normalized, should be within 0 and 1)
+ * 7: How many lids have appeared/disappeared? (normalized, should be within 0 and 1)
+ * 8: How many valley's needing an I-piece have appeared/disappeared? (normalized, should be within 0 and 1)
+ * 9: How much has the height increased/decreased? (normalized, should be within 0 and 1)
+ * 10: Combo value (normalized, should be within 0 and 1) (note: not sure about upper and lower bound, so normalization may not be entirely correc
+ * 
+ * When using this class, set the property "stimulus.size" to 11.
+ * 
+ * @author Oliver Phillip
+ */
 public class BasicStimulus4 implements StimulusGenerator {
 
 	@Override

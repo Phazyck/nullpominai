@@ -31,6 +31,9 @@ import mu.nu.nullpo.game.play.GameEngine;
 import mu.nu.nullpo.game.play.GameEngine.Status;
 import mu.nu.nullpo.game.subsystem.ai.DummyAI;
 
+/**
+ * A custom AI using Artifical Neural Networks evolved using NeuroEvolution of Augmenting Topologies.  
+ */
 public class NeatAI extends DummyAI {
 	
 	/**
@@ -45,6 +48,7 @@ public class NeatAI extends DummyAI {
 	private int pieceNr = 0;
 	private int missCount = 0;
 
+	/** Object for generating stimuli from game states. */
 	StimulusGenerator stimulusGenerator;
 	
 	// Values for loading neural networks
@@ -53,7 +57,6 @@ public class NeatAI extends DummyAI {
 
 	Properties properties;
 
-
 	Stack<Move> inputMoves;
 	
 	@Override
@@ -61,24 +64,27 @@ public class NeatAI extends DummyAI {
 		return "Neaty v0.2";
 	}
 
-	// Neural Network activation object
+	/** Neural Network activation object. */
 	private Activator networkActivator;
 
+	/** A string of the move stack. Used for debugging purposes. */
 	private String moveStackString;
 
+	/** The next move to be performed. */
 	private Move nextMove;
 
+	/** The last input that was performed. */
 	private int lastInput;
 
 	/**
-	 * This constructor should only be called by the game
+	 * This constructor should only be called by the game.
 	 */
 	public NeatAI() {
 		this(null);
 	}
 
 	/**
-	 * This constructor intended for when used as part of fitness evaluation during evolution
+	 * This constructor is intended for when used as part of fitness evaluation during evolution
 	 * @param ac Pre-initialized network activator
 	 */
 	public NeatAI(Activator ac) {
@@ -114,9 +120,6 @@ public class NeatAI extends DummyAI {
 		this.pieceNr = 0;
 		this.targetObtained = false;
 		
-		
-		
-		
 		// Load and initialize a preexisting network, if no network was supplied
 		if (networkActivator == null) {
 			try {
@@ -142,118 +145,6 @@ public class NeatAI extends DummyAI {
 
 	}
 
-	/*
-	
-	private int getInput(int x, int y, int rt, Controller ctrl)
-	{
-		int input = 0;
-		
-		int deltaRt = Util.getDeltaRt(rt, bestRt);
-		int deltaX = Util.getDeltaX(x, bestX);
-		
-		//--- Rotation
-		
-		if(deltaRt < 0 && !ctrl.isPress(Controller.BUTTON_A))
-		{
-			// Rotate counter-clockwise.
-			input |= Controller.BUTTON_BIT_A;
-		} 
-		else if(deltaRt > 0 && !ctrl.isPress(Controller.BUTTON_B))
-		{
-			// Rotate clockwise.
-			input |= Controller.BUTTON_BIT_B;
-		}
-		
-		//--- Movement
-		
-		if(deltaX < 0 && !ctrl.isPress(Controller.BUTTON_LEFT))
-		{
-			// Move left.
-			input |= Controller.BUTTON_BIT_LEFT;			
-		}
-		else if(deltaX > 0 && !ctrl.isPress(Controller.BUTTON_RIGHT))
-		{
-			// Move right.
-			input |= Controller.BUTTON_BIT_RIGHT;
-		}
-		
-		//--- Drop/Lock
-		
-		if(deltaRt == 0 && deltaX == 0)
-		{
-			if(y != bestY 
-			   && !ctrl.isPress(Controller.BUTTON_UP))
-			{
-				// Drop
-				input |= Controller.BUTTON_BIT_UP;
-			}
-			else if(y == bestY
-					&& !ctrl.isPress(Controller.BUTTON_DOWN))
-			{
-				targetObtained = true;
-				// Lock
-				input |= Controller.BUTTON_BIT_DOWN;
-			}
-		}
-		
-		return(input);
-	}
-	
-	boolean AREProcessed;
-	int AREinput;
-		
-	@Override
-	public void setControl(GameEngine engine, int playerID, Controller ctrl) {
-		Piece piece = engine.nowPieceObject;
-		
-		int input = 0;
-		
-		// First frame in ARE
-		if(!AREProcessed && engine.stat == Status.ARE) {
-			AREProcessed = true;
-			
-			Piece nextPiece = engine.getNextObject(engine.nextPieceCount);
-			
-			Motion AREmotion = motions.pop();
-			
-			int x = engine.getSpawnPosX(engine.field, nextPiece);
-			int y = engine.getSpawnPosY(nextPiece);
-			int rt = nextPiece.direction;
-			
-			bestX =  x + AREmotion.x;
-			bestRt = rt + AREmotion.rotate;
-			bestY =  -10; // Don't let the getInput logic lock the piece 
-			// nextPiece.getBottom(x, y, rt, engine.field);
-			
-			AREinput = getInput(x, y, rt, ctrl);
-			
-//			System.out.println("Next piece name: " + Piece.PIECE_NAMES[nextPiece.id]);
-//			
-//			// bestX = motions.peek()
-////			System.out.println(engine.nowPieceX);
-//			System.out.println(engine.getSpawnPosX(engine.field, nextPiece));
-//			System.out.println(engine.getSpawnPosY(nextPiece));
-		}
-		// Repeat ARE
-		else if (engine.stat == Status.ARE) {
-			input = AREinput;
-		}
-		
-		if(piece != null && engine.stat == Status.MOVE)
-		{
-			int x = engine.nowPieceX;
-			int y = engine.nowPieceY;
-			int rt = piece.direction;
-			
-			//Debug.printStage(engine, x, y, rt, 'Y');
-			input = getInput(x, y, rt, ctrl);
-		}
-		
-		ctrl.setButtonBit(input);
-	}
-	
-	*/
-		
 	@Override
 	public void setControl(GameEngine engine, int playerID, Controller ctrl) {
 		Piece piece = engine.nowPieceObject;
@@ -292,7 +183,7 @@ public class NeatAI extends DummyAI {
 //				Debug.printStage(engine, x, y, rt, piece, 'X');
 //				Debug.printStage(engine, bestX, bestY, bestRt, piece, 'Y');
 				
-				input = getInput(piece, lockAllowed, ctrl);
+				input = getInput(piece, lockAllowed);
 			}
 			
 			lastInput = input;
@@ -301,7 +192,14 @@ public class NeatAI extends DummyAI {
 		ctrl.setButtonBit(input);
 	}
 	
-	private int getInput(Piece piece, boolean lock, Controller ctrl)
+	/**
+	 * Actual method for producing input values. 
+	 * 
+	 * @param piece The current piece.
+	 * @param lock A boolean describing whether or not locking should be performed.
+	 * @return The input values. (a bit-string)
+	 */
+	private int getInput(Piece piece, boolean lock)
 	{
 		if(lastInput != Controller.BUTTON_BIT_UP)
 		{
@@ -348,69 +246,12 @@ public class NeatAI extends DummyAI {
 		}
 	}
 	
-	private int getInputOld(int x, int y, int rt, boolean lock, Controller ctrl)
-	{
-		int input = 0;
-		
-		int deltaRt = Util.getDeltaRt(rt, bestRt);
-		int deltaX = Util.getDeltaX(x, bestX);
-		
-		//--- Rotation
-		
-		if(deltaRt < 0 && !ctrl.isPress(Controller.BUTTON_A))
-		{
-			// Rotate counter-clockwise.
-			input |= Controller.BUTTON_BIT_A;
-		} 
-		else if(deltaRt > 0 && !ctrl.isPress(Controller.BUTTON_B))
-		{
-			// Rotate clockwise.
-			input |= Controller.BUTTON_BIT_B;
-		}
-		
-		//--- Movement
-		
-		if(deltaX < 0 && !ctrl.isPress(Controller.BUTTON_LEFT))
-		{
-			// Move left.
-			input |= Controller.BUTTON_BIT_LEFT;			
-		}
-		else if(deltaX > 0 && !ctrl.isPress(Controller.BUTTON_RIGHT))
-		{
-			// Move right.
-			input |= Controller.BUTTON_BIT_RIGHT;
-		}
-		
-		//--- Drop/Lock
-		
-		if(deltaRt == 0 && deltaX == 0)
-		{
-			if(y != bestY 
-			   && !ctrl.isPress(Controller.BUTTON_UP))
-			{
-				// Drop
-				input |= Controller.BUTTON_BIT_UP;
-			}
-			else if(y == bestY
-					&& !ctrl.isPress(Controller.BUTTON_DOWN)
-					&& lock)
-			{ 
-				targetObtained = true;
-				// Lock
-				input |= Controller.BUTTON_BIT_DOWN;
-			}
-		}
-		
-		return(input);
-	}
-	
-	
-	
 	/**
-	 * Uses the network to score a move 
-	 * @param move Move to score
-	 * @param engine Game Engine Object
-	 * @return the network's score for that move
+	 * Use the network to score a move.
+	 * 
+	 * @param engine The current game engine. 
+	 * @param move The move to score.
+	 * @return The network's score for the given move.
 	 */
 	private double scoreMove(GameEngine engine, Move move) {
 		// Get the stimuli for the network
@@ -424,18 +265,14 @@ public class NeatAI extends DummyAI {
 
 		return result[0]; 
 	}
-	
+
 	/**
-	 * Generate the input values for the neural networks.
-	 * This is the tricky one! How do we properly structure this so we can rapidly iterate upon this?
-	 * @param engine Game Engine object to extract values from
-	 * @param field 
-	 * @return array of input values. MAKE SURE THE NETWORK IS ABLE TO ACCEPT THIS COUNT OF INPUTS
+	 * Utility function for applying piece offsets.
+	 * 
+	 * @param p The piece.
+	 * @param engine The game engine.
+	 * @return The corrected piece.
 	 */
-//	private double[] makeStimuli(GameEngine engine, Move move) {
-//		return stimulusGenerator.makeStimuli(engine, move);
-//	}
-	
 	private static Piece checkOffset(Piece p, GameEngine engine)
 	{
 		Piece result = new Piece(p);
@@ -556,6 +393,9 @@ public class NeatAI extends DummyAI {
 //		else System.out.println("Move chosen: ");
 	}
 
+	/**
+	 * This method updates the nextMove field to point to the next destination.
+	 */
 	private void nextDestination() {
 		assert(!inputMoves.isEmpty());
 		
@@ -568,6 +408,16 @@ public class NeatAI extends DummyAI {
 		bestRt = nextMove.rotation;
 	}
 	
+	/**
+	 * This method explores the possible (20G) moves that can be performed 
+	 * in a given game state (engine), using a given piece, starting from a root move.
+	 * New moves are added to the given set of moves.
+	 * 
+	 * @param engine The current game engine.
+	 * @param piece The current piece.
+	 * @param root The root move.
+	 * @param moves The set of possible moves so far.
+	 */
 	private void exploreMoves(GameEngine engine, Piece piece, Move root, Set<Move> moves)
 	{
 		Queue<Move> exploreQueue = new LinkedList<>();
@@ -587,9 +437,7 @@ public class NeatAI extends DummyAI {
 			exploreQueue.addAll(newNeighbours);
 		}
 	}
-	
-	// TODO somehow verify this generates correct set of moves every time	
-	// Figured out this doesn't account for floorkicks
+
 	/**
 	 * Get a collection of different available moves
 	 * @param engine Game Engine object
@@ -617,7 +465,15 @@ public class NeatAI extends DummyAI {
 		return moves;
 	}
 	
-	// TODO better collection than set for this?
+	/**
+	 * This method finds the next moves that are possible from a given move.
+	 * 
+	 * @param engine The current game engine.
+	 * @param piece The current piece.
+	 * @param prevMove The previous move.
+	 * @param exploredMoves The moves that have been found so far.
+	 * @return The newly discovered neighbouring moves. 
+	 */
 	private Set<Move> getMoveUnexploredNeighbours(GameEngine engine, Piece piece, Move prevMove, Set<Move> exploredMoves) {
 		
 		Field field = engine.field;
@@ -730,6 +586,12 @@ public class NeatAI extends DummyAI {
 		return result;
 	}
 	
+	/**
+	 * Given a move, this method construct a stack of moves to be executed by running through it's chain of parent moves.
+	 * 
+	 * @param move The move.
+	 * @return The move stack.
+	 */
 	private Stack<Move> makeMoveStack(Move move) {
 		Stack<Move> result = new Stack<>();
 
@@ -742,6 +604,13 @@ public class NeatAI extends DummyAI {
 		return result;
 	}
 	
+	/**
+	 * A utility method for making a string representation of a move stack.
+	 * Used for debugging purposes.
+	 * 
+	 * @param moves The move stack.
+	 * @return The string representation of the move stack.
+	 */
 	private String moveStackToString(Stack<Move> moves) {
 		/* StringBuilder sb = new StringBuilder();
 		
@@ -776,6 +645,4 @@ public class NeatAI extends DummyAI {
 		
 		return sb.toString();
 	}
-	
-	
 }

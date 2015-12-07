@@ -16,17 +16,22 @@ import com.anji.integration.TranscriberException;
 import com.anji.util.Configurable;
 import com.anji.util.Properties;
 
+/**
+ * This class implements the fitness function used when evolving artifical neural networks with ANJI.
+ */
 public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 
 	private static final long serialVersionUID = 1L;
 	
 	private final static String TRANSCRIBER_CLASS_KEY = "nullpominai.transcriber";
-	
 
 	private ActivatorTranscriber activatorFactory;
 
 	private static Logger logger = Logger.getLogger( TargetFitnessFunction.class );
 	
+	/**
+	 * The game seeds used for simulations during fitness calculation.
+	 */
 	private static final String[] FITNESS_TEST_SEEDS = {"15478945", "897494638", "4697358", "62c2fb46d0bb6b53", "5a9fbb07dd13c6fc", "-dd27fc1755162cd", "-3bd84a30fecd8f13"}; // I facerolled my numpad, sue me!  -Kas
 	
 	private static Object lock = new Object();
@@ -91,6 +96,9 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 		return 0;
 	}
 	
+	/**
+	 * Utility class for multi-threading of simulations.
+	 */
 	class GameRunner implements Runnable {
 		
 		String seed;
