@@ -5,6 +5,11 @@ import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
 
+/**
+ * A class containing static utility functions.
+ * 
+ * @author Oliver Phillip
+ */
 public class Util {
 	private Util() {}
 	
@@ -58,6 +63,13 @@ public class Util {
 		return(diffX);
 	}
 	
+	/**
+	 * Given an engine with a current field inside, and a move, this method construct a new field that is how the old field would look after applying the move.
+	 * 
+	 * @param engine The game engine.
+	 * @param move The move.
+	 * @return The new field.
+	 */
 	public static Field getFieldAfter(GameEngine engine, Move move) {
 		Piece piece = new Piece(move.piece);
 		Field field = new Field(engine.field);
