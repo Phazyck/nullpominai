@@ -25,14 +25,18 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class StateInTraining extends BasicGameState {
 	
-	public static final int TRAINING_ROUNDS = 100;
-	public static final int CUSTOM_FPS = 6090;
+	public static final int TRAINING_ROUNDS = 1;
+	public static final int CUSTOM_FPS = 6000;
 	public static final String CUSTOM_SEED = 
-			null
 //			"-2fac0ecd9c988463"
+//			null
 //			"15478945"
 //			"897494638"
 //			"4697358"
+//			"62c2fb46d0bb6b53"
+//			"5a9fbb07dd13c6fc"
+//			"-dd27fc1755162cd"
+			"-3bd84a30fecd8f13"
 			;
 	
 	/** This state's ID */
@@ -406,7 +410,8 @@ public class StateInTraining extends BasicGameState {
 	{
 		if(trainingRound >= TRAINING_ROUNDS)
 		{
-			System.exit(0);
+			return;
+//			System.exit(0);
 		}
 		
 		if(gameManager.engine[0].stat == Status.SETTING)
@@ -426,7 +431,8 @@ public class StateInTraining extends BasicGameState {
 		log.info("Final Level: " + gameManager.engine[0].statistics.level);
 		
 		trainingRound++;
-		GameKeySlick.gamekey[0].setInputState(GameKeySlick.BUTTON_RETRY, 1);
+		return;
+//		GameKeySlick.gamekey[0].setInputState(GameKeySlick.BUTTON_RETRY, 1);
 	}
 	
 	/*

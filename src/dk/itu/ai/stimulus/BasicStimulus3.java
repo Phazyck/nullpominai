@@ -7,7 +7,7 @@ import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
 
-public class BasicStimulus implements StimulusGenerator {
+public class BasicStimulus3 implements StimulusGenerator {
 
 	@Override
 	public void init(Properties props) throws Exception {
@@ -67,7 +67,18 @@ public class BasicStimulus implements StimulusGenerator {
 		
 		// -- Line clears
 		int lines = fld.checkLine();
-		stimuli[3] = asDouble(lines);
+		
+		int igp = 0;
+		
+		switch(lines)
+		{
+			case 1: { igp =  2; } break;
+			case 2: { igp = 12; } break;
+			case 3: { igp = 13; } break;
+			case 4: { igp = 30; } break;
+		}
+		
+		stimuli[3] = asDouble(igp);
 		
 		if(lines > 0) 
 		{

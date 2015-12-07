@@ -7,7 +7,7 @@ import mu.nu.nullpo.game.component.Field;
 import mu.nu.nullpo.game.component.Piece;
 import mu.nu.nullpo.game.play.GameEngine;
 
-public class BasicStimulus implements StimulusGenerator {
+public class BasicStimulus4 implements StimulusGenerator {
 
 	@Override
 	public void init(Properties props) throws Exception {
@@ -21,9 +21,18 @@ public class BasicStimulus implements StimulusGenerator {
 		return(result);
 	}
 	
-	private double asDouble(int i)
+	private double asDouble(int i, int min, int max)
 	{
-		double result = i;
+		double result;
+		
+		if(min > max)
+		{
+			result = asDouble(i, max, min);
+		}
+		else
+		{
+			result = ((double)i) / ((double)(max - min));
+		}
 		
 		return(result);
 	}
@@ -31,7 +40,7 @@ public class BasicStimulus implements StimulusGenerator {
 	@Override
 	public double[] makeStimuli(GameEngine engine, Move move) {
 		
-		double[] stimuli = new double[10];
+		double[] stimuli = new double[11];
 		
 		Field fld = new Field(engine.field);
 		Piece piece = new Piece(move.piece);
@@ -67,7 +76,18 @@ public class BasicStimulus implements StimulusGenerator {
 		
 		// -- Line clears
 		int lines = fld.checkLine();
-		stimuli[3] = asDouble(lines);
+		
+		int igp = 0;
+		
+		switch(lines)
+		{
+			case 1: { igp =  2; } break;
+			case 2: { igp = 12; } break;
+			case 3: { igp = 13; } break;
+			case 4: { igp = 30; } break;
+		}
+		
+		stimuli[3] = asDouble(igp, 0, 30);
 		
 		if(lines > 0) 
 		{
@@ -95,21 +115,25 @@ public class BasicStimulus implements StimulusGenerator {
 		// Negative values means hole count has decreased (good)
 		// Positive values mean hole count has increased (bad).
 		int holeDelta = holeAfter - holeBefore;
-		stimuli[6] = asDouble(holeDelta);
+		stimuli[6] = asDouble(holeDelta, 0, 200);
 		
 		// -- Difference in lids before and after. 
 		// Negative values means lid count has decreased (good)
 		// Positive values mean lid count has increased (bad).
 		int lidDelta = lidAfter - lidBefore;
-		stimuli[7] = asDouble(lidDelta);
+		stimuli[7] = asDouble(lidDelta, 0, 200);
 		
 		// -- Difference in I-valleys before and after.
 		int needIValleyDelta = needIValleyAfter - needIValleyBefore;
-		stimuli[8] = asDouble(needIValleyDelta);
+		stimuli[8] = asDouble(needIValleyDelta, 0, 10);
 		
 		// -- Difference in height before and after.
 		int heightDelta = heightAfter - heightBefore;
-		stimuli[9] = asDouble(heightDelta);
+		stimuli[9] = asDouble(heightDelta, 0, 20);
+		
+		// Other
+		int combo = (engine.combo) + (2 * lines) - 2;
+		stimuli[10] = asDouble(combo, 0, 100);
 		
 		return stimuli;
 	}

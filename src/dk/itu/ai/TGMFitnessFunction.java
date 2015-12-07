@@ -74,7 +74,7 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 				
 //				System.out.println("ALL THREADS DONE. SCORE: " + total);
 				
-				fitness = total / FITNESS_TEST_SEEDS.length;
+				fitness = total;
 				
 				
 				chromosome.setFitnessValue(fitness);
@@ -119,7 +119,7 @@ public class TGMFitnessFunction implements BulkFitnessFunction, Configurable {
 				simulation.setCustomSeed(seed);
 				simulation.runSimulation();
 				
-				score = 1000000 * simulation.getGM3Grade();
+				score = simulation.getGM3Grade();
 //				score = simulation.getLevel();
 				
 //				System.out.println("Thread done: " + seed + "\tScore: " + score);

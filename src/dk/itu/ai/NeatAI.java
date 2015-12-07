@@ -473,11 +473,11 @@ public class NeatAI extends DummyAI {
 			else
 			{
 				missCount++;
-				System.out.printf("Piece %3d\tLevel %3d\tTarget missed!\t%3d misses.\n", pieceNr, level, missCount);
+//				System.out.printf("Piece %3d\tLevel %3d\tTarget missed!\t%3d misses.\n", pieceNr, level, missCount);
 //				String pieceName = Piece.getPieceName(engine.nextPieceArrayObject[engine.nextPieceCount-2].id);
 //				System.out.println(pieceName);
-				System.out.println(moveStackString);
-				System.out.println();
+//				System.out.println(moveStackString);
+//				System.out.println();
 			}
 		}
 		
